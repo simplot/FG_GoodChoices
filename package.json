@@ -1,0 +1,12 @@
+{
+  "name": "FallHarvest",
+  "private": true,
+  "scripts": {
+    "start": ""
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "http-server": "^0.9.0",
+    "node-sass": "^3.8.0"
+  }
+}
