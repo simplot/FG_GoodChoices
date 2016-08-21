@@ -1,16 +1,93 @@
 <!doctype html>
 <html ng-app="FallHarvestApp">
 <head>
+  <meta name="Description" content="" />
+  <meta name="Keywords" content="" />
+
   <script src="//code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
-
   <script src="js/site.js"></script>
 
   <link rel="stylesheet" href="style/site.css">
+  <link href='https://fonts.googleapis.com/css?family=Slabo+13px' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div ng-controller="FallHarvestController as vm" ng-cloak>
-    ....
+    <header id="header" class="primary-header navbar fluid-container">
+  		<nav class="nav">
+  			<ul id="navigation" class="nav-tabs">
+          <li>
+            <div class="inner seasonal">
+              <a href="#seasonal"><strong>SEASONAL</strong> CELEBRATIONS</a>
+            </div>
+          </li>
+          <li>
+            <div class="inner gameday">
+              <a href="#gameday"><strong>GAME DAY</strong> GATHERINGS</a>
+            </div>
+          </li>
+          <li>
+            <div class="inner logo">
+              <a href="#top"><img src="img/simplot-fall-harvest-logo.png" alt="Simplot Fall Harvest logo" /></a>
+            </div>
+          </li>
+          <li>
+            <div class="inner recipes">
+              <a href="#recipes"><strong>RECIPES</strong></a>
+            </div>
+          </li>
+          <li>
+            <div class="inner save">
+              <a href="#save">SAVE UP TO <strong>$2500</strong></a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <section id="top" class="page fluid-container">
+        <div class="hero">
+          <img src="img/tablescape-home.jpg" class="col-xs-12 img-responsive" alt="tablescape top" />
+        </div>
+        <div class="row">
+          <div class="col-md-8 push-md-2">
+            <h4 class="center intro-text">Satisfy guests’ cravings for seasonally inspired menus with the real, simple products only Simplot can deliver. With videos, trends and fall-inspired recipes, Simplot Fall Harvest will help bring friends and family to your table.</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 push-md-2">
+            <h2 class="center">SEE WHAT'S IN <strong>SEASON</strong></h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="callout seasonal">
+              <a class="image-link" href="#" style="background-image: url('img/seasonal-tablescape-angled-hands.jpg');">
+                <div class="inner">
+                  <h3 class="center"><strong>SEASONAL</strong> CELEBRATIONS</h3>
+                  <img src="img/circle-arrow.png" width="82" height="82" />
+                </div>
+              </a>
+              <a class="learn-more" href="#" class="center">LEARN MORE</a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="callout gameday">
+              <a class="image-link" href="#" style="background-image: url('img/seasonal-tablescape-angled-hands.jpg');">
+                <div class="inner">
+                  <h3 class="center"><strong>GAME DAY</strong> GATHERINGS</h3>
+                  <img src="img/circle-arrow.png" width="82" height="82" />
+                </div>
+              </a>
+              <a class="learn-more" href="#" class="center">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="down-arrow">
+          <a href="#seasonal"><img src="img/scroll-down-arrow.png" width="75" alt="scroll to Seasonal Celebrations" /></a>
+        </div>
+      </section>
+    </div>
   </div>
 </body>
 </html>

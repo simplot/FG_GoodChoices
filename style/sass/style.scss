@@ -1,0 +1,14 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+// DEFINE BASE VARIABLES
+@import "partials/custom-variables";
+
+
+// Import bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// SITE STYLES
+@import "partials/site";

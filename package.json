@@ -2,11 +2,14 @@
   "name": "FallHarvest",
   "private": true,
   "scripts": {
-    "start": ""
+    "start": "",
+    "build-css": "node-sass --include-path style style/sass/style.scss style/site.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.3",
     "http-server": "^0.9.0",
-    "node-sass": "^3.8.0"
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.10.2"
   }
 }

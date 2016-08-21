@@ -1,0 +1,201 @@
+// Hide only visually, but have it available for screenreaders:by Jon Neal
+// www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden
+@mixin visually-hidden {
+  border:0; clip:rect(0 0 0 0); height:1px; margin:-1px; overflow:hidden; padding:0; position:absolute; width:1px;
+  // Extends the .visuallyhidden class to allow the element to be focusable
+  // when navigated to via the keyboard:drupal.org/node/897638
+  &.focusable:active, &.focusable:focus, &.focus {
+    clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  line-height: 140%;
+}
+body, #header {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.center {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.nav-tabs {
+  list-style: none;
+  padding-left: 0;
+  border-bottom: 0;
+  margin-bottom: 0;
+  li {
+    width: 20%;
+    padding: 0 2px;
+    float: left;
+    text-align: center;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    .inner {
+      border-top: 5px solid;
+      border-bottom: 5px solid;
+      margin-top: 26%;
+      a {
+        text-decoration: none;
+        transition: all .2s;
+        display: inline-block;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &.seasonal {
+        border-color: $brand-primary;
+        a {
+          color: $brand-primary;
+          &:hover {
+            background: $brand-primary;
+            color: $white;
+          }
+        }
+      }
+      &.gameday {
+        border-color: $brand-secondary;
+        a {
+          color: $brand-secondary;
+          &:hover {
+            background: $brand-secondary;
+            color: $white;
+          }
+        }
+      }
+      &.logo {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        a {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+      &.recipes {
+        border-color: $gray;
+        a {
+          color: $gray;
+          &:hover {
+            background: $gray;
+            color: $white;
+          }
+        }
+      }
+      &.save {
+        border-color: $gray-light;
+        a {
+          color: $gray-light;
+          &:hover {
+            background: $gray-light;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+#main {
+  margin-top: -4%;
+  > section {
+
+  }
+}
+.down-arrow {
+  position: absolute;
+  width: 100%;
+  margin: 50px 0;
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+#top {
+  // margin-top: -4%;
+  z-index: -1;
+  position: relative;
+  .intro-text {
+    letter-spacing: 0;
+  }
+  .hero {
+    margin-top: -40px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+    img {
+      padding: 0;
+    //  width: 100%;
+    }
+  }
+  .callout {
+    // padding: 0 2%;
+    position: relative;
+    .learn-more {
+      display: block;
+      text-align: center;
+    }
+    .image-link {
+      border: 5px solid;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 310px;
+      display: block;
+      height: 100%;
+      color: $white;
+      margin-bottom: 10px;
+      .inner {
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.35);
+        padding: 100px 0 0;
+        transition: background-color .2s;
+        img {
+          display: block;
+          margin: 20px auto 30px;
+        }
+      }
+      &:hover {
+        .inner {
+          background: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+    &.seasonal {
+      a {
+        margin-left: 90px;
+        margin-right: 22.5px;
+      }
+      .image-link {
+        border-color: $brand-primary;
+      }
+    }
+    &.gameday {
+      a {
+        margin-right: 90px;
+        margin-left: 22.5px;
+      }
+      .image-link {
+        border-color: $brand-secondary;
+      }
+    }
+  }
+}
