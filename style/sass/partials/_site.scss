@@ -8,18 +8,47 @@
     clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;
   }
 }
-
+.visually-hidden {
+  @include visually-hidden;
+}
 html, body {
   height: 100%;
 }
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
   margin-bottom: 25px;
-  line-height: 140%;
+  line-height: 120%;
+  &.no-margin {
+    margin-bottom: 0;
+  }
+  &.intro-text {
+    letter-spacing: 0;
+    line-height: 140%;
+  }
 }
 body, #header {
   max-width: 1400px;
   margin: 0 auto;
+}
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  padding: 5px 80px 5px 10px;
+  background: url("#{$images}/select-arrow-3.png") no-repeat right $white;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+input {
+  padding: 5px 10px;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  border: 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,.35);
+}
+.img-responsive {
+  max-width: 100%;
 }
 .center {
   text-align: center;
@@ -132,9 +161,6 @@ body, #header {
   // margin-top: -4%;
   z-index: -1;
   position: relative;
-  .intro-text {
-    letter-spacing: 0;
-  }
   .hero {
     margin-top: -40px;
     margin-bottom: 25px;
@@ -181,7 +207,7 @@ body, #header {
     }
     &.seasonal {
       a {
-        margin-left: 90px;
+      //  margin-left: 90px;
         margin-right: 22.5px;
       }
       .image-link {
@@ -190,12 +216,107 @@ body, #header {
     }
     &.gameday {
       a {
-        margin-right: 90px;
+      //  margin-right: 90px;
         margin-left: 22.5px;
       }
       .image-link {
         border-color: $brand-secondary;
       }
+    }
+  }
+}
+#recipes {
+  margin-top: 120px;
+  .form-row {
+    margin-bottom: $spacer-y;
+  }
+  .sort-by {
+    margin-bottom: $spacer-y / 2;
+  }
+  #form-recipe-filters {
+    > span {
+      display: inline-block;
+      margin-right: $spacer-x;
+      label {
+        display: block;
+      }
+    }
+  }
+  #form-recipe-search {
+    float: right;
+    margin-top: $spacer-y * 2;
+  }
+  .card-block {
+    padding: 0;
+  }
+  .card {
+    box-shadow: 0 2px 4px rgba(0,0,0,.35);
+    margin: 12.5px;
+    padding-right: 0;
+    padding-left: 0;
+    float: left;
+    width: calc(25% - 25px);
+    &.double-wide {
+      width: calc(50% - 25px);
+    }
+    .inner {
+      padding: 0.75rem;
+    }
+  }
+  .card-img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    //margin-left: -12.5px;
+    width: 100%;
+  }
+  .card-title {
+    font-weight: bold;
+    width: 80%;
+    text-transform: uppercase;
+  }
+  .card-subtitle {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: $card-spacer-y;
+    display: block;
+  }
+  .card-link {
+    font-weight: bold;
+    margin-top: $card-spacer-y * 2;
+    margin-bottom: $card-spacer-y * 2;
+  }
+  .view-more-recipes {
+    width: 100%;
+    text-align: center;
+    margin: $spacer-y * 2 0;
+  }
+}
+#primary-footer {
+  .footer-divider {
+    position: relative;
+    height: 10px;
+  //  width: 100%;
+    background-color: $gray;
+    margin-top: $spacer-y * 2;
+    margin-bottom: $spacer-y * 2;
+    .inner {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 68px;
+        margin-top: -28px;
+        //margin: 0 auto;
+      }
+    }
+  }
+  .footer-links-container {
+    margin-bottom: $spacer-y;
+  }
+  .footer-links {
+    float: right;
+    margin-top: $spacer-y * 2;
+    a {
+      margin-right: $spacer-x;
     }
   }
 }

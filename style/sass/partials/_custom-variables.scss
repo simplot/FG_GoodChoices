@@ -155,7 +155,7 @@ $container-max-widths: (
 //
 // Set the number of columns and specify the width of the gutters.
 
-$grid-columns:      12 !default;
+$grid-columns:      24 !default;
 $grid-gutter-width: 25px !default;
 
 
@@ -316,8 +316,8 @@ $btn-border-radius-sm:           $border-radius-sm !default;
 
 // Forms
 
-$input-padding-x:                .75rem !default;
-$input-padding-y:                .5rem !default;
+$input-padding-x:                .5rem !default;
+$input-padding-y:                1rem !default;
 $input-line-height:              1.25 !default;
 
 $input-bg:                       #fff !default;
