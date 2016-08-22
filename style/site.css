@@ -5328,6 +5328,8 @@ select {
   padding: 5px 80px 5px 10px;
   background: url("../img/select-arrow-3.png") no-repeat right #fff;
   border: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
 
 input {
@@ -5336,6 +5338,8 @@ input {
   -moz-appearance: none;
   appearance: none;
   border: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
 
 .img-responsive {
@@ -5410,9 +5414,6 @@ input {
             background: #838b7e;
             color: #fff; }
 
-#main {
-  margin-top: -4%; }
-
 .down-arrow {
   position: absolute;
   width: 100%;
@@ -5483,6 +5484,8 @@ input {
   #recipes .card-block {
     padding: 0; }
   #recipes .card {
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     margin: 12.5px;
     padding-right: 0;
