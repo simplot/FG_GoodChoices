@@ -5620,8 +5620,12 @@ input {
   #recipes #form-recipe-search {
     float: right;
     margin-top: 2rem; }
-  #recipes .card-block {
+  #recipes .recipe-card-container {
     padding: 0; }
+  #recipes .card, #recipes .grid-sizer {
+    width: calc(25% - 25px); }
+  #recipes .grid-item--width2 {
+    width: calc(50% - 25px); }
   #recipes .card {
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
@@ -5629,8 +5633,7 @@ input {
     margin: 12.5px;
     padding-right: 0;
     padding-left: 0;
-    float: left;
-    width: calc(25% - 25px); }
+    float: left; }
     #recipes .card.double-wide {
       width: calc(50% - 25px); }
     #recipes .card a {

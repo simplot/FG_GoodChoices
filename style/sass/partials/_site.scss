@@ -434,8 +434,19 @@ input {
     float: right;
     margin-top: $spacer-y * 2;
   }
-  .card-block {
+  .recipe-card-container {
     padding: 0;
+    // width: 1600px;
+  }
+  .card, .grid-sizer {
+    width: calc(25% - 25px);
+//   width: 25%;
+    // width: 308px;
+  }
+  .grid-item--width2 {
+    width: calc(50% - 25px);
+  //  width: 50%;
+    // width: 631px;
   }
   .card {
     @include box-shadow( 0, 2px, 4px, rgba( 0, 0, 0, .35 ) );
@@ -443,7 +454,6 @@ input {
     padding-right: 0;
     padding-left: 0;
     float: left;
-    width: calc(25% - 25px);
     &.double-wide {
       width: calc(50% - 25px);
     }
