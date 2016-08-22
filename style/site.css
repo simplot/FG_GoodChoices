@@ -5317,6 +5317,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0;
     line-height: 140%; }
 
+strong {
+  font-family: "Bitter", serif;
+  font-weight: 700; }
+
 body, #header {
   max-width: 1400px;
   margin: 0 auto; }
@@ -5356,9 +5360,7 @@ input {
   border-bottom: 0;
   margin-bottom: 0; }
   .nav-tabs li {
-    width: 20%;
     padding: 0 2px;
-    float: left;
     text-align: center; }
     .nav-tabs li:first-child {
       padding-left: 0; }
@@ -5366,8 +5368,7 @@ input {
       padding-right: 0; }
     .nav-tabs li .inner {
       border-top: 5px solid;
-      border-bottom: 5px solid;
-      margin-top: 26%; }
+      border-bottom: 5px solid; }
       .nav-tabs li .inner a {
         text-decoration: none;
         transition: all .2s;
@@ -5379,43 +5380,53 @@ input {
         width: 100%; }
         .nav-tabs li .inner a:hover {
           cursor: pointer; }
-      .nav-tabs li .inner.seasonal {
-        border-color: #d2983c; }
-        .nav-tabs li .inner.seasonal a {
-          color: #d2983c; }
-          .nav-tabs li .inner.seasonal a:hover {
-            background: #d2983c;
-            color: #fff; }
-      .nav-tabs li .inner.gameday {
-        border-color: #942e37; }
-        .nav-tabs li .inner.gameday a {
-          color: #942e37; }
-          .nav-tabs li .inner.gameday a:hover {
-            background: #942e37;
-            color: #fff; }
-      .nav-tabs li .inner.logo {
-        margin: 0;
-        padding: 0;
-        border: 0; }
-        .nav-tabs li .inner.logo a img {
-          max-width: 100%; }
-      .nav-tabs li .inner.recipes {
-        border-color: #5f514e; }
-        .nav-tabs li .inner.recipes a {
-          color: #5f514e; }
-          .nav-tabs li .inner.recipes a:hover {
-            background: #5f514e;
-            color: #fff; }
-      .nav-tabs li .inner.save {
-        border-color: #838b7e; }
-        .nav-tabs li .inner.save a {
-          color: #838b7e; }
-          .nav-tabs li .inner.save a:hover {
-            background: #838b7e;
-            color: #fff; }
+
+#navigation li {
+  width: 20%;
+  float: left; }
+  #navigation li:first-child {
+    padding-left: 0; }
+  #navigation li:last-child {
+    padding-right: 0; }
+  #navigation li .inner {
+    margin-top: 26%; }
+    #navigation li .inner.seasonal {
+      border-color: #d2983c; }
+      #navigation li .inner.seasonal a {
+        color: #d2983c; }
+        #navigation li .inner.seasonal a:hover {
+          background: #d2983c;
+          color: #fff; }
+    #navigation li .inner.gameday {
+      border-color: #942e37; }
+      #navigation li .inner.gameday a {
+        color: #942e37; }
+        #navigation li .inner.gameday a:hover {
+          background: #942e37;
+          color: #fff; }
+    #navigation li .inner.logo {
+      margin: 0;
+      padding: 0;
+      border: 0; }
+      #navigation li .inner.logo a img {
+        max-width: 100%; }
+    #navigation li .inner.recipes {
+      border-color: #5f514e; }
+      #navigation li .inner.recipes a {
+        color: #5f514e; }
+        #navigation li .inner.recipes a:hover {
+          background: #5f514e;
+          color: #fff; }
+    #navigation li .inner.save {
+      border-color: #838b7e; }
+      #navigation li .inner.save a {
+        color: #838b7e; }
+        #navigation li .inner.save a:hover {
+          background: #838b7e;
+          color: #fff; }
 
 .down-arrow {
-  position: absolute;
+  position: relative;
   width: 100%;
   margin: 50px 0; }
   .down-arrow a {
@@ -5466,6 +5477,52 @@ input {
       margin-left: 22.5px; }
     #top .callout.gameday .image-link {
       border-color: #942e37; }
+
+#seasonal {
+  position: relative; }
+  #seasonal .outline {
+    border: 5px solid #d2983c;
+    padding: 2rem 0.5rem 1rem; }
+  #seasonal h1 {
+    color: #d2983c; }
+  #seasonal .circle-stat {
+    width: 185px;
+    height: 185px;
+    position: absolute;
+    right: 0;
+    top: -3rem; }
+    #seasonal .circle-stat img {
+      width: 100%;
+      position: relative;
+      z-index: 10; }
+    #seasonal .circle-stat .overlay {
+      position: absolute;
+      top: 0;
+      display: table;
+      width: 100%;
+      height: 100%; }
+      #seasonal .circle-stat .overlay .inner {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+        position: relative;
+        z-index: 20;
+        color: #fff; }
+        #seasonal .circle-stat .overlay .inner h3, #seasonal .circle-stat .overlay .inner p {
+          margin-bottom: 0;
+          line-height: 130%; }
+        #seasonal .circle-stat .overlay .inner p {
+          font-size: 14px; }
+        #seasonal .circle-stat .overlay .inner small {
+          font-size: 11px; }
+  #seasonal .nav-tabs {
+    margin: 0 0.25rem; }
+    #seasonal .nav-tabs li .inner {
+      border-color: #d2983c; }
+      #seasonal .nav-tabs li .inner a {
+        color: #d2983c; }
+        #seasonal .nav-tabs li .inner a span {
+          font-weight: 900; }
 
 #recipes {
   margin-top: 120px; }
@@ -5528,7 +5585,7 @@ input {
 
 #primary-footer .footer-divider {
   position: relative;
-  height: 10px;
+  height: 5px;
   background-color: #5f514e;
   margin-top: 2rem;
   margin-bottom: 2rem; }
@@ -5537,7 +5594,7 @@ input {
     text-align: center; }
     #primary-footer .footer-divider .inner img {
       width: 68px;
-      margin-top: -28px; }
+      margin-top: -31px; }
 
 #primary-footer .footer-links-container {
   margin-bottom: 1rem; }
