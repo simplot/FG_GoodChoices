@@ -259,14 +259,21 @@ input {
     &.double-wide {
       width: calc(50% - 25px);
     }
-    .inner {
-      padding: 0.75rem;
+    a {
+      text-decoration: none;
+      > .inner {
+        padding: 0.75rem;
+        display: inline-block;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .card-img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    //margin-left: -12.5px;
+  //  margin-bottom: $card-spacer-y;
     width: 100%;
   }
   .card-title {
@@ -281,9 +288,13 @@ input {
     display: block;
   }
   .card-link {
+    text-decoration: underline;
     font-weight: bold;
     margin-top: $card-spacer-y * 2;
     margin-bottom: $card-spacer-y * 2;
+    &:hover {
+      text-decoration: none;
+    }
   }
   .view-more-recipes {
     width: 100%;
@@ -318,5 +329,66 @@ input {
     a {
       margin-right: $spacer-x;
     }
+  }
+}
+
+/*
+// Hover effect for recipe card images
+*/
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-bottom: 5px solid $white;
+    border-top: 5px solid $white;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+    .inner {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .overlay {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+    }
+    img {
+      filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+      filter: brightness(0.6);
+      -webkit-filter: brightness(0.6);
+    }
+  }
+  img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+  p {
+    color: $white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 900;
   }
 }
