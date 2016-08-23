@@ -1,4 +1,4 @@
-var app = angular.module('FallHarvestApp', []);
+var app = angular.module('FallHarvestApp', ['ngAnimate']);
 
 ///////////////////////////////////////////////////////////////////////////////
 
