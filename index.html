@@ -288,10 +288,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-22">
             <div class="recipe-card-container fluid-container">
               <div class="row">
-                <div class="card double-wide">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
+                <div class="card" ng-class="{'double-wide': recipe.columns===2}" ng-repeat="recipe in vm.recipes">
+                  <a href="pdf/{{recipe.download}}" target="_blank">
                     <div class="hovereffect">
-                      <img class="card-img" src="img/flame-roasted-sweet-potato-potato-maple-pancakes.jpg" alt="flame-roasted sweet potato maple pancakes" />
+                      <img class="card-img" ng-src="img/recipes/thumb/{{recipe.image}}" alt="{{recipe.name}}" />
                       <div class="overlay">
                         <div class="inner">
                           <p>
@@ -301,176 +301,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                       </div>
                     </div>
                     <div class="inner">
-                      <h5 class="card-title">FLAME-ROASTED MAPLE SWEET POTATO PANCAKES WITH BOURBON BUTTER & PECANS</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory, alcohol-infused flavors, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/sweet-breakfast-pita.jpg" alt="sweet potato breakfast pita" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">SWEET POTATO BREAKFAST PITA</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/soups.jpg" alt="Hearty Grains & Butternut Squash Soup" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Hearty Grains & Butternut Squash Soup</h5>
-                      <small class="card-subtitle">Trends: Sweet & SAVORY, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/salad.jpg" alt="FIESTA SALAD BOWL" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">FIESTA SALAD BOWL</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites, bold & global flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/Fuji-Bourbon-Turkey-Mash-and-Beans.jpg" alt="Bourbon & Flame-roasted fuji apple glazed turkey" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Bourbon & Flame-roasted fuji apple glazed turkey</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory,  seasonal favorites, alcohol-infused flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img img-responsive" src="img/CARROTS-CHICKEN-GRAVY-MASH.jpg" alt="Parisian carrots in brown butter sage sauce with redskin mashed" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Parisian carrots in brown butter sage sauce with redskin mashed</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card double-wide">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/poutine.jpg" alt="THANKSGIVING sweet potato POUTINE" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">THANKSGIVING sweet potato POUTINE</h5>
-                      <small class="card-subtitle">Trends: SWEET & SAVORY, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/sidewinders.jpg" alt="SPICY SRIRACHA SIDEWINDERS" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">SPICY SRIRACHA SIDEWINDERS™</h5>
-                      <small class="card-subtitle">Trends: bold & global flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/cauliflower-and-carrots.jpg" alt="CURRIED CAULIFLOWER" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">CURRIED CAULIFLOWER</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites, bold & global flavors</small>
+                      <h5 class="card-title">{{recipe.name}}</h5>
+                      <small class="card-subtitle">Trends: {{recipe.trendDescriptions.join(', ')}}</small>
                       <div class="card-link">
                         RECIPE
                       </div>
