@@ -279,7 +279,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-7">
             <form id="form-recipe-search" name="form-recipe-search">
               <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
-              <input type="text" name="recipe-search" placeholder="Search by Keyword" />
+              <input type="text" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
             </form>
           </div>
         </div>
@@ -288,7 +288,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-22">
             <div class="recipe-card-container fluid-container">
               <div class="row">
-                <div class="card" ng-class="{'double-wide': recipe.columns===2}" ng-repeat="recipe in vm.recipes">
+                <div class="card" ng-class="{'double-wide': recipe.columns===2}" ng-repeat="recipe in vm.recipes | filter:{isVisible: true}">
                   <a href="pdf/{{recipe.download}}" target="_blank">
                     <div class="hovereffect">
                       <img class="card-img" ng-src="img/recipes/thumb/{{recipe.image}}" alt="{{recipe.name}}" />
@@ -302,7 +302,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     </div>
                     <div class="inner">
                       <h5 class="card-title">{{recipe.name}}</h5>
-                      <small class="card-subtitle">Trends: {{recipe.trendDescriptions.join(', ')}}</small>
+                      <small class="card-subtitle">Trends: {{recipe.derived.trendsDisplay}}</small>
                       <div class="card-link">
                         RECIPE
                       </div>

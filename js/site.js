@@ -2,11 +2,42 @@ var app = angular.module('FallHarvestApp', []);
 
 ///////////////////////////////////////////////////////////////////////////////
 
+function extractTerms(items, property) {
+    return _.uniq(_.flatten(items.map(function (item) { return item[property]; })));
+}
+
+function initializeRecipes(recipes) {
+    recipes.forEach(function (recipe) {
+        recipe.trendsDisplay = recipe.trendDescriptions.join(', ');
+        recipe.searchText = (recipe.name + ' ' + recipe.description).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    });
+}
+
 app.controller('FallHarvestController', function($scope) {
     var vm = this;
     window.gep = vm;
 
     vm.recipes = getRecipes();
+    initializeRecipes(vm.recipes);
+
+    vm.daypartTerms = extractTerms(vm.recipes, 'dayparts');
+    vm.productTerms = extractTerms(vm.recipes, 'products');
+    vm.trendTerms = extractTerms(vm.recipes, 'trends');
+
+    vm.filterParameters = {
+        text: '',
+        daypart: null,
+        product: null,
+        trend: null
+    };
+
+    vm.updateFilterResults = function () {
+        var filterText = vm.filterParameters.text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+        vm.recipes.forEach(function (recipe) {
+            recipe.isVisible = !filterText || recipe.searchText.indexOf(filterText) >= 0;
+        });
+    }
+    vm.updateFilterResults();
 
     $scope.$on('someName', function(event) {
         console.log('event fired:', event);
@@ -16,7 +47,7 @@ app.controller('FallHarvestController', function($scope) {
 ///////////////////////////////////////////////////////////////////////////////
 
 // put emit-on-update="someName" on an ng-repeat and it will fire someName
-// after the DOM settles down from rendering
+// after the DOM settles down from the angular rendering
 app.directive('emitOnUpdate', function($timeout) {
     return {
         restrict: 'A',
@@ -71,10 +102,10 @@ function getRecipes() {
             columns: +row[3],
             download: row[4],
             description: row[5],
-            dayparts: row[6].split('|').map(function (str) { return str.trim() }),
-            products: row[7].split('|').map(function (str) { return str.trim() }),
-            trends: row[8].split('|').map(function (str) { return str.trim() }),
-            trendDescriptions: row[9].split(',').map(function (str) { return str.trim() })
+            dayparts: row[6].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
+            products: row[7].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
+            trends: row[8].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
+            trendDescriptions: row[9].split(',').map(function (str) { return str.trim() }).filter(function (str) { return !!str; })
         };
         if (record.trends.length !== record.trendDescriptions.length) {
             console.log('warning: trends and descriptions lengths do not match for ' + record.name);
