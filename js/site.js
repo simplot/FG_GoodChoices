@@ -26,15 +26,21 @@ app.controller('FallHarvestController', function($scope) {
 
     vm.filterParameters = {
         text: '',
-        daypart: null,
-        product: null,
-        trend: null
+        daypart: '',
+        product: '',
+        trend: ''
     };
 
     vm.updateFilterResults = function () {
         var filterText = vm.filterParameters.text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
         vm.recipes.forEach(function (recipe) {
-            recipe.isVisible = !filterText || recipe.searchText.indexOf(filterText) >= 0;
+            var daypartMatch = !vm.filterParameters.daypart || recipe.dayparts.indexOf(vm.filterParameters.daypart) >= 0;
+            var productMatch = !vm.filterParameters.product || recipe.products.indexOf(vm.filterParameters.product) >= 0;
+            var trendMatch = !vm.filterParameters.trend || recipe.trends.indexOf(vm.filterParameters.trend) >= 0;
+            var textMatch = !filterText || recipe.searchText.indexOf(filterText) >= 0;
+
+            recipe.isVisible = daypartMatch && productMatch && trendMatch && textMatch;
         });
     }
     vm.updateFilterResults();

@@ -246,32 +246,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <form id="form-recipe-filters" name="form-recipe-filters">
               <span>
                 <label for="season-filter">Season:</label>
-                <select name="season-filter">
-                  <option value="all">All</option>
-                  <option value="fall">Fall</option>
-                  <option value="winter">Winter</option>
-                  <option value="spring">Spring</option>
-                  <option value="summer">Summer</option>
+                <select name="season-filter"
+                        ng-model="vm.filterParameters.daypart"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.daypartTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
               <span>
                 <label for="trend-filter">Trend:</label>
-                <select name="trend-filter">
-                  <option value="all">All</option>
-                  <option value="alcohol">Alcohol</option>
-                  <option value="bold">Bold</option>
-                  <option value="seasonal">Seasonal</option>
-                  <option value="sweet">Sweet</option>
+                <select name="trend-filter"
+                        ng-model="vm.filterParameters.trend"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.trendTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
               <span>
                 <label for="product-filter">Product:</label>
-                <select name="product-filter">
-                  <option value="all">All</option>
-                  <option value="potatoes">Potatoes</option>
-                  <option value="grains">Grains</option>
-                  <option value="vegetables">Vegetables</option>
-                  <option value="roasted">Roasted</option>
+                <select name="product-filter"
+                        ng-model="vm.filterParameters.product"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.productTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
             </form>
@@ -279,7 +276,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-7">
             <form id="form-recipe-search" name="form-recipe-search">
               <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
-              <input type="text" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
+              <input type="text" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
             </form>
           </div>
         </div>
@@ -302,7 +299,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                     </div>
                     <div class="inner">
                       <h5 class="card-title">{{recipe.name}}</h5>
-                      <small class="card-subtitle">Trends: {{recipe.derived.trendsDisplay}}</small>
+                      <small class="card-subtitle">Trends: {{recipe.trendsDisplay}}</small>
                       <div class="card-link">
                         RECIPE
                       </div>
