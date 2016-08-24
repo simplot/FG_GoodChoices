@@ -1,37 +1,29 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
-// below are some first stabs at animation examples for Angular -- please
-// see https://docs.angularjs.org/api/ngAnimate
-// and https://docs.angularjs.org/guide/animations
-
 /* The starting CSS styles for the enter animation */
 .card.ng-enter {
-  transition:0.5s linear all;
-  opacity:0;
-}
+  transition: 0.5s linear all;
+  opacity: 0; }
+
 /* The finishing CSS styles for the enter animation */
 .card.ng-enter.ng-enter-active {
-  opacity:1;
-}
+  opacity: 1; }
+
 /* The starting CSS styles for the leave animation */
 .card.ng-leave {
-  transition:0.5s linear all;
-  opacity:1;
-}
+  transition: 0.5s linear all;
+  opacity: 1; }
+
 /* The finishing CSS styles for the leave animation */
 .card.ng-leave.ng-leave-active {
-  opacity:0;
-}
+  opacity: 0; }
+
 /* The starting CSS styles for the move animation */
 .card.ng-move {
-  transition:0.5s linear all;
-}
+  transition: 0.5s linear all; }
+
 /* The finishing CSS styles for the move animation */
-.card.ng-move.ng-move-active {
-}
-
-
 /*!
  * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
@@ -5521,6 +5513,11 @@ input {
     padding: 2rem 0.5rem 1rem; }
   #seasonal h1 {
     color: #d2983c; }
+  #seasonal .product-group {
+    padding: 0 2rem;
+    display: none; }
+    #seasonal .product-group.active {
+      display: block !important; }
   #seasonal .circle-stat {
     width: 185px;
     height: 185px;
@@ -5566,48 +5563,96 @@ input {
         transition: all .2s; }
         #seasonal .nav-tabs li .inner a span {
           font-weight: 900; }
-      #seasonal .nav-tabs li .inner:hover {
+        #seasonal .nav-tabs li .inner a p {
+          display: none !important; }
+      #seasonal .nav-tabs li .inner:hover, #seasonal .nav-tabs li .inner.active {
         margin-top: -32px; }
-        #seasonal .nav-tabs li .inner:hover a {
+        #seasonal .nav-tabs li .inner:hover a, #seasonal .nav-tabs li .inner.active a {
           background: #d2983c;
           color: #fff; }
-          #seasonal .nav-tabs li .inner:hover a header {
+          #seasonal .nav-tabs li .inner:hover a header, #seasonal .nav-tabs li .inner.active a header {
             font-size: 24px; }
-          #seasonal .nav-tabs li .inner:hover a p {
+          #seasonal .nav-tabs li .inner:hover a p, #seasonal .nav-tabs li .inner.active a p {
             width: 75%;
             margin: 0 auto;
             display: block !important; }
-  #seasonal .product-group {
+  #seasonal .carousel {
     padding: 0 2rem; }
-  #seasonal article.active > .inner {
-    border: 5px solid #d2983c; }
+    #seasonal .carousel .carousel-item {
+      margin: 1rem 0 1.5rem;
+      border: 5px solid #d2983c;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 12.5px;
+      margin-right: 12.5px;
+      width: calc(100% - 25px); }
+      #seasonal .carousel .carousel-item img {
+        max-width: 100%; }
+      #seasonal .carousel .carousel-item .overlay {
+        position: absolute;
+        max-width: 45%; }
+        #seasonal .carousel .carousel-item .overlay.bottom {
+          bottom: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.top {
+          top: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.right {
+          right: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.left {
+          left: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.center {
+          margin: 0 auto;
+          top: 8rem;
+          left: 16rem; }
+        #seasonal .carousel .carousel-item .overlay.bottom-left {
+          bottom: 2rem;
+          left: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.bottom-right {
+          bottom: 2rem;
+          right: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.top-right {
+          top: 2rem;
+          right: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.top-left {
+          top: 2rem;
+          left: 2rem; }
+        #seasonal .carousel .carousel-item .overlay.center-left {
+          margin: 0 auto;
+          top: 8rem;
+          left: 16rem; }
   #seasonal article > .inner {
-    padding: 1rem 1rem;
+    padding: 30px;
     height: 260px; }
     #seasonal article > .inner h6 {
       margin-bottom: 0.5rem;
       text-transform: uppercase;
-      color: #d2983c;
       font-family: "Bitter", serif;
       font-weight: 900; }
+      #seasonal article > .inner h6 a {
+        color: #d2983c; }
+        #seasonal article > .inner h6 a:hover {
+          cursor: pointer;
+          color: #5f514e; }
     #seasonal article > .inner p strong {
       color: #d2983c; }
-    #seasonal article > .inner .recipe-link {
-      display: inline-block; }
-      #seasonal article > .inner .recipe-link > .inner {
-        border-top: 2px solid #d2983c;
-        border-bottom: 2px solid #d2983c;
-        padding: 0.25rem 0;
-        position: absolute;
-        bottom: 1rem;
-        right: 2rem; }
-      #seasonal article > .inner .recipe-link a {
-        text-decoration: none;
-        color: #d2983c;
-        padding: 0.25rem 1rem; }
-        #seasonal article > .inner .recipe-link a:hover {
-          background: #d2983c;
-          color: #fff; }
+  #seasonal article .recipe-link {
+    display: inline-block; }
+    #seasonal article .recipe-link > .inner {
+      border-top: 2px solid #d2983c;
+      border-bottom: 2px solid #d2983c;
+      padding: 0.25rem 0;
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem; }
+    #seasonal article .recipe-link a {
+      text-decoration: none;
+      color: #d2983c;
+      padding: 0.25rem 1rem; }
+      #seasonal article .recipe-link a:hover {
+        background: #d2983c;
+        color: #fff; }
+  #seasonal article.active > .inner {
+    padding: 25px;
+    border: 5px solid #d2983c; }
 
 #gameday {
   position: relative; }

@@ -251,7 +251,6 @@ input {
     }
   }
 }
-
 #seasonal {
   position: relative;
   .outline {
@@ -260,6 +259,13 @@ input {
   }
   h1 {
     color: $brand-primary;
+  }
+  .product-group {
+    padding: 0 $spacer-x * 2;
+    display: none;
+    &.active {
+      display: block !important;
+    }
   }
   .circle-stat {
     width: 185px;
@@ -315,8 +321,11 @@ input {
         span {
           font-weight: 900;
         }
+        p {
+          display: none !important;
+        }
       }
-      &:hover {
+      &:hover, &.active {
         margin-top: -32px;
         a {
           background: $brand-primary;
@@ -333,48 +342,110 @@ input {
       }
     }
   }
-  .product-group {
+  .carousel {
     padding: 0 $spacer-x * 2;
-  }
-  article {
-    &.active {
-      > .inner {
-        border: 5px solid $brand-primary;
+    .carousel-item {
+      margin: $spacer-y 0 $spacer-y * 1.5;
+      border: 5px solid $brand-primary;
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: $grid-gutter-width / 2;
+      margin-right: $grid-gutter-width / 2;
+      width: calc(100% - #{$grid-gutter-width});
+      //position: relative;
+      img {
+        max-width: 100%;
+      }
+      .overlay {
+        position: absolute;
+        max-width: 45%;
+        &.bottom {
+          bottom: $spacer-y * 2;
+        }
+        &.top {
+          top: $spacer-y * 2;
+        }
+        &.right {
+          right: $spacer-x * 2;
+        }
+        &.left {
+          left: $spacer-x * 2;
+        }
+        &.center {
+          margin: 0 auto;
+          top: 8rem;
+          left: 16rem
+        }
+        &.bottom-left {
+          bottom: $spacer-y * 2;
+          left: $spacer-x * 2;
+        }
+        &.bottom-right {
+          bottom: $spacer-y * 2;
+          right: $spacer-x * 2;
+        }
+        &.top-right {
+          top: $spacer-y * 2;
+          right: $spacer-x * 2;
+        }
+        &.top-left {
+          top: $spacer-y * 2;
+          left: $spacer-x * 2;
+        }
+        &.center-left {
+          margin: 0 auto;
+          top: 8rem;
+          left: 16rem
+        }
       }
     }
+  }
+  article {
     > .inner {
-      padding: $spacer-y $spacer-x;
+      padding: 30px;
       height: 260px;
       h6 {
         margin-bottom: $spacer-y / 2;
         text-transform: uppercase;
-        color: $brand-primary;
         font-family: $font-family-serif-2;
         font-weight: 900;
+        a {
+          color: $brand-primary;
+          &:hover {
+            cursor: pointer;
+            color: $gray;
+          }
+        }
       }
       p strong {
         color: $brand-primary;
       }
-      .recipe-link {
-        display: inline-block;
-        > .inner {
-          border-top: 2px solid $brand-primary;
-          border-bottom: 2px solid $brand-primary;
-          padding: $spacer-y / 4 0;
-          position: absolute;
-          bottom: $spacer-y;
-          right: $spacer-x * 2;
+    }
+    .recipe-link {
+      display: inline-block;
+      > .inner {
+        border-top: 2px solid $brand-primary;
+        border-bottom: 2px solid $brand-primary;
+        padding: $spacer-y / 4 0;
+        position: absolute;
+        bottom: $spacer-y;
+        right: $spacer-x * 2;
+      }
+      a {
+        text-decoration: none;
+        color: $brand-primary;
+        padding: $spacer-y / 4 $spacer-x;
+      //  margin: $spacer-y / 2 0;
+        &:hover {
+          background: $brand-primary;
+          color: $white;
         }
-        a {
-          text-decoration: none;
-          color: $brand-primary;
-          padding: $spacer-y / 4 $spacer-x;
-        //  margin: $spacer-y / 2 0;
-          &:hover {
-            background: $brand-primary;
-            color: $white;
-          }
-        }
+      }
+    }
+    &.active {
+      > .inner {
+        padding: 25px;
+        border: 5px solid $brand-primary;
       }
     }
   }
@@ -500,7 +571,7 @@ input {
   }
   .card {
     @include box-shadow( 0, 2px, 4px, rgba( 0, 0, 0, .35 ) );
-    margin: 12.5px;
+    margin: $grid-gutter-width / 2;
     padding-right: 0;
     padding-left: 0;
     float: left;

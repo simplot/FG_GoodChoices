@@ -2,6 +2,57 @@
 function pageReady() {
     // here's where any run-once-on-setup code can be put
     console.log('page is set up and running');
+
+    //Handles the seasonal product category nav tabs
+    // $('#seasonal .nav-tabs li a').click(function () {
+    //
+    // });
+    //
+    //Handles the navigation for product carousel thumbnails
+    $('[id^=seasonal-group-carousel-selector-]').click(function () {
+      var id_selector = $(this).attr("id");
+      var carousel_index = 0;
+      try {
+        var id = /-(\d+)$/.exec(id_selector)[1];
+
+        //set the carousel index on group change
+        if( id == 1 ) {
+          carousel_index = 3;
+        }
+        else if( id == 2 ) {
+          carousel_index = 6;
+        }
+        $('#seasonal-carousel').carousel(carousel_index);
+        // console.log(id_selector, id);
+        $('#seasonal .nav-tabs .inner').removeClass('active');
+        $(this).parent().addClass('active');
+        $('#seasonal .product-group').removeClass('active');
+        $('#seasonal .product-group.group-' + id).addClass('active');
+
+        //Default to the first product in group
+        $('#seasonal .product-group > article').removeClass('active');
+        $('#seasonal .product-group.group-' + id + ' > article:first-child').addClass('active');
+      }
+      catch (e) {
+        console.log('Regex failed!', e);
+      }
+    });
+
+    //Handles the seasonal product carousel thumbnails
+    $('[id^=seasonal-carousel-selector-]').click(function () {
+      var id_selector = $(this).attr("id");
+      try {
+        var id = /-(\d+)$/.exec(id_selector)[1];
+        // console.log(id_selector, id);
+        $('.product-group > article').removeClass('active');
+        $(this).parent().parent().parent().addClass('active');
+        $('#seasonal-carousel').carousel(parseInt(id));
+      }
+      catch (e) {
+        console.log('Regex failed!', e);
+      }
+    });
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////
