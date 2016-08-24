@@ -5307,8 +5307,13 @@ a.text-danger:focus, a.text-danger:hover {
 html, body {
   height: 100%; }
 
+h1, h2, h3 {
+  letter-spacing: 2px; }
+
+h4, h5, h6 {
+  letter-spacing: 1px; }
+
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 2px;
   margin-bottom: 25px;
   line-height: 120%; }
   h1.no-margin, h2.no-margin, h3.no-margin, h4.no-margin, h5.no-margin, h6.no-margin {
@@ -5541,6 +5546,37 @@ input {
             width: 75%;
             margin: 0 auto;
             display: block !important; }
+  #seasonal .product-group {
+    padding: 0 2rem; }
+  #seasonal article.active > .inner {
+    border: 5px solid #d2983c; }
+  #seasonal article > .inner {
+    padding: 1rem 1rem;
+    height: 260px; }
+    #seasonal article > .inner h6 {
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: #d2983c;
+      font-family: "Bitter", serif;
+      font-weight: 900; }
+    #seasonal article > .inner p strong {
+      color: #d2983c; }
+    #seasonal article > .inner .recipe-link {
+      display: inline-block; }
+      #seasonal article > .inner .recipe-link > .inner {
+        border-top: 2px solid #d2983c;
+        border-bottom: 2px solid #d2983c;
+        padding: 0.25rem 0;
+        position: absolute;
+        bottom: 1rem;
+        right: 2rem; }
+      #seasonal article > .inner .recipe-link a {
+        text-decoration: none;
+        color: #d2983c;
+        padding: 0.25rem 1rem; }
+        #seasonal article > .inner .recipe-link a:hover {
+          background: #d2983c;
+          color: #fff; }
 
 #gameday {
   position: relative; }
@@ -5742,4 +5778,5 @@ input {
     vertical-align: middle;
     text-align: center;
     font-weight: 900;
+    letter-spacing: 1px;
     font-family: "Bitter", serif; }
