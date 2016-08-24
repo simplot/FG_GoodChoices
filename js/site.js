@@ -1,19 +1,16 @@
+
+function pageReady() {
+    // here's where any run-once-on-setup code can be put
+    console.log('page is set up and running');
+}
+
+///////////////////////////////////////////////////////////////////////////////
+
 var app = angular.module('FallHarvestApp', ['ngAnimate']);
 
 ///////////////////////////////////////////////////////////////////////////////
 
-function extractTerms(items, property) {
-    return _.uniq(_.flatten(items.map(function (item) { return item[property]; })));
-}
-
-function initializeRecipes(recipes) {
-    recipes.forEach(function (recipe) {
-        recipe.trendsDisplay = recipe.trendDescriptions.join(', ');
-        recipe.searchText = (recipe.name + ' ' + recipe.description).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-    });
-}
-
-app.controller('FallHarvestController', function($scope) {
+app.controller('FallHarvestController', function($scope, $timeout) {
     var vm = this;
     window.gep = vm;
 
@@ -45,8 +42,13 @@ app.controller('FallHarvestController', function($scope) {
     }
     vm.updateFilterResults();
 
-    $scope.$on('someName', function(event) {
-        console.log('event fired:', event);
+    // example emit-on-update receiver:
+    // $scope.$on('someName', function(event) {
+    //     console.log('event fired:', event);
+    // });
+
+    $timeout(function() {
+        pageReady();
     });
 });
 
@@ -118,4 +120,15 @@ function getRecipes() {
         }
         return record;
     });
+}
+
+function initializeRecipes(recipes) {
+    recipes.forEach(function (recipe) {
+        recipe.trendsDisplay = recipe.trendDescriptions.join(', ');
+        recipe.searchText = (recipe.name + ' ' + recipe.description).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    });
+}
+
+function extractTerms(items, property) {
+    return _.uniq(_.flatten(items.map(function (item) { return item[property]; })));
 }
