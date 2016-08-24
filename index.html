@@ -12,6 +12,7 @@
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
 
   <script src="js/site.js"></script>
 </head>
@@ -281,32 +282,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
             <form id="form-recipe-filters" name="form-recipe-filters">
               <span>
                 <label for="season-filter">Season:</label>
-                <select name="season-filter">
-                  <option value="all">All</option>
-                  <option value="fall">Fall</option>
-                  <option value="winter">Winter</option>
-                  <option value="spring">Spring</option>
-                  <option value="summer">Summer</option>
+                <select name="season-filter"
+                        ng-model="vm.filterParameters.daypart"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.daypartTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
               <span>
                 <label for="trend-filter">Trend:</label>
-                <select name="trend-filter">
-                  <option value="all">All</option>
-                  <option value="alcohol">Alcohol</option>
-                  <option value="bold">Bold</option>
-                  <option value="seasonal">Seasonal</option>
-                  <option value="sweet">Sweet</option>
+                <select name="trend-filter"
+                        ng-model="vm.filterParameters.trend"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.trendTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
               <span>
                 <label for="product-filter">Product:</label>
-                <select name="product-filter">
-                  <option value="all">All</option>
-                  <option value="potatoes">Potatoes</option>
-                  <option value="grains">Grains</option>
-                  <option value="vegetables">Vegetables</option>
-                  <option value="roasted">Roasted</option>
+                <select name="product-filter"
+                        ng-model="vm.filterParameters.product"
+                        ng-change="vm.updateFilterResults()"
+                        ng-options="option for option in vm.productTerms track by option">
+                  <option value="">All</option>
                 </select>
               </span>
             </form>
@@ -314,7 +312,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-7">
             <form id="form-recipe-search" name="form-recipe-search">
               <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
-              <input type="text" name="recipe-search" placeholder="Search by Keyword" />
+              <input type="text" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
             </form>
           </div>
         </div>
@@ -323,10 +321,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
           <div class="col-md-22">
             <div class="recipe-card-container fluid-container">
               <div class="row">
-                <div class="card double-wide">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
+                <div class="card" ng-class="{'double-wide': recipe.columns===2}" ng-repeat="recipe in vm.recipes | filter:{isVisible: true}">
+                  <a href="pdf/{{recipe.download}}" target="_blank">
                     <div class="hovereffect">
-                      <img class="card-img" src="img/flame-roasted-sweet-potato-potato-maple-pancakes.jpg" alt="flame-roasted sweet potato maple pancakes" />
+                      <img class="card-img" ng-src="img/recipes/thumb/{{recipe.image}}" alt="{{recipe.name}}" />
                       <div class="overlay">
                         <div class="inner">
                           <p>
@@ -336,176 +334,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                       </div>
                     </div>
                     <div class="inner">
-                      <h5 class="card-title">FLAME-ROASTED MAPLE SWEET POTATO PANCAKES WITH BOURBON BUTTER & PECANS</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory, alcohol-infused flavors, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/sweet-breakfast-pita.jpg" alt="sweet potato breakfast pita" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">SWEET POTATO BREAKFAST PITA</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/soups.jpg" alt="Hearty Grains & Butternut Squash Soup" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Hearty Grains & Butternut Squash Soup</h5>
-                      <small class="card-subtitle">Trends: Sweet & SAVORY, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/salad.jpg" alt="FIESTA SALAD BOWL" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">FIESTA SALAD BOWL</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites, bold & global flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/Fuji-Bourbon-Turkey-Mash-and-Beans.jpg" alt="Bourbon & Flame-roasted fuji apple glazed turkey" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Bourbon & Flame-roasted fuji apple glazed turkey</h5>
-                      <small class="card-subtitle">Trends: Sweet & Savory,  seasonal favorites, alcohol-infused flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img img-responsive" src="img/CARROTS-CHICKEN-GRAVY-MASH.jpg" alt="Parisian carrots in brown butter sage sauce with redskin mashed" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">Parisian carrots in brown butter sage sauce with redskin mashed</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card double-wide">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/poutine.jpg" alt="THANKSGIVING sweet potato POUTINE" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">THANKSGIVING sweet potato POUTINE</h5>
-                      <small class="card-subtitle">Trends: SWEET & SAVORY, seasonal favorites</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/sidewinders.jpg" alt="SPICY SRIRACHA SIDEWINDERS" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">SPICY SRIRACHA SIDEWINDERS™</h5>
-                      <small class="card-subtitle">Trends: bold & global flavors</small>
-                      <div class="card-link">
-                        RECIPE
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <div class="card">
-                  <a href="pdf/AvocadoChimichurriRecipe.pdf" target="_blank">
-                    <div class="hovereffect">
-                      <img class="card-img" src="img/cauliflower-and-carrots.jpg" alt="CURRIED CAULIFLOWER" />
-                      <div class="overlay">
-                        <div class="inner">
-                          <p>
-                            DOWNLOAD RECIPE
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="inner">
-                      <h5 class="card-title">CURRIED CAULIFLOWER</h5>
-                      <small class="card-subtitle">Trends: seasonal favorites, bold & global flavors</small>
+                      <h5 class="card-title">{{recipe.name}}</h5>
+                      <small class="card-subtitle">Trends: {{recipe.trendsDisplay}}</small>
                       <div class="card-link">
                         RECIPE
                       </div>

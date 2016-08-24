@@ -1,6 +1,37 @@
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important; }
 
+// below are some first stabs at animation examples for Angular -- please
+// see https://docs.angularjs.org/api/ngAnimate
+// and https://docs.angularjs.org/guide/animations
+
+/* The starting CSS styles for the enter animation */
+.card.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+/* The finishing CSS styles for the enter animation */
+.card.ng-enter.ng-enter-active {
+  opacity:1;
+}
+/* The starting CSS styles for the leave animation */
+.card.ng-leave {
+  transition:0.5s linear all;
+  opacity:1;
+}
+/* The finishing CSS styles for the leave animation */
+.card.ng-leave.ng-leave-active {
+  opacity:0;
+}
+/* The starting CSS styles for the move animation */
+.card.ng-move {
+  transition:0.5s linear all;
+}
+/* The finishing CSS styles for the move animation */
+.card.ng-move.ng-move-active {
+}
+
+
 /*!
  * Bootstrap v4.0.0-alpha.3 (http://getbootstrap.com)
  * Copyright 2011-2016 The Bootstrap Authors
