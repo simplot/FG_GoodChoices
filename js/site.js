@@ -119,7 +119,7 @@ function pageReady() {
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-var app = angular.module('FallHarvestApp', ['ngAnimate']);
+var app = angular.module('FallHarvestApp', ['ngMaterial']);
 
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -220,6 +220,8 @@ function getRecipes() {
         ["Mashed Potato Flatbread", "mashed_potato_flatbread", "MshdPotFltbrd.jpg", "2", "MshdPotFltbrd.pdf", "", "", "Potatoes|Vegetables", "Seasonal", "Seasonal Favorites"],
         ["Loafer Pop Trio", "banh_mi_meatball_potato_pops", "LoaferPopTrio.jpg", "1", "LoaferPopTrio.pdf", "", "", "Potatoes|Vegetables", "Seasonal|Bold", "Seasonal Favorites, Bold & Global"]
     ].map(function (row) {
+        function trimify(str) { return str.trim(); }
+        function nonempty(str) { return !!str; }
         var record = {
             name: row[0],
             reference: row[1],
@@ -227,10 +229,10 @@ function getRecipes() {
             columns: +row[3],
             download: row[4],
             description: row[5],
-            dayparts: row[6].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
-            products: row[7].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
-            trends: row[8].split('|').map(function (str) { return str.trim() }).filter(function (str) { return !!str; }),
-            trendDescriptions: row[9].split(',').map(function (str) { return str.trim() }).filter(function (str) { return !!str; })
+            dayparts: row[6].split('|').map(trimify).filter(nonempty),
+            products: row[7].split('|').map(trimify).filter(nonempty),
+            trends: row[8].split('|').map(trimify).filter(nonempty),
+            trendDescriptions: row[9].split(',').map(trimify).filter(nonempty) 
         };
         if (record.trends.length !== record.trendDescriptions.length) {
             console.log('warning: trends and descriptions lengths do not match for ' + record.name);
