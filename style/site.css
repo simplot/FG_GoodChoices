@@ -5397,9 +5397,39 @@ input {
     .nav-tabs li .inner {
       border-top: 5px solid;
       border-bottom: 5px solid; }
+      .nav-tabs li .inner.seasonal {
+        border-color: #d2983c; }
+        .nav-tabs li .inner.seasonal a {
+          color: #d2983c; }
+          .nav-tabs li .inner.seasonal a:hover {
+            background: #d2983c;
+            color: #fff; }
+      .nav-tabs li .inner.gameday {
+        border-color: #942e37; }
+        .nav-tabs li .inner.gameday a {
+          color: #942e37; }
+          .nav-tabs li .inner.gameday a:hover {
+            background: #942e37;
+            color: #fff; }
+      .nav-tabs li .inner.recipes {
+        border-color: #5f514e; }
+        .nav-tabs li .inner.recipes a {
+          color: #5f514e; }
+          .nav-tabs li .inner.recipes a:hover {
+            background: #5f514e;
+            color: #fff; }
+      .nav-tabs li .inner.save {
+        border-color: #838b7e; }
+        .nav-tabs li .inner.save a {
+          color: #838b7e; }
+          .nav-tabs li .inner.save a:hover {
+            background: #838b7e;
+            color: #fff; }
       .nav-tabs li .inner a {
         text-decoration: none;
-        transition: all .2s;
+        -moz-transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
         display: inline-block;
         margin-top: 3px;
         margin-bottom: 3px;
@@ -5418,40 +5448,12 @@ input {
     padding-right: 0; }
   #navigation li .inner {
     margin-top: 26%; }
-    #navigation li .inner.seasonal {
-      border-color: #d2983c; }
-      #navigation li .inner.seasonal a {
-        color: #d2983c; }
-        #navigation li .inner.seasonal a:hover {
-          background: #d2983c;
-          color: #fff; }
-    #navigation li .inner.gameday {
-      border-color: #942e37; }
-      #navigation li .inner.gameday a {
-        color: #942e37; }
-        #navigation li .inner.gameday a:hover {
-          background: #942e37;
-          color: #fff; }
     #navigation li .inner.logo {
       margin: 0;
       padding: 0;
       border: 0; }
       #navigation li .inner.logo a img {
         max-width: 100%; }
-    #navigation li .inner.recipes {
-      border-color: #5f514e; }
-      #navigation li .inner.recipes a {
-        color: #5f514e; }
-        #navigation li .inner.recipes a:hover {
-          background: #5f514e;
-          color: #fff; }
-    #navigation li .inner.save {
-      border-color: #838b7e; }
-      #navigation li .inner.save a {
-        color: #838b7e; }
-        #navigation li .inner.save a:hover {
-          background: #838b7e;
-          color: #fff; }
 
 .down-arrow {
   position: relative;
@@ -5491,10 +5493,12 @@ input {
       width: 100%;
       background: rgba(0, 0, 0, 0.35);
       padding: 100px 0 0;
-      transition: background-color .2s; }
+      -moz-transition: background-color 0.2s;
+      -webkit-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
       #top .callout .image-link .inner img {
         display: block;
-        margin: 20px auto 30px; }
+        margin: 5px auto 45px; }
     #top .callout .image-link:hover .inner {
       background: transparent; }
   #top .callout.seasonal a {
@@ -5553,25 +5557,27 @@ input {
         #seasonal .circle-stat .overlay .inner small, #gameday .circle-stat .overlay .inner small {
           font-size: 11px;
           font-style: italic; }
-  #seasonal .nav-tabs, #gameday .nav-tabs {
+  #seasonal .outline .nav-tabs, #gameday .outline .nav-tabs {
     margin: 2rem 0.25rem 1rem; }
-    #seasonal .nav-tabs li .inner, #gameday .nav-tabs li .inner {
+    #seasonal .outline .nav-tabs li .inner, #gameday .outline .nav-tabs li .inner {
       border-color: #d2983c; }
-      #seasonal .nav-tabs li .inner a, #gameday .nav-tabs li .inner a {
+      #seasonal .outline .nav-tabs li .inner a, #gameday .outline .nav-tabs li .inner a {
         color: #d2983c;
-        transition: all .2s; }
-        #seasonal .nav-tabs li .inner a span, #gameday .nav-tabs li .inner a span {
+        -moz-transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s; }
+        #seasonal .outline .nav-tabs li .inner a span, #gameday .outline .nav-tabs li .inner a span {
           font-weight: 900; }
-        #seasonal .nav-tabs li .inner a p, #gameday .nav-tabs li .inner a p {
+        #seasonal .outline .nav-tabs li .inner a p, #gameday .outline .nav-tabs li .inner a p {
           display: none !important; }
-      #seasonal .nav-tabs li .inner:hover, #gameday .nav-tabs li .inner:hover, #seasonal .nav-tabs li .inner.active, #gameday .nav-tabs li .inner.active {
+      #seasonal .outline .nav-tabs li .inner:hover, #gameday .outline .nav-tabs li .inner:hover, #seasonal .outline .nav-tabs li .inner.active, #gameday .outline .nav-tabs li .inner.active {
         margin-top: -32px; }
-        #seasonal .nav-tabs li .inner:hover a, #gameday .nav-tabs li .inner:hover a, #seasonal .nav-tabs li .inner.active a, #gameday .nav-tabs li .inner.active a {
+        #seasonal .outline .nav-tabs li .inner:hover a, #gameday .outline .nav-tabs li .inner:hover a, #seasonal .outline .nav-tabs li .inner.active a, #gameday .outline .nav-tabs li .inner.active a {
           background: #d2983c;
           color: #fff; }
-          #seasonal .nav-tabs li .inner:hover a header, #gameday .nav-tabs li .inner:hover a header, #seasonal .nav-tabs li .inner.active a header, #gameday .nav-tabs li .inner.active a header {
+          #seasonal .outline .nav-tabs li .inner:hover a header, #gameday .outline .nav-tabs li .inner:hover a header, #seasonal .outline .nav-tabs li .inner.active a header, #gameday .outline .nav-tabs li .inner.active a header {
             font-size: 24px; }
-          #seasonal .nav-tabs li .inner:hover a p, #gameday .nav-tabs li .inner:hover a p, #seasonal .nav-tabs li .inner.active a p, #gameday .nav-tabs li .inner.active a p {
+          #seasonal .outline .nav-tabs li .inner:hover a p, #gameday .outline .nav-tabs li .inner:hover a p, #seasonal .outline .nav-tabs li .inner.active a p, #gameday .outline .nav-tabs li .inner.active a p {
             width: 75%;
             margin: 0 auto;
             display: block !important; }
@@ -5627,7 +5633,10 @@ input {
       font-family: "Bitter", serif;
       font-weight: 900; }
       #seasonal article > .inner h6 a, #gameday article > .inner h6 a {
-        color: #d2983c; }
+        color: #d2983c;
+        -moz-transition: color 0.2s;
+        -webkit-transition: color 0.2s;
+        transition: color 0.2s; }
         #seasonal article > .inner h6 a:hover, #gameday article > .inner h6 a:hover {
           cursor: pointer;
           color: #5f514e; }
@@ -5645,13 +5654,18 @@ input {
     #seasonal article .recipe-link a, #gameday article .recipe-link a {
       text-decoration: none;
       color: #d2983c;
-      padding: 0.25rem 1rem; }
+      padding: 0.25rem 1rem;
+      -moz-transition: all 0.2s;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s; }
       #seasonal article .recipe-link a:hover, #gameday article .recipe-link a:hover {
         background: #d2983c;
         color: #fff; }
   #seasonal article.active > .inner, #gameday article.active > .inner {
     padding: 25px;
     border: 5px solid #d2983c; }
+  #seasonal .page-tabs, #gameday .page-tabs {
+    margin-top: 2.5rem; }
 
 #gameday .outline {
   border-color: #942e37; }
@@ -5662,11 +5676,11 @@ input {
 #gameday .circle-stat {
   left: 1rem; }
 
-#gameday .nav-tabs li .inner {
+#gameday .outline .nav-tabs li .inner {
   border-color: #942e37; }
-  #gameday .nav-tabs li .inner a {
+  #gameday .outline .nav-tabs li .inner a {
     color: #942e37; }
-  #gameday .nav-tabs li .inner:hover a, #gameday .nav-tabs li .inner.active a {
+  #gameday .outline .nav-tabs li .inner:hover a, #gameday .outline .nav-tabs li .inner.active a {
     background: #942e37; }
 
 #gameday .carousel .carousel-item {
@@ -5689,79 +5703,88 @@ input {
 #gameday article.active > .inner {
   border: 5px solid #942e37; }
 
-#recipes {
-  margin-top: 120px; }
-  #recipes .form-row {
-    margin-bottom: 1rem; }
-  #recipes .sort-by {
-    margin-bottom: 0.5rem; }
-  #recipes #form-recipe-filters > span {
-    display: inline-block;
-    margin-right: 1rem; }
-    #recipes #form-recipe-filters > span label {
-      display: block; }
-  #recipes #form-recipe-search {
-    float: right;
-    margin-top: 2rem; }
-  #recipes .recipe-card-container {
-    padding: 0;
-    margin: 0 auto;
-    max-width: 1281px; }
-    @media (max-width: 718px) {
-      #recipes .recipe-card-container {
-        max-width: 326px; } }
-    @media (min-width: 719px) and (max-width: 1059px) {
-      #recipes .recipe-card-container {
-        max-width: 631px; } }
-    @media (min-width: 1060px) and (max-width: 1400px) {
-      #recipes .recipe-card-container {
-        max-width: 960px; } }
-  #recipes .card, #recipes .grid-sizer {
-    width: 301px; }
-  #recipes .card {
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-    margin: 12.5px;
-    padding-right: 0;
-    padding-left: 0;
-    float: left; }
-    #recipes .card.double-wide {
-      width: 629px; }
-      @media (max-width: 718px) {
-        #recipes .card.double-wide {
-          width: 301px; } }
-    #recipes .card a {
-      text-decoration: none; }
-      #recipes .card a > .inner {
-        padding: 0.75rem;
-        display: inline-block; }
-      #recipes .card a:hover {
-        cursor: pointer; }
-  #recipes .card-img {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 100%; }
-  #recipes .card-title {
-    font-weight: bold;
-    width: 80%;
-    text-transform: uppercase; }
-  #recipes .card-subtitle {
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
+#recipes .form-row {
+  margin-bottom: 1rem; }
+
+#recipes .sort-by {
+  margin-bottom: 0.5rem; }
+
+#recipes #form-recipe-filters > span {
+  display: inline-block;
+  margin-right: 1rem; }
+  #recipes #form-recipe-filters > span label {
     display: block; }
-  #recipes .card-link {
-    text-decoration: underline;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem; }
-    #recipes .card-link:hover {
-      text-decoration: none; }
-  #recipes .view-more-recipes {
-    width: 100%;
-    text-align: center;
-    margin: 2rem 0; }
+
+#recipes #form-recipe-search {
+  float: right;
+  margin-top: 2rem; }
+
+#recipes .recipe-card-container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1281px; }
+  @media (max-width: 718px) {
+    #recipes .recipe-card-container {
+      max-width: 326px; } }
+  @media (min-width: 719px) and (max-width: 1059px) {
+    #recipes .recipe-card-container {
+      max-width: 631px; } }
+  @media (min-width: 1060px) and (max-width: 1400px) {
+    #recipes .recipe-card-container {
+      max-width: 960px; } }
+
+#recipes .card, #recipes .grid-sizer {
+  width: 301px; }
+
+#recipes .card {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  margin: 12.5px;
+  padding-right: 0;
+  padding-left: 0;
+  float: left; }
+  #recipes .card.double-wide {
+    width: 629px; }
+    @media (max-width: 718px) {
+      #recipes .card.double-wide {
+        width: 301px; } }
+  #recipes .card a {
+    text-decoration: none; }
+    #recipes .card a > .inner {
+      padding: 0.75rem;
+      display: inline-block; }
+    #recipes .card a:hover {
+      cursor: pointer; }
+
+#recipes .card-img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 100%; }
+
+#recipes .card-title {
+  font-weight: bold;
+  width: 80%;
+  text-transform: uppercase; }
+
+#recipes .card-subtitle {
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  display: block; }
+
+#recipes .card-link {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
+  #recipes .card-link:hover {
+    text-decoration: none; }
+
+#recipes .view-more-recipes {
+  width: 100%;
+  text-align: center;
+  margin: 2rem 0; }
 
 #primary-footer .footer-divider {
   position: relative;
@@ -5803,10 +5826,10 @@ input {
     height: 80%;
     left: 10%;
     top: 10%;
-    border-bottom: 5px solid #fff;
-    border-top: 5px solid #fff;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
     -webkit-transform: scale(0, 1);
     -ms-transform: scale(0, 1);
     transform: scale(0, 1); }
@@ -5829,8 +5852,9 @@ input {
   .hovereffect img {
     display: block;
     position: relative;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s; }
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
   .hovereffect p {
     color: #fff;
     display: table-cell;

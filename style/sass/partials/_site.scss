@@ -19,6 +19,11 @@
     box-shadow: $top $left $blur $color;
   }
 }
+@mixin transition( $transition ) {
+  -moz-transition:    $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
 .visually-hidden {
   @include visually-hidden;
 }
@@ -92,9 +97,49 @@ input {
     .inner {
       border-top: 5px solid;
       border-bottom: 5px solid;
+      &.seasonal {
+        border-color: $brand-primary;
+        a {
+          color: $brand-primary;
+          &:hover {
+            background: $brand-primary;
+            color: $white;
+          }
+        }
+      }
+      &.gameday {
+        border-color: $brand-secondary;
+        a {
+          color: $brand-secondary;
+          &:hover {
+            background: $brand-secondary;
+            color: $white;
+          }
+        }
+      }
+      &.recipes {
+        border-color: $gray;
+        a {
+          color: $gray;
+          &:hover {
+            background: $gray;
+            color: $white;
+          }
+        }
+      }
+      &.save {
+        border-color: $gray-light;
+        a {
+          color: $gray-light;
+          &:hover {
+            background: $gray-light;
+            color: $white;
+          }
+        }
+      }
       a {
         text-decoration: none;
-        transition: all .2s;
+        @include transition(all .2s);
         display: inline-block;
         margin-top: 3px;
         margin-bottom: 3px;
@@ -120,26 +165,6 @@ input {
     }
     .inner {
       margin-top: 26%;
-      &.seasonal {
-        border-color: $brand-primary;
-        a {
-          color: $brand-primary;
-          &:hover {
-            background: $brand-primary;
-            color: $white;
-          }
-        }
-      }
-      &.gameday {
-        border-color: $brand-secondary;
-        a {
-          color: $brand-secondary;
-          &:hover {
-            background: $brand-secondary;
-            color: $white;
-          }
-        }
-      }
       &.logo {
         margin: 0;
         padding: 0;
@@ -147,26 +172,6 @@ input {
         a {
           img {
             max-width: 100%;
-          }
-        }
-      }
-      &.recipes {
-        border-color: $gray;
-        a {
-          color: $gray;
-          &:hover {
-            background: $gray;
-            color: $white;
-          }
-        }
-      }
-      &.save {
-        border-color: $gray-light;
-        a {
-          color: $gray-light;
-          &:hover {
-            background: $gray-light;
-            color: $white;
           }
         }
       }
@@ -218,10 +223,10 @@ input {
         width: 100%;
         background: rgba(0, 0, 0, 0.35);
         padding: 100px 0 0;
-        transition: background-color .2s;
+        @include transition(background-color .2s);
         img {
           display: block;
-          margin: 20px auto 30px;
+          margin: 5px auto 45px;
         }
       }
       &:hover {
@@ -309,7 +314,7 @@ input {
       }
     }
   }
-  .nav-tabs {
+  .outline .nav-tabs {
     margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
       .inner {
@@ -317,7 +322,7 @@ input {
         // transition: all .2s;
         a {
           color: $brand-primary;
-          transition: all .2s;
+          @include transition(all .2s);
           span {
             font-weight: 900;
           }
@@ -412,6 +417,7 @@ input {
         font-weight: 900;
         a {
           color: $brand-primary;
+          @include transition(color .2s);
           &:hover {
             cursor: pointer;
             color: $gray;
@@ -437,6 +443,7 @@ input {
         color: $brand-primary;
         padding: $spacer-y / 4 $spacer-x;
       //  margin: $spacer-y / 2 0;
+        @include transition(all .2s);
         &:hover {
           background: $brand-primary;
           color: $white;
@@ -449,6 +456,9 @@ input {
         border: 5px solid $brand-primary;
       }
     }
+  }
+  .page-tabs {
+    margin-top: $spacer-y * 2.5;
   }
 }
 
@@ -463,7 +473,7 @@ input {
   .circle-stat {
     left: $spacer-x;
   }
-  .nav-tabs {
+  .outline .nav-tabs {
     // margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
       .inner {
@@ -515,7 +525,7 @@ input {
 }
 
 #recipes {
-  margin-top: 120px;
+//  margin-top: 120px;
   .form-row {
     margin-bottom: $spacer-y;
   }
@@ -658,10 +668,10 @@ input {
     height: 80%;
     left: 10%;
     top: 10%;
-    border-bottom: 5px solid $white;
-    border-top: 5px solid $white;
-    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-    transition: opacity 0.35s, transform 0.35s;
+    border-bottom: 2px solid $white;
+    border-top: 2px solid $white;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+    transition: opacity 0.2s, transform 0.2s;
     -webkit-transform: scale(0,1);
     -ms-transform: scale(0,1);
     transform: scale(0,1);
@@ -689,8 +699,7 @@ input {
   img {
     display: block;
     position: relative;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
+    @include transition( all 0.2s )
   }
   p {
     color: $white;
