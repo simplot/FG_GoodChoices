@@ -5709,8 +5709,7 @@ input {
     max-width: 1281px; }
     @media (max-width: 718px) {
       #recipes .recipe-card-container {
-        max-width: auto;
-        width: auto; } }
+        max-width: 326px; } }
     @media (min-width: 719px) and (max-width: 1059px) {
       #recipes .recipe-card-container {
         max-width: 631px; } }
@@ -5728,8 +5727,10 @@ input {
     padding-left: 0;
     float: left; }
     #recipes .card.double-wide {
-      width: calc(50% - 25px);
       width: 629px; }
+      @media (max-width: 718px) {
+        #recipes .card.double-wide {
+          width: 301px; } }
     #recipes .card a {
       text-decoration: none; }
       #recipes .card a > .inner {

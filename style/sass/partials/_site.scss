@@ -540,8 +540,8 @@ input {
     margin: 0 auto;
     max-width: 1281px;
     @media ( max-width: '718px' ) {
-      max-width: auto;
-      width: auto;
+      max-width: 326px;
+    //  width: auto;
     }
     @media( min-width: '719px' ) and ( max-width: '1059px' ) {
       max-width: 631px;
@@ -549,11 +549,9 @@ input {
     @media( min-width: '1060px' ) and ( max-width: '1400px' ) {
       max-width: 960px;
     }
-    // width: 1600px;
   }
   .card, .grid-sizer {
 //    width: calc(25% - 25px);
-//   width: 25%;
      width: 301px;
   }
   .card {
@@ -563,8 +561,11 @@ input {
     padding-left: 0;
     float: left;
     &.double-wide {
-      width: calc(50% - 25px);
+  //    width: calc(50% - 25px);
       width: 629px;
+      @media ( max-width: '718px' ) {
+        width: 301px;
+      }
     }
     a {
       text-decoration: none;
