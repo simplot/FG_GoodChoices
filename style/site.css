@@ -5461,80 +5461,80 @@ input {
     display: block;
     text-align: center; }
 
-#top {
-  z-index: -1;
-  position: relative; }
-  #top .hero {
-    margin-top: -40px;
-    margin-bottom: 25px;
-    display: inline-block;
-    width: 100%; }
-    #top .hero img {
-      padding: 0; }
-  #top .callout {
-    position: relative; }
-    #top .callout .learn-more {
-      display: block;
-      text-align: center; }
-    #top .callout .image-link {
-      border: 5px solid;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 310px;
-      display: block;
-      height: 100%;
-      color: #fff;
-      margin-bottom: 10px; }
-      #top .callout .image-link .inner {
-        height: 100%;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.35);
-        padding: 100px 0 0;
-        transition: background-color .2s; }
-        #top .callout .image-link .inner img {
-          display: block;
-          margin: 20px auto 30px; }
-      #top .callout .image-link:hover .inner {
-        background: transparent; }
-    #top .callout.seasonal a {
-      margin-right: 22.5px; }
-    #top .callout.seasonal .image-link {
-      border-color: #d2983c; }
-    #top .callout.gameday a {
-      margin-left: 22.5px; }
-    #top .callout.gameday .image-link {
-      border-color: #942e37; }
+#top .hero {
+  margin-top: -40px;
+  margin-bottom: 25px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: -1; }
+  #top .hero img {
+    padding: 0; }
 
-#seasonal {
+#top .callout {
   position: relative; }
-  #seasonal .outline {
+  #top .callout .learn-more {
+    display: block;
+    text-align: center; }
+  #top .callout .image-link {
+    border: 5px solid;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 310px;
+    display: block;
+    height: 100%;
+    color: #fff;
+    margin-bottom: 10px; }
+    #top .callout .image-link .inner {
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.35);
+      padding: 100px 0 0;
+      transition: background-color .2s; }
+      #top .callout .image-link .inner img {
+        display: block;
+        margin: 20px auto 30px; }
+    #top .callout .image-link:hover .inner {
+      background: transparent; }
+  #top .callout.seasonal a {
+    margin-right: 22.5px; }
+  #top .callout.seasonal .image-link {
+    border-color: #d2983c; }
+  #top .callout.gameday a {
+    margin-left: 22.5px; }
+  #top .callout.gameday .image-link {
+    border-color: #942e37; }
+
+#seasonal, #gameday {
+  position: relative; }
+  #seasonal .outline, #gameday .outline {
     border: 5px solid #d2983c;
     padding: 2rem 0.5rem 1rem; }
-  #seasonal h1 {
+  #seasonal h1, #gameday h1 {
     color: #d2983c; }
-  #seasonal .product-group {
+  #seasonal .product-group, #gameday .product-group {
     padding: 0 2rem;
     display: none; }
-    #seasonal .product-group.active {
+    #seasonal .product-group.active, #gameday .product-group.active {
       display: block !important; }
-  #seasonal .circle-stat {
+  #seasonal .circle-stat, #gameday .circle-stat {
     width: 185px;
     height: 185px;
     position: absolute;
     right: 1rem;
     top: -2rem; }
-    #seasonal .circle-stat img {
+    #seasonal .circle-stat img, #gameday .circle-stat img {
       width: 100%;
       position: relative;
       z-index: 10; }
-    #seasonal .circle-stat .overlay {
+    #seasonal .circle-stat .overlay, #gameday .circle-stat .overlay {
       position: absolute;
       top: 0;
       display: table;
       width: 100%;
       height: 100%; }
-      #seasonal .circle-stat .overlay .inner {
+      #seasonal .circle-stat .overlay .inner, #gameday .circle-stat .overlay .inner {
         text-align: center;
         display: table-cell;
         vertical-align: middle;
@@ -5542,43 +5542,42 @@ input {
         z-index: 20;
         color: #fff;
         font-family: "Bitter", serif; }
-        #seasonal .circle-stat .overlay .inner h3, #seasonal .circle-stat .overlay .inner p {
+        #seasonal .circle-stat .overlay .inner h3, #gameday .circle-stat .overlay .inner h3, #seasonal .circle-stat .overlay .inner p, #gameday .circle-stat .overlay .inner p {
           margin-bottom: 0;
           line-height: 130%; }
-        #seasonal .circle-stat .overlay .inner h3 {
+        #seasonal .circle-stat .overlay .inner h3, #gameday .circle-stat .overlay .inner h3 {
           font-weight: 900; }
-        #seasonal .circle-stat .overlay .inner p {
+        #seasonal .circle-stat .overlay .inner p, #gameday .circle-stat .overlay .inner p {
           font-size: 15px;
           font-style: italic; }
-        #seasonal .circle-stat .overlay .inner small {
+        #seasonal .circle-stat .overlay .inner small, #gameday .circle-stat .overlay .inner small {
           font-size: 11px;
           font-style: italic; }
-  #seasonal .nav-tabs {
+  #seasonal .nav-tabs, #gameday .nav-tabs {
     margin: 2rem 0.25rem 1rem; }
-    #seasonal .nav-tabs li .inner {
-      border-color: #d2983c;
-      transition: all .2s; }
-      #seasonal .nav-tabs li .inner a {
+    #seasonal .nav-tabs li .inner, #gameday .nav-tabs li .inner {
+      border-color: #d2983c; }
+      #seasonal .nav-tabs li .inner a, #gameday .nav-tabs li .inner a {
         color: #d2983c;
         transition: all .2s; }
-        #seasonal .nav-tabs li .inner a span {
+        #seasonal .nav-tabs li .inner a span, #gameday .nav-tabs li .inner a span {
           font-weight: 900; }
-        #seasonal .nav-tabs li .inner a p {
+        #seasonal .nav-tabs li .inner a p, #gameday .nav-tabs li .inner a p {
           display: none !important; }
-      #seasonal .nav-tabs li .inner:hover, #seasonal .nav-tabs li .inner.active {
+      #seasonal .nav-tabs li .inner:hover, #gameday .nav-tabs li .inner:hover, #seasonal .nav-tabs li .inner.active, #gameday .nav-tabs li .inner.active {
         margin-top: -32px; }
-        #seasonal .nav-tabs li .inner:hover a, #seasonal .nav-tabs li .inner.active a {
+        #seasonal .nav-tabs li .inner:hover a, #gameday .nav-tabs li .inner:hover a, #seasonal .nav-tabs li .inner.active a, #gameday .nav-tabs li .inner.active a {
           background: #d2983c;
           color: #fff; }
-          #seasonal .nav-tabs li .inner:hover a header, #seasonal .nav-tabs li .inner.active a header {
+          #seasonal .nav-tabs li .inner:hover a header, #gameday .nav-tabs li .inner:hover a header, #seasonal .nav-tabs li .inner.active a header, #gameday .nav-tabs li .inner.active a header {
             font-size: 24px; }
-          #seasonal .nav-tabs li .inner:hover a p, #seasonal .nav-tabs li .inner.active a p {
+          #seasonal .nav-tabs li .inner:hover a p, #gameday .nav-tabs li .inner:hover a p, #seasonal .nav-tabs li .inner.active a p, #gameday .nav-tabs li .inner.active a p {
             width: 75%;
             margin: 0 auto;
             display: block !important; }
-  #seasonal .carousel {
+  #seasonal .carousel, #gameday .carousel {
     padding: 0 2rem; }
-    #seasonal .carousel .carousel-item {
+    #seasonal .carousel .carousel-item, #gameday .carousel .carousel-item {
       margin: 1rem 0 1.5rem;
       border: 5px solid #d2983c;
       padding-left: 0;
@@ -5586,137 +5585,109 @@ input {
       margin-left: 12.5px;
       margin-right: 12.5px;
       width: calc(100% - 25px); }
-      #seasonal .carousel .carousel-item img {
+      #seasonal .carousel .carousel-item img, #gameday .carousel .carousel-item img {
         max-width: 100%; }
-      #seasonal .carousel .carousel-item .overlay {
+      #seasonal .carousel .carousel-item .overlay, #gameday .carousel .carousel-item .overlay {
         position: absolute;
         max-width: 45%; }
-        #seasonal .carousel .carousel-item .overlay.bottom {
+        #seasonal .carousel .carousel-item .overlay.bottom, #gameday .carousel .carousel-item .overlay.bottom {
           bottom: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top {
+        #seasonal .carousel .carousel-item .overlay.top, #gameday .carousel .carousel-item .overlay.top {
           top: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.right {
+        #seasonal .carousel .carousel-item .overlay.right, #gameday .carousel .carousel-item .overlay.right {
           right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.left {
+        #seasonal .carousel .carousel-item .overlay.left, #gameday .carousel .carousel-item .overlay.left {
           left: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.center {
+        #seasonal .carousel .carousel-item .overlay.center, #gameday .carousel .carousel-item .overlay.center {
           margin: 0 auto;
           top: 8rem;
           left: 16rem; }
-        #seasonal .carousel .carousel-item .overlay.bottom-left {
+        #seasonal .carousel .carousel-item .overlay.bottom-left, #gameday .carousel .carousel-item .overlay.bottom-left {
           bottom: 2rem;
           left: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.bottom-right {
+        #seasonal .carousel .carousel-item .overlay.bottom-right, #gameday .carousel .carousel-item .overlay.bottom-right {
           bottom: 2rem;
           right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top-right {
+        #seasonal .carousel .carousel-item .overlay.top-right, #gameday .carousel .carousel-item .overlay.top-right {
           top: 2rem;
           right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top-left {
+        #seasonal .carousel .carousel-item .overlay.top-left, #gameday .carousel .carousel-item .overlay.top-left {
           top: 2rem;
           left: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.center-left {
+        #seasonal .carousel .carousel-item .overlay.center-left, #gameday .carousel .carousel-item .overlay.center-left {
           margin: 0 auto;
           top: 8rem;
           left: 16rem; }
-  #seasonal article > .inner {
+  #seasonal article > .inner, #gameday article > .inner {
     padding: 30px;
     height: 260px; }
-    #seasonal article > .inner h6 {
+    #seasonal article > .inner h6, #gameday article > .inner h6 {
       margin-bottom: 0.5rem;
       text-transform: uppercase;
       font-family: "Bitter", serif;
       font-weight: 900; }
-      #seasonal article > .inner h6 a {
+      #seasonal article > .inner h6 a, #gameday article > .inner h6 a {
         color: #d2983c; }
-        #seasonal article > .inner h6 a:hover {
+        #seasonal article > .inner h6 a:hover, #gameday article > .inner h6 a:hover {
           cursor: pointer;
           color: #5f514e; }
-    #seasonal article > .inner p strong {
+    #seasonal article > .inner p strong, #gameday article > .inner p strong {
       color: #d2983c; }
-  #seasonal article .recipe-link {
+  #seasonal article .recipe-link, #gameday article .recipe-link {
     display: inline-block; }
-    #seasonal article .recipe-link > .inner {
+    #seasonal article .recipe-link > .inner, #gameday article .recipe-link > .inner {
       border-top: 2px solid #d2983c;
       border-bottom: 2px solid #d2983c;
       padding: 0.25rem 0;
       position: absolute;
       bottom: 1rem;
       right: 2rem; }
-    #seasonal article .recipe-link a {
+    #seasonal article .recipe-link a, #gameday article .recipe-link a {
       text-decoration: none;
       color: #d2983c;
       padding: 0.25rem 1rem; }
-      #seasonal article .recipe-link a:hover {
+      #seasonal article .recipe-link a:hover, #gameday article .recipe-link a:hover {
         background: #d2983c;
         color: #fff; }
-  #seasonal article.active > .inner {
+  #seasonal article.active > .inner, #gameday article.active > .inner {
     padding: 25px;
     border: 5px solid #d2983c; }
 
-#gameday {
-  position: relative; }
-  #gameday .outline {
-    border: 5px solid #942e37;
-    padding: 2rem 0.5rem 1rem; }
-  #gameday h1 {
+#gameday .outline {
+  border-color: #942e37; }
+
+#gameday h1 {
+  color: #942e37; }
+
+#gameday .circle-stat {
+  left: 1rem; }
+
+#gameday .nav-tabs li .inner {
+  border-color: #942e37; }
+  #gameday .nav-tabs li .inner a {
     color: #942e37; }
-  #gameday .circle-stat {
-    width: 185px;
-    height: 185px;
-    position: absolute;
-    left: 1rem;
-    top: -2rem; }
-    #gameday .circle-stat img {
-      width: 100%;
-      position: relative;
-      z-index: 10; }
-    #gameday .circle-stat .overlay {
-      position: absolute;
-      top: 0;
-      display: table;
-      width: 100%;
-      height: 100%; }
-      #gameday .circle-stat .overlay .inner {
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        position: relative;
-        z-index: 20;
-        color: #fff;
-        font-family: "Bitter", serif; }
-        #gameday .circle-stat .overlay .inner h3, #gameday .circle-stat .overlay .inner p {
-          margin-bottom: 0;
-          line-height: 130%; }
-        #gameday .circle-stat .overlay .inner h3 {
-          font-weight: 900; }
-        #gameday .circle-stat .overlay .inner p {
-          font-size: 15px;
-          font-style: italic; }
-        #gameday .circle-stat .overlay .inner small {
-          font-size: 11px;
-          font-style: italic; }
-  #gameday .nav-tabs {
-    margin: 2rem 0.25rem 1rem; }
-    #gameday .nav-tabs li .inner {
-      border-color: #942e37;
-      transition: all .2s; }
-      #gameday .nav-tabs li .inner a {
-        color: #942e37;
-        transition: all .2s; }
-        #gameday .nav-tabs li .inner a span {
-          font-weight: 900; }
-      #gameday .nav-tabs li .inner:hover {
-        margin-top: -32px; }
-        #gameday .nav-tabs li .inner:hover a {
-          background: #942e37;
-          color: #fff; }
-          #gameday .nav-tabs li .inner:hover a header {
-            font-size: 24px; }
-          #gameday .nav-tabs li .inner:hover a p {
-            width: 75%;
-            margin: 0 auto;
-            display: block !important; }
+  #gameday .nav-tabs li .inner:hover a, #gameday .nav-tabs li .inner.active a {
+    background: #942e37; }
+
+#gameday .carousel .carousel-item {
+  border-color: #942e37; }
+
+#gameday article > .inner h6 a {
+  color: #942e37; }
+
+#gameday article > .inner p strong {
+  color: #942e37; }
+
+#gameday article .recipe-link > .inner {
+  border-color: #942e37; }
+
+#gameday article .recipe-link a {
+  color: #942e37; }
+  #gameday article .recipe-link a:hover {
+    background: #942e37; }
+
+#gameday article.active > .inner {
+  border: 5px solid #942e37; }
 
 #recipes {
   margin-top: 120px; }
@@ -5733,11 +5704,21 @@ input {
     float: right;
     margin-top: 2rem; }
   #recipes .recipe-card-container {
-    padding: 0; }
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1281px; }
+    @media (max-width: 718px) {
+      #recipes .recipe-card-container {
+        max-width: auto;
+        width: auto; } }
+    @media (min-width: 719px) and (max-width: 1059px) {
+      #recipes .recipe-card-container {
+        max-width: 631px; } }
+    @media (min-width: 1060px) and (max-width: 1400px) {
+      #recipes .recipe-card-container {
+        max-width: 960px; } }
   #recipes .card, #recipes .grid-sizer {
-    width: calc(25% - 25px); }
-  #recipes .grid-item--width2 {
-    width: calc(50% - 25px); }
+    width: 301px; }
   #recipes .card {
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
     -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
@@ -5747,7 +5728,8 @@ input {
     padding-left: 0;
     float: left; }
     #recipes .card.double-wide {
-      width: calc(50% - 25px); }
+      width: calc(50% - 25px);
+      width: 629px; }
     #recipes .card a {
       text-decoration: none; }
       #recipes .card a > .inner {

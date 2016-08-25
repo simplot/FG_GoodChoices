@@ -3,12 +3,7 @@ function pageReady() {
     // here's where any run-once-on-setup code can be put
     console.log('page is set up and running');
 
-    //Handles the seasonal product category nav tabs
-    // $('#seasonal .nav-tabs li a').click(function () {
-    //
-    // });
-    //
-    //Handles the navigation for product carousel thumbnails
+    //Handles the navigation for seasonal product group carousels
     $('[id^=seasonal-group-carousel-selector-]').click(function () {
       var id_selector = $(this).attr("id");
       var carousel_index = 0;
@@ -38,13 +33,13 @@ function pageReady() {
       }
     });
 
-    //Handles the seasonal product carousel thumbnails
+    //Handles the seasonal product carousel links
     $('[id^=seasonal-carousel-selector-]').click(function () {
       var id_selector = $(this).attr("id");
       try {
         var id = /-(\d+)$/.exec(id_selector)[1];
         // console.log(id_selector, id);
-        $('.product-group > article').removeClass('active');
+        $('#seasonal .product-group > article').removeClass('active');
         $(this).parent().parent().parent().addClass('active');
         $('#seasonal-carousel').carousel(parseInt(id));
       }
@@ -52,6 +47,71 @@ function pageReady() {
         console.log('Regex failed!', e);
       }
     });
+
+    //Handles the navigation for gameday product group carousels
+    $('[id^=gameday-group-carousel-selector-]').click(function () {
+      var id_selector = $(this).attr("id");
+      var carousel_index = 0;
+      try {
+        var id = /-(\d+)$/.exec(id_selector)[1];
+
+        //set the carousel index on group change
+        if( id == 1 ) {
+          carousel_index = 3;
+        }
+        else if( id == 2 ) {
+          carousel_index = 6;
+        }
+        $('#gameday-carousel').carousel(carousel_index);
+        // console.log(id_selector, id);
+        $('#gameday .nav-tabs .inner').removeClass('active');
+        $(this).parent().addClass('active');
+        $('#gameday .product-group').removeClass('active');
+        $('#gameday .product-group.group-' + id).addClass('active');
+
+        //Default to the first product in group
+        $('#gameday .product-group > article').removeClass('active');
+        $('#gameday .product-group.group-' + id + ' > article:first-child').addClass('active');
+      }
+      catch (e) {
+        console.log('Regex failed!', e);
+      }
+    });
+
+    //Handles the gameday product carousel links
+    $('[id^=gameday-carousel-selector-]').click(function () {
+      var id_selector = $(this).attr("id");
+      try {
+        var id = /-(\d+)$/.exec(id_selector)[1];
+        // console.log(id_selector, id);
+        $('#gameday .product-group > article').removeClass('active');
+        $(this).parent().parent().parent().addClass('active');
+        $('#gameday-carousel').carousel(parseInt(id));
+      }
+      catch (e) {
+        console.log('Regex failed!', e);
+      }
+    });
+
+    //Makes all anchor tags smooth scroll, except for carousel controls
+    $('a[href^="#"]').on('click',function( event ) {
+  		if( event.preventDefault() ) {
+      	event.preventDefault();
+  		}
+  		var isCarousel = true;
+  		isCarousel = $(this).hasClass('carousel-control');
+  		//do not anchor scrolls for carousel links
+  		if( !isCarousel ) {
+  			var target = $( $(this).attr('href') );
+  			var scrollHeight = target.offset().top;
+  	    if( target.length ) {
+        //  event.preventDefault();
+          $('html, body').animate({
+              scrollTop: scrollHeight
+          }, 500);
+  	    }
+  		}
+  	});
 
 }
 

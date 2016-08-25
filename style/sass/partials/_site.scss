@@ -184,14 +184,13 @@ input {
   }
 }
 #top {
-  // margin-top: -4%;
-  z-index: -1;
-  position: relative;
   .hero {
     margin-top: -40px;
     margin-bottom: 25px;
     display: inline-block;
     width: 100%;
+    position: relative;
+    z-index: -1;
     img {
       padding: 0;
     //  width: 100%;
@@ -312,31 +311,33 @@ input {
   }
   .nav-tabs {
     margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
-    li .inner {
-      border-color: $brand-primary;
-      transition: all .2s;
-      a {
-        color: $brand-primary;
-        transition: all .2s;
-        span {
-          font-weight: 900;
-        }
-        p {
-          display: none !important;
-        }
-      }
-      &:hover, &.active {
-        margin-top: -32px;
+    li {
+      .inner {
+        border-color: $brand-primary;
+        // transition: all .2s;
         a {
-          background: $brand-primary;
-          color: $white;
-          header {
-            font-size: 24px;
+          color: $brand-primary;
+          transition: all .2s;
+          span {
+            font-weight: 900;
           }
           p {
-            width: 75%;
-            margin: 0 auto;
-            display: block !important;
+            display: none !important;
+          }
+        }
+        &:hover, &.active {
+          margin-top: -32px;
+          a {
+            background: $brand-primary;
+            color: $white;
+            header {
+              font-size: 24px;
+            }
+            p {
+              width: 75%;
+              margin: 0 auto;
+              display: block !important;
+            }
           }
         }
       }
@@ -452,83 +453,62 @@ input {
 }
 
 #gameday {
-  position: relative;
+  @extend #seasonal;
   .outline {
-    border: 5px solid $brand-secondary;
-    padding: $spacer-y * 2 $spacer-x / 2 $spacer-y;
+    border-color: $brand-secondary;
   }
   h1 {
     color: $brand-secondary;
   }
   .circle-stat {
-    width: 185px;
-    height: 185px;
-    position: absolute;
     left: $spacer-x;
-    top: -$spacer-y * 2;
-    img {
-      width: 100%;
-      position: relative;
-      z-index: 10;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      display: table;
-      width: 100%;
-      height: 100%;
+  }
+  .nav-tabs {
+    // margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
+    li {
       .inner {
-        text-align: center;
-        display: table-cell;
-        vertical-align: middle;
-        position: relative;
-        z-index: 20;
-        color: $white;
-        font-family: $font-family-serif-2;
-        h3, p {
-          margin-bottom: 0;
-          line-height: 130%;
+        border-color: $brand-secondary;
+        a {
+          color: $brand-secondary;
         }
-        h3 {
-          font-weight: 900;
-        }
-        p {
-          font-size: 15px;
-          font-style: italic;
-        }
-        small {
-          font-size: 11px;
-          font-style: italic;
+        &:hover, &.active {
+          a {
+            background: $brand-secondary;
+          }
         }
       }
     }
   }
-  .nav-tabs {
-    margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
-    li .inner {
+  .carousel {
+    .carousel-item {
       border-color: $brand-secondary;
-      transition: all .2s;
-      a {
-        color: $brand-secondary;
-        transition: all .2s;
-        span {
-          font-weight: 900;
+  }
+  }
+  article {
+    > .inner {
+      h6 {
+        a {
+          color: $brand-secondary;
         }
       }
-      &:hover {
-        margin-top: -32px;
-        a {
+      p strong {
+        color: $brand-secondary;
+      }
+    }
+    .recipe-link {
+      > .inner {
+        border-color: $brand-secondary;
+      }
+      a {
+        color: $brand-secondary;
+        &:hover {
           background: $brand-secondary;
-          color: $white;
-          header {
-            font-size: 24px;
-          }
-          p {
-            width: 75%;
-            margin: 0 auto;
-            display: block !important;
-          }
         }
+      }
+    }
+    &.active {
+      > .inner {
+        border: 5px solid $brand-secondary;
       }
     }
   }
@@ -557,17 +537,24 @@ input {
   }
   .recipe-card-container {
     padding: 0;
+    margin: 0 auto;
+    max-width: 1281px;
+    @media ( max-width: '718px' ) {
+      max-width: auto;
+      width: auto;
+    }
+    @media( min-width: '719px' ) and ( max-width: '1059px' ) {
+      max-width: 631px;
+    }
+    @media( min-width: '1060px' ) and ( max-width: '1400px' ) {
+      max-width: 960px;
+    }
     // width: 1600px;
   }
   .card, .grid-sizer {
-    width: calc(25% - 25px);
+//    width: calc(25% - 25px);
 //   width: 25%;
-    // width: 308px;
-  }
-  .grid-item--width2 {
-    width: calc(50% - 25px);
-  //  width: 50%;
-    // width: 631px;
+     width: 301px;
   }
   .card {
     @include box-shadow( 0, 2px, 4px, rgba( 0, 0, 0, .35 ) );
@@ -577,6 +564,7 @@ input {
     float: left;
     &.double-wide {
       width: calc(50% - 25px);
+      width: 629px;
     }
     a {
       text-decoration: none;
