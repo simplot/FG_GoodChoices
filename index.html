@@ -637,7 +637,7 @@
             <div class="recipe-card-container">
               <div class="row">
                 <md-content class="smoothify">
-                <md-grid-list md-cols="4" md-row-height="5em" md-gutter="25px">
+                <md-grid-list md-cols="4" md-colspan-sm="2" md-colspan-md="3" md-row-height="5em" md-gutter="25px">
                   <md-grid-tile
                     ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
                     ng-class="{'double-wide': recipe.columns===2}"

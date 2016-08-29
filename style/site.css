@@ -5703,10 +5703,11 @@ input {
   #recipes #form-recipe-search {
     float: right;
     margin-top: 2rem; }
-  #recipes .recipe-card-container {
-    padding: 0;
-    margin: 0 auto;
+  #recipes md-grid-list {
+    margin: 20px auto 40px;
     max-width: 1281px; }
+  #recipes .recipe-card-container {
+    padding: 0; }
     @media (max-width: 718px) {
       #recipes .recipe-card-container {
         max-width: 326px; } }

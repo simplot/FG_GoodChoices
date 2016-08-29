@@ -535,10 +535,14 @@ input {
     float: right;
     margin-top: $spacer-y * 2;
   }
+  md-grid-list {
+    margin: 20px auto 40px;
+    max-width: 1281px;
+  }
   .recipe-card-container {
     padding: 0;
-    margin: 0 auto;
-    max-width: 1281px;
+    // margin: 0 auto;
+    // max-width: 1281px;
     @media ( max-width: '718px' ) {
       max-width: 326px;
     //  width: auto;
