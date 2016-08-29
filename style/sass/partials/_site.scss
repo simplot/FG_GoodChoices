@@ -556,10 +556,10 @@ input {
   }
   .card {
     @include box-shadow( 0, 2px, 4px, rgba( 0, 0, 0, .35 ) );
-    margin: $grid-gutter-width / 2;
-    padding-right: 0;
-    padding-left: 0;
-    float: left;
+    // margin: $grid-gutter-width / 2;
+    // padding-right: 0;
+    // padding-left: 0;
+    // float: left;
     &.double-wide {
   //    width: calc(50% - 25px);
       width: 629px;
@@ -586,7 +586,7 @@ input {
   }
   .card-title {
     font-weight: bold;
-    width: 80%;
+    // width: 80%;
     text-transform: uppercase;
   }
   .card-subtitle {
@@ -645,7 +645,7 @@ input {
 */
 .hovereffect {
   width: 100%;
-  height: 100%;
+  // height: 100%;
   float: left;
   overflow: hidden;
   position: relative;

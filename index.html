@@ -634,18 +634,41 @@
         <div class="row">
           <div class="col-md-1"></div>
           <div class="col-md-22">
-            <md-content class="smoothify">
-              <md-grid-list md-cols="3" md-row-height="5em" md-gutter="10px">
-                <md-grid-tile class="thingie"
-                  ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
-                  md-colspan="{{recipe.columns}}"
-                  md-rowspan="{{recipe.columns}}">
-                  <div style="height:100%; width:100%; background:lightgrey; border: 1px solid black;">
-                    {{recipe.name}}
-                  </div>
-                </md-grid-tile>
-              </md-grid-list>
-            </md-content>
+            <div class="recipe-card-container">
+              <div class="row">
+                <md-content class="smoothify">
+                <md-grid-list md-cols="4" md-row-height="5em" md-gutter="25px">
+                  <md-grid-tile
+                    ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
+                    ng-class="{'double-wide': recipe.columns===2}"
+                    md-colspan="{{recipe.columns}}"
+                    md-rowspan="{{recipe.columns * 4}}">
+                    <div class="card" style="height:100%; width:100%;">
+                      <a href="pdf/{{recipe.download}}" target="_blank">
+                        <div class="hovereffect">
+                          <img class="card-img" ng-src="img/recipes/thumb/{{recipe.image}}" alt="{{recipe.name}}" />
+                          <div class="overlay">
+                            <div class="inner">
+                              <p>
+                                DOWNLOAD RECIPE
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="inner">
+                          <h5 class="card-title">{{recipe.name}}</h5>
+                          <small class="card-subtitle">Trends: {{recipe.trendsDisplay}}</small>
+                          <div class="card-link">
+                            RECIPE
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </md-grid-tile>
+                </md-grid-list>
+              </md-content>
+            </div>
+          </div>
         </div>
       </div>
   </section>

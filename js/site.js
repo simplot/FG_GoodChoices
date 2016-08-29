@@ -232,7 +232,7 @@ function getRecipes() {
             dayparts: row[6].split('|').map(trimify).filter(nonempty),
             products: row[7].split('|').map(trimify).filter(nonempty),
             trends: row[8].split('|').map(trimify).filter(nonempty),
-            trendDescriptions: row[9].split(',').map(trimify).filter(nonempty) 
+            trendDescriptions: row[9].split(',').map(trimify).filter(nonempty),
         };
         if (record.trends.length !== record.trendDescriptions.length) {
             console.log('warning: trends and descriptions lengths do not match for ' + record.name);
