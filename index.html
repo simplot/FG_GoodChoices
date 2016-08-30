@@ -569,11 +569,11 @@
                 <div class="col-md-15 filter-container fluid-container">
                   <form id="form-recipe-filters" name="form-recipe-filters">
                     <span>
-                      <label for="season-filter">Season:</label>
+                      <label for="season-filter">Occasion:</label>
                       <select name="season-filter"
-                      ng-model="vm.filterParameters.daypart"
+                      ng-model="vm.filterParameters.occasion"
                       ng-change="vm.updateFilterResults()"
-                      ng-options="option for option in vm.daypartTerms track by option">
+                      ng-options="option for option in vm.occasionTerms track by option">
                       <option value="">All</option>
                     </select>
                   </span>
@@ -637,16 +637,16 @@
             <div class="recipe-card-container">
               <div class="row">
                 <md-content class="smoothify">
-                <md-grid-list md-cols="4" md-colspan-sm="2" md-colspan-md="3" md-row-height="5em" md-gutter="25px">
+                <md-grid-list md-cols="4" md-cols-sm="2" md-cols-md="3" md-row-height="5em" md-gutter="25px">
                   <md-grid-tile
                     ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
                     ng-class="{'double-wide': recipe.columns===2}"
                     md-colspan="{{recipe.columns}}"
-                    md-rowspan="{{recipe.rows}}">
+                    md-rowspan="{{recipe.rows*2}}">
                     <div class="card" style="height:100%; width:100%;">
                       <a href="pdf/{{recipe.download}}" target="_blank">
                         <div class="hovereffect">
-                          <img class="card-img" ng-src="img/recipes/thumb/{{recipe.image}}" alt="{{recipe.name}}" />
+                          <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
                           <div class="overlay">
                             <div class="inner">
                               <p>
@@ -657,7 +657,7 @@
                         </div>
                         <div class="inner">
                           <h5 class="card-title">{{recipe.name}}</h5>
-                          <small class="card-subtitle">Trends: {{recipe.trendsDisplay}}</small>
+                          <small class="card-subtitle">Trends: {{recipe.trends.join(', ')}}</small>
                           <div class="card-link">
                             RECIPE
                           </div>
