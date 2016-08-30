@@ -186,15 +186,15 @@ app.directive('emitOnUpdate', function($timeout) {
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-// exported a csv from the old recipes spreadsheet, then used http://papaparse.com/demo to parse it ("," delimiter)
+// exported a csv from the recipes spreadsheet, then used http://papaparse.com/demo to parse it ("," delimiter)
 // finally, used the console to view the result and save as global and then
-// JSON.stringify(thingie.data.map(x=>{ return { name: x[0].trim(), columns: 1, rows: 1, download: x[1].trim(), image: x[2].trim(), occasion: x[3].trim(), trends: (x[4].trim() + '|' + x[5].trim()).replace(/(^\|)|(\|$)/,'').split('|'), products: (x[6].trim() + '|' + x[7].trim()).replace(/(^\|)|(\|$)/,'').split('|')}; }))
+// JSON.stringify(result.data.map(x=>{ return { name: x[0].trim(), columns: 1, rows: 1, download: x[1].trim(), image: x[2].trim(), occasion: x[3].trim(), trends: (x[4].trim() + '|' + x[5].trim()).replace(/(^\|)|(\|$)/,'').split('|'), products: (x[6].trim() + '|' + x[7].trim()).replace(/(^\|)|(\|$)/,'').split('|')}; }))
 // to have something to copy-n-paste to here
 function getRecipes() {
     return [{
         "name": "Bacon Wrapped Cracked Pepper Fries",
-        "columns": 2,
-        "rows": 4,
+        "columns": 1,
+        "rows": 3,
         "download": "BaconWrappedCrackedPepperFries.pdf",
         "image": "BaconWrappedCrackedPepperFries.jpg",
         "occasion": "Game Day",
@@ -202,8 +202,8 @@ function getRecipes() {
         "products": ["Fries"]
     }, {
         "name": "Curried Vegetables",
-        "columns": 1,
-        "rows": 2,
+        "columns": 2,
+        "rows": 3,
         "download": "CurriedCauliflower.pdf",
         "image": "CurriedCauliflower.jpg",
         "occasion": "Seasonal Celebrations",
@@ -220,8 +220,8 @@ function getRecipes() {
         "products": ["Roasted"]
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
-        "columns": 2,
-        "rows": 4,
+        "columns": 1,
+        "rows": 3,
         "download": "HeartyGrainsButternutSquashSoup.pdf",
         "image": "HeartyGrainsButternutSquashSoup.jpg",
         "occasion": "Seasonal Celebrations",
@@ -239,7 +239,7 @@ function getRecipes() {
     }, {
         "name": "Bourbon and Flame-Roasted Fuji Apple Glazed Turkey",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "BourbonandFlameRoastedFujiAppleGlazedTurkey.pdf",
         "image": "BourbonandFlameRoastedFujiAppleGlazedTurkey.jpg",
         "occasion": "Seasonal Celebrations",
@@ -248,7 +248,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
         "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
         "occasion": "Seasonal Celebrations",
@@ -257,7 +257,7 @@ function getRecipes() {
     }, {
         "name": "Bacon and Brussels Mashed with Stout Gravy",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "BaconBrusslesMashedStoutGravy.pdf",
         "image": "BaconBrusslesMashedStoutGravy.jpg",
         "occasion": "Seasonal Celebrations",
@@ -275,7 +275,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Salmon with Redskin Mashed, Tri-Colored Carrots & Pesto",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.pdf",
         "image": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.jpg",
         "occasion": "Seasonal Celebrations",
@@ -283,8 +283,8 @@ function getRecipes() {
         "products": ["Mashed"]
     }, {
         "name": "Roasted Yukon Gold & Reds and Haricot Vert with Ancho Dust",
-        "columns": 1,
-        "rows": 2,
+        "columns": 2,
+        "rows": 3,
         "download": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.pdf",
         "image": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.jpg",
         "occasion": "Seasonal Celebrations",
@@ -302,7 +302,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Sweet Potato Breakfast Hash",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "RoastedSweetPotatoBreakfastHash.pdf",
         "image": "RoastedSweetPotatoBreakfastHash.jpg",
         "occasion": "Seasonal Celebrations",
@@ -337,8 +337,8 @@ function getRecipes() {
         "products": ["Mashed", "Avocado"]
     }, {
         "name": "Avocado Buffalo Chicken Sliders",
-        "columns": 1,
-        "rows": 2,
+        "columns": 2,
+        "rows": 3,
         "download": "AvocadoBuffaloChickenSliders.pdf",
         "image": "AvocadoBuffaloChickenSliders.jpg",
         "occasion": "Game Day",
@@ -347,7 +347,7 @@ function getRecipes() {
     }, {
         "name": "Sweet Potatocado Smoothie",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "SweetPotatocadoSmoothie.pdf",
         "image": "SweetPotatocadoSmoothie.jpg",
         "occasion": "Seasonal Celebrations",
@@ -365,7 +365,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Sweet Mashed Potatoes",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "SpicySweetMashedPotatos.pdf",
         "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
@@ -383,7 +383,7 @@ function getRecipes() {
     }, {
         "name": "Brussels Sprouts with Corn & Jalapeno and Bacon",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
         "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
         "occasion": "Seasonal Celebrations",
@@ -419,7 +419,7 @@ function getRecipes() {
     }, {
         "name": "Avocado Mary",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "AvocadoMary.pdf",
         "image": "AvocadoMary.jpg",
         "occasion": "Game Day",
@@ -428,7 +428,7 @@ function getRecipes() {
     }, {
         "name": "Marionberry Mule",
         "columns": 2,
-        "rows": 4,
+        "rows": 5,
         "download": "MarionberryMule.pdf",
         "image": "MarionberryMule.jpg",
         "occasion": "Game Day",
@@ -482,7 +482,7 @@ function getRecipes() {
     }, {
         "name": "Eggs Benny Rosemary Brunch Fries",
         "columns": 2,
-        "rows": 4,
+        "rows": 1,
         "download": "EggsBennyRosemaryBrunchFries.pdf",
         "image": "EggsBennyRosemaryBrunchFries.jpg",
         "occasion": "Seasonal Celebrations",
@@ -509,7 +509,7 @@ function getRecipes() {
     }, {
         "name": "Fuji Apple Fizz",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "FujiAppleFizz.pdf",
         "image": "FujiAppleFizz.jpg",
         "occasion": "Seasonal Celebrations",
