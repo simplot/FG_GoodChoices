@@ -397,7 +397,7 @@ function getRecipes() {
         "image": "PorkNachosWPineappleNPepper.jpg",
         "occasion": "Game Day",
         "trends": ["Spicy & Bold", "Shareable"],
-        "products": [""]
+        "products": []
     }, {
         "name": "Quinoa Kale Stuffed Mushrooms",
         "columns": 1,
