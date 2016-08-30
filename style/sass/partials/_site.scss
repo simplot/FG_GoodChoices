@@ -24,6 +24,10 @@
 }
 html, body {
   height: 100%;
+  background: none $white;
+}
+md-content.md-default-theme, md-content {
+  background-color: $white;
 }
 h1, h2, h3 {
   letter-spacing: 2px;
@@ -49,6 +53,7 @@ strong {
 body, #header {
   max-width: 1400px;
   margin: 0 auto;
+  z-index: 1;
 }
 select {
   -webkit-appearance:none;
@@ -190,7 +195,7 @@ input {
     display: inline-block;
     width: 100%;
     position: relative;
-    z-index: -1;
+    z-index: 0;
     img {
       padding: 0;
     //  width: 100%;
@@ -345,13 +350,17 @@ input {
   }
   .carousel {
     padding: 0 $spacer-x * 2;
+    .carousel-inner {
+      margin-left: $grid-gutter-width / 2;
+      margin-right: $grid-gutter-width / 2;
+    }
     .carousel-item {
       margin: $spacer-y 0 $spacer-y * 1.5;
       border: 5px solid $brand-primary;
       padding-left: 0;
       padding-right: 0;
-      margin-left: $grid-gutter-width / 2;
-      margin-right: $grid-gutter-width / 2;
+      // margin-left: $grid-gutter-width / 2;
+      // margin-right: $grid-gutter-width / 2;
       width: calc(100% - #{$grid-gutter-width});
       //position: relative;
       img {
