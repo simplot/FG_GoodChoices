@@ -363,20 +363,11 @@ function getRecipes() {
         "trends": ["Extreme Indulgence"],
         "products": ["Fries"]
     }, {
-        "name": "Szechuan Pepper Fries",
-        "columns": 1,
-        "rows": 2,
-        "download": "",
-        "image": "",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareable"],
-        "products": ["Fries"]
-    }, {
         "name": "Spicy Sweet Mashed Potatoes",
         "columns": 1,
         "rows": 2,
-        "download": "",
-        "image": "SpicySweetPotatoMashedPotatoes.jpg",
+        "download": "SpicySweetMashedPotatos.pdf",
+        "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
         "trends": ["Spicy & Bold", "Classics with a twist"],
         "products": ["Mashed"]
@@ -393,7 +384,7 @@ function getRecipes() {
         "name": "Brussels Sprouts with Corn & Jalapeno and Bacon",
         "columns": 2,
         "rows": 4,
-        "download": "",
+        "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
         "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
         "occasion": "Seasonal Celebrations",
         "trends": ["Sharables", "Classics with a twist"],
@@ -402,8 +393,8 @@ function getRecipes() {
         "name": "Pork Nachos with Pineapple and Pepper",
         "columns": 1,
         "rows": 2,
-        "download": "",
-        "image": "PorkNachosWPineapplesNPeppers.jpg",
+        "download": "PorkNachosWPineappleNPepper.pdf",
+        "image": "PorkNachosWPineappleNPepper.jpg",
         "occasion": "Game Day",
         "trends": ["Spicy & Bold", "Shareable"],
         "products": [""]
@@ -417,15 +408,6 @@ function getRecipes() {
         "trends": ["Sharables"],
         "products": ["Grains"]
     }, {
-        "name": "Spicy Pineapple Poblano Cheeseburger",
-        "columns": 1,
-        "rows": 2,
-        "download": "",
-        "image": "",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold"],
-        "products": ["Roasted", "Fruit"]
-    }, {
         "name": "Spicy Pulled Pork Shepherd Pie",
         "columns": 1,
         "rows": 2,
@@ -438,8 +420,8 @@ function getRecipes() {
         "name": "Avocado Mary",
         "columns": 1,
         "rows": 2,
-        "download": "",
-        "image": "",
+        "download": "AvocadoMary.pdf",
+        "image": "AvocadoMary.jpg",
         "occasion": "Game Day",
         "trends": ["Craft Cocktails/Mocktails"],
         "products": ["Avocado"]
@@ -447,8 +429,8 @@ function getRecipes() {
         "name": "Marionberry Mule",
         "columns": 2,
         "rows": 4,
-        "download": "",
-        "image": "",
+        "download": "MarionberryMule.pdf",
+        "image": "MarionberryMule.jpg",
         "occasion": "Game Day",
         "trends": ["Craft Cocktails/Mocktails"],
         "products": ["Fruit"]
@@ -456,8 +438,8 @@ function getRecipes() {
         "name": "Loaded Ghost Pepper Cheese & Pork Belly Sidewinders",
         "columns": 1,
         "rows": 2,
-        "download": "",
-        "image": "",
+        "download": "LoadedGhostPepperCheeseNPorkBellySidewinders.pdf",
+        "image": "LoadedGhostPepperCheeseNPorkBellySidewinders.jpg",
         "occasion": "Game Day",
         "trends": ["Extreme Indulgence"],
         "products": ["Fries", "Avocado"]
@@ -528,8 +510,8 @@ function getRecipes() {
         "name": "Fuji Apple Fizz",
         "columns": 1,
         "rows": 2,
-        "download": "",
-        "image": "",
+        "download": "FujiAppleFizz.pdf",
+        "image": "FujiAppleFizz.jpg",
         "occasion": "Seasonal Celebrations",
         "trends": ["Seasonal Beverages"],
         "products": ["Fruit"]
