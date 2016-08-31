@@ -123,7 +123,6 @@ function pageReady() {
       e.preventDefault();
       $(this).hide();
       $(this).next().show();
-      //$( '#seasonal-video-link iframe' ).show();
     });
 
 
@@ -208,7 +207,7 @@ function getRecipes() {
     return [{
         "name": "Bacon Wrapped Cracked Pepper Fries",
         "columns": 1,
-        "rows": 3,
+        "rows": 4,
         "download": "BaconWrappedCrackedPepperFries.pdf",
         "image": "BaconWrappedCrackedPepperFries.jpg",
         "occasion": "Game Day",
@@ -217,7 +216,7 @@ function getRecipes() {
     }, {
         "name": "Curried Vegetables",
         "columns": 2,
-        "rows": 3,
+        "rows": 4,
         "download": "CurriedCauliflower.pdf",
         "image": "CurriedCauliflower.jpg",
         "occasion": "Seasonal Celebrations",
@@ -226,7 +225,7 @@ function getRecipes() {
     }, {
         "name": "Flame-Roasted Maple Sweet Potato Pancakes with Bourbon Butter & Pecans",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
         "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
         "occasion": "Seasonal Celebrations",
@@ -235,7 +234,7 @@ function getRecipes() {
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
         "columns": 1,
-        "rows": 3,
+        "rows": 4,
         "download": "HeartyGrainsButternutSquashSoup.pdf",
         "image": "HeartyGrainsButternutSquashSoup.jpg",
         "occasion": "Seasonal Celebrations",
@@ -244,7 +243,7 @@ function getRecipes() {
     }, {
         "name": "Parisian Carrots in Brown Butter Sage Sauce with Redskin Mashed",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.pdf",
         "image": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.jpg",
         "occasion": "Seasonal Celebrations",
@@ -260,15 +259,6 @@ function getRecipes() {
         "trends": ["Classics with a Twist"],
         "products": ["Roasted"]
     }, {
-        "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
-        "columns": 2,
-        "rows": 3,
-        "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
-        "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Spicy & Bold"],
-        "products": ["Roasted"]
-    }, {
         "name": "Bacon and Brussels Mashed with Stout Gravy",
         "columns": 1,
         "rows": 3,
@@ -278,6 +268,15 @@ function getRecipes() {
         "trends": ["Classics with a Twist"],
         "products": ["Mashed", "Vegetables"]
     }, {
+        "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
+        "columns": 2,
+        "rows": 3,
+        "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
+        "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
+        "occasion": "Seasonal Celebrations",
+        "trends": ["Classics with a Twist", "Spicy & Bold"],
+        "products": ["Roasted"]
+    }, {
         "name": "Spicy Sriracha SIDEWINDERS™",
         "columns": 1,
         "rows": 2,
@@ -286,6 +285,15 @@ function getRecipes() {
         "occasion": "Game Day",
         "trends": ["Spicy & Bold", "Sharables"],
         "products": ["Fries"]
+    }, {
+        "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
+        "columns": 1,
+        "rows": 2,
+        "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
+        "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
+        "occasion": "Seasonal Celebrations",
+        "trends": ["Classics with a Twist"],
+        "products": ["Vegetables"]
     }, {
         "name": "Roasted Salmon with Redskin Mashed, Tri-Colored Carrots & Pesto",
         "columns": 2,
@@ -298,21 +306,12 @@ function getRecipes() {
     }, {
         "name": "Roasted Yukon Gold & Reds and Haricot Vert with Ancho Dust",
         "columns": 2,
-        "rows": 3,
+        "rows": 4,
         "download": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.pdf",
         "image": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.jpg",
         "occasion": "Seasonal Celebrations",
         "trends": ["Classics with a Twist", "Spicy & Bold"],
         "products": ["Roasted", "Vegetables"]
-    }, {
-        "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
-        "columns": 1,
-        "rows": 2,
-        "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
-        "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Vegetables"]
     }, {
         "name": "Roasted Sweet Potato Breakfast Hash",
         "columns": 2,
@@ -350,24 +349,6 @@ function getRecipes() {
         "trends": ["Spicy & Bold"],
         "products": ["Mashed", "Avocado"]
     }, {
-        "name": "Avocado Buffalo Chicken Sliders",
-        "columns": 2,
-        "rows": 3,
-        "download": "AvocadoBuffaloChickenSliders.pdf",
-        "image": "AvocadoBuffaloChickenSliders.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Sharables"],
-        "products": ["Avocado"]
-    }, {
-        "name": "Sweet Potatocado Smoothie",
-        "columns": 2,
-        "rows": 3,
-        "download": "SweetPotatocadoSmoothie.pdf",
-        "image": "SweetPotatocadoSmoothie.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages", "Classics with a twist"],
-        "products": ["Avocado", "Mashed"]
-    }, {
         "name": "Fondue Frites",
         "columns": 1,
         "rows": 2,
@@ -377,9 +358,27 @@ function getRecipes() {
         "trends": ["Extreme Indulgence"],
         "products": ["Fries"]
     }, {
+        "name": "Avocado Buffalo Chicken Sliders",
+        "columns": 2,
+        "rows": 4,
+        "download": "AvocadoBuffaloChickenSliders.pdf",
+        "image": "AvocadoBuffaloChickenSliders.jpg",
+        "occasion": "Game Day",
+        "trends": ["Spicy & Bold", "Sharables"],
+        "products": ["Avocado"]
+    }, {
+        "name": "Sweet Potatocado Smoothie",
+        "columns": 2,
+        "rows": 4,
+        "download": "SweetPotatocadoSmoothie.pdf",
+        "image": "SweetPotatocadoSmoothie.jpg",
+        "occasion": "Seasonal Celebrations",
+        "trends": ["Seasonal Beverages", "Classics with a twist"],
+        "products": ["Avocado", "Mashed"]
+    }, {
         "name": "Spicy Sweet Mashed Potatoes",
         "columns": 1,
-        "rows": 3,
+        "rows": 4,
         "download": "SpicySweetMashedPotatos.pdf",
         "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
@@ -442,7 +441,7 @@ function getRecipes() {
     }, {
         "name": "Marionberry Mule",
         "columns": 2,
-        "rows": 5,
+        "rows": 6,
         "download": "MarionberryMule.pdf",
         "image": "MarionberryMule.jpg",
         "occasion": "Game Day",
@@ -496,7 +495,7 @@ function getRecipes() {
     }, {
         "name": "Eggs Benny Rosemary Brunch Fries",
         "columns": 2,
-        "rows": 1,
+        "rows": 3,
         "download": "EggsBennyRosemaryBrunchFries.pdf",
         "image": "EggsBennyRosemaryBrunchFries.jpg",
         "occasion": "Seasonal Celebrations",
@@ -514,7 +513,7 @@ function getRecipes() {
     }, {
         "name": "Cherry Old Fashioned Smash",
         "columns": 1,
-        "rows": 2,
+        "rows": 3,
         "download": "CherryOldFashionedSmash.pdf",
         "image": "CherryOldFashionedSmash.jpg",
         "occasion": "Seasonal Celebrations",
@@ -532,7 +531,7 @@ function getRecipes() {
     }, {
         "name": "Sparkling Rosemary Berry Sangria",
         "columns": 2,
-        "rows": 4,
+        "rows": 3,
         "download": "SparklingRosemaryBerrySangria.pdf",
         "image": "SparklingRosemaryBerrySangria.jpg",
         "occasion": "Seasonal Celebrations",

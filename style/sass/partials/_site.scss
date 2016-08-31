@@ -582,16 +582,16 @@ input {
     padding: 0;
     // margin: 0 auto;
     // max-width: 1281px;
-    @media ( max-width: '718px' ) {
-      max-width: 326px;
-    //  width: auto;
-    }
-    @media( min-width: '719px' ) and ( max-width: '1059px' ) {
-      max-width: 631px;
-    }
-    @media( min-width: '1060px' ) and ( max-width: '1400px' ) {
-      max-width: 960px;
-    }
+    // @media ( max-width: '718px' ) {
+    //   max-width: 326px;
+    // //  width: auto;
+    // }
+    // @media( min-width: '719px' ) and ( max-width: '1059px' ) {
+    //   max-width: 631px;
+    // }
+    // @media( min-width: '1060px' ) and ( max-width: '1400px' ) {
+    //   max-width: 960px;
+    // }
   }
   .card, .grid-sizer {
 //    width: calc(25% - 25px);

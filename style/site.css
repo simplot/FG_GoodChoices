@@ -5737,15 +5737,6 @@ input {
 
 #recipes .recipe-card-container {
   padding: 0; }
-  @media (max-width: 718px) {
-    #recipes .recipe-card-container {
-      max-width: 326px; } }
-  @media (min-width: 719px) and (max-width: 1059px) {
-    #recipes .recipe-card-container {
-      max-width: 631px; } }
-  @media (min-width: 1060px) and (max-width: 1400px) {
-    #recipes .recipe-card-container {
-      max-width: 960px; } }
 
 #recipes .card, #recipes .grid-sizer {
   width: 301px; }
