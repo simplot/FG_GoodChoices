@@ -78,6 +78,9 @@ select {
   border: 0;
   @include box-shadow( 0, 1px, 2px, rgba( 0, 0, 0, .35 ) );
 }
+select::-ms-expand {
+  display: none;
+}
 input {
   padding: 5px 10px;
   -webkit-appearance:none;
@@ -202,19 +205,22 @@ input {
       height: 100%;
       color: $white;
       margin-bottom: 10px;
-      .inner {
+      .overlay {
         height: 100%;
         width: 100%;
-        background: rgba(0, 0, 0, 0.35);
-        padding: 100px 0 0;
+        display: table;
         @include transition( background-color .2s );
+        background: rgba(0, 0, 0, 0.35);
+      }
+      .inner {
+        padding: 100px 0 0;
         img {
           display: block;
           margin: 0 auto 50px;
         }
       }
       &:hover {
-        .inner {
+        .overlay {
           background: rgba(0, 0, 0, 0);
         }
       }
