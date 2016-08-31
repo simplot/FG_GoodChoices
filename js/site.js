@@ -113,6 +113,20 @@ function pageReady() {
   		}
   	});
 
+    //Play videos when still cover image is clicked
+    $( '#seasonal-video-link' ).click( function(e) {
+      e.preventDefault();
+      $(this).hide();
+      $(this).next().show();
+    });
+    $( '#gameday-video-link' ).click( function(e) {
+      e.preventDefault();
+      $(this).hide();
+      $(this).next().show();
+      //$( '#seasonal-video-link iframe' ).show();
+    });
+
+
 }
 
 ///////////////////////////////////////////////////////////////////////////////

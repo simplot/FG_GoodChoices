@@ -8,6 +8,13 @@
     clip:auto; height:auto; margin:0; overflow:visible; position:static; width:auto;
   }
 }
+
+@mixin transition( $transition ) {
+  -moz-transition:    $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
@@ -99,7 +106,7 @@ input {
       border-bottom: 5px solid;
       a {
         text-decoration: none;
-        transition: all .2s;
+        @include transition( all .2s );
         display: inline-block;
         margin-top: 3px;
         margin-bottom: 3px;
@@ -125,26 +132,6 @@ input {
     }
     .inner {
       margin-top: 26%;
-      &.seasonal {
-        border-color: $brand-primary;
-        a {
-          color: $brand-primary;
-          &:hover {
-            background: $brand-primary;
-            color: $white;
-          }
-        }
-      }
-      &.gameday {
-        border-color: $brand-secondary;
-        a {
-          color: $brand-secondary;
-          &:hover {
-            background: $brand-secondary;
-            color: $white;
-          }
-        }
-      }
       &.logo {
         margin: 0;
         padding: 0;
@@ -152,26 +139,6 @@ input {
         a {
           img {
             max-width: 100%;
-          }
-        }
-      }
-      &.recipes {
-        border-color: $gray;
-        a {
-          color: $gray;
-          &:hover {
-            background: $gray;
-            color: $white;
-          }
-        }
-      }
-      &.save {
-        border-color: $gray-light;
-        a {
-          color: $gray-light;
-          &:hover {
-            background: $gray-light;
-            color: $white;
           }
         }
       }
@@ -223,10 +190,10 @@ input {
         width: 100%;
         background: rgba(0, 0, 0, 0.35);
         padding: 100px 0 0;
-        transition: background-color .2s;
+        @include transition( background-color .2s );
         img {
           display: block;
-          margin: 20px auto 30px;
+          margin: 0 auto 50px;
         }
       }
       &:hover {
@@ -236,18 +203,26 @@ input {
       }
     }
     &.seasonal {
+      margin-right: 22.5px;
+
+      iframe {
+        border: 5px solid $brand-primary;
+      }
       a {
       //  margin-left: 90px;
-        margin-right: 22.5px;
       }
       .image-link {
         border-color: $brand-primary;
       }
     }
     &.gameday {
+      margin-left: 22.5px;
+
+      iframe {
+        border: 5px solid $brand-secondary;
+      }
       a {
       //  margin-right: 90px;
-        margin-left: 22.5px;
       }
       .image-link {
         border-color: $brand-secondary;
@@ -314,7 +289,7 @@ input {
       }
     }
   }
-  .nav-tabs {
+  .nav-tabs:not( .scroll-tabs ) {
     margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
       .inner {
@@ -322,7 +297,7 @@ input {
         // transition: all .2s;
         a {
           color: $brand-primary;
-          transition: all .2s;
+          @include transition( all .2s );
           span {
             font-weight: 900;
           }
@@ -472,7 +447,7 @@ input {
   .circle-stat {
     left: $spacer-x;
   }
-  .nav-tabs {
+  .nav-tabs:not( .scroll-tabs ) {
     // margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
       .inner {
@@ -523,8 +498,63 @@ input {
   }
 }
 
+.scroll-tabs {
+  margin-top: 2.5rem;
+  li .inner {
+    &:hover {
+       margin-top: 0 !important;
+    }
+  }
+}
+.nav-tabs li .inner {
+  &:hover {
+  //  margin-top: 0 !important;
+  }
+  &.seasonal {
+    border-color: $brand-primary !important;
+    background: none;
+    a {
+      color: $brand-primary !important;
+      &:hover, &:active {
+        background: none $brand-primary !important;
+        color: $white !important;
+      }
+    }
+  }
+  &.gameday {
+    border-color: $brand-secondary !important;
+    a {
+      color: $brand-secondary !important;
+      &:hover, &:active {
+        background: $brand-secondary !important;
+        color: $white !important;
+      }
+    }
+  }
+  &.recipes {
+    border-color: $gray !important;
+    a {
+      color: $gray !important;
+      &:hover, &:active {
+        background: $gray !important;
+        color: $white !important;
+      }
+    }
+  }
+  &.save {
+    border-color: $gray-light !important;
+    a {
+      color: $gray-light !important;
+      &:hover, &:active {
+        background: $gray-light !important;
+        color: $white !important;
+      }
+    }
+  }
+}
+
 #recipes {
-  margin-top: 120px;
+//  margin-top: 120px;
   .form-row {
     margin-bottom: $spacer-y;
   }
@@ -702,8 +732,7 @@ input {
   img {
     display: block;
     position: relative;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s;
+    @include transition( all 0.35s );
   }
   p {
     color: $white;
