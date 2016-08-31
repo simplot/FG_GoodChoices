@@ -397,7 +397,7 @@ function getRecipes() {
         "image": "PorkNachosWPineappleNPepper.jpg",
         "occasion": "Game Day",
         "trends": ["Spicy & Bold", "Shareable"],
-        "products": []
+        "products": ["Roasted", "Fries"]
     }, {
         "name": "Quinoa Kale Stuffed Mushrooms",
         "columns": 1,
@@ -498,11 +498,11 @@ function getRecipes() {
         "trends": ["Classics with a Twist", "Sharables"],
         "products": ["Fruit", "Grains"]
     }, {
-        "name": "Black Cherry Old Fashioned Smash",
+        "name": "Cherry Old Fashioned Smash",
         "columns": 1,
         "rows": 2,
-        "download": "BlackCherryOldFashionedSmash.pdf",
-        "image": "BlackCherryOldFashionedSmash.jpg",
+        "download": "CherryOldFashionedSmash.pdf",
+        "image": "CherryOldFashionedSmash.jpg",
         "occasion": "Seasonal Celebrations",
         "trends": ["Seasonal Beverages"],
         "products": ["Fruit"]
