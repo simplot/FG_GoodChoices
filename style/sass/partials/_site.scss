@@ -26,6 +26,13 @@
     box-shadow: $top $left $blur $color;
   }
 }
+
+@mixin opacity( $opacity ) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
 .visually-hidden {
   @include visually-hidden;
 }
@@ -153,6 +160,11 @@ input {
   a {
     display: block;
     text-align: center;
+    @include transition(opacity .2s);
+    &:hover {
+      cursor: pointer;
+      @include opacity(0.7);
+    }
   }
 }
 #top {
@@ -171,6 +183,11 @@ input {
   .callout {
     // padding: 0 2%;
     position: relative;
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
     .learn-more {
       display: block;
       text-align: center;
@@ -701,8 +718,8 @@ input {
     height: 80%;
     left: 10%;
     top: 10%;
-    border-bottom: 5px solid $white;
-    border-top: 5px solid $white;
+    border-bottom: 2px solid $white;
+    border-top: 2px solid $white;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: scale(0,1);

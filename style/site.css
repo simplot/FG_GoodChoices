@@ -5438,7 +5438,14 @@ input {
   margin: 50px 0; }
   .down-arrow a {
     display: block;
-    text-align: center; }
+    text-align: center;
+    -moz-transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+    .down-arrow a:hover {
+      cursor: pointer;
+      opacity: 0.7;
+      filter: alpha(opacity=70); }
 
 #top .hero {
   margin-top: -40px;
@@ -5452,6 +5459,8 @@ input {
 
 #top .callout {
   position: relative; }
+  #top .callout a:hover {
+    cursor: pointer; }
   #top .callout .learn-more {
     display: block;
     text-align: center; }
@@ -5825,8 +5834,8 @@ input {
     height: 80%;
     left: 10%;
     top: 10%;
-    border-bottom: 5px solid #fff;
-    border-top: 5px solid #fff;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: scale(0, 1);
