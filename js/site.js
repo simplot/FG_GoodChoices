@@ -133,20 +133,6 @@ function pageReady() {
         $('#gameday-video-modal iframe').removeAttr('src');
     });
 
-
-    //Play videos when still cover image is clicked
-    // $( '#seasonal-video-link' ).click( function(e) {
-    //   e.preventDefault();
-    //   $(this).hide();
-    //   $(this).next().show();
-    // });
-    // $( '#gameday-video-link' ).click( function(e) {
-    //   e.preventDefault();
-    //   $(this).hide();
-    //   $(this).next().show();
-    // });
-
-
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -228,7 +214,7 @@ function getRecipes() {
     return [{
         "name": "Bacon Wrapped Cracked Pepper Fries",
         "columns": 1,
-        "rows": 4,
+        "rows": 8,
         "download": "BaconWrappedCrackedPepperFries.pdf",
         "image": "BaconWrappedCrackedPepperFries.jpg",
         "occasion": "Game Day",
@@ -237,7 +223,7 @@ function getRecipes() {
     }, {
         "name": "Curried Vegetables",
         "columns": 2,
-        "rows": 4,
+        "rows": 8,
         "download": "CurriedCauliflower.pdf",
         "image": "CurriedCauliflower.jpg",
         "occasion": "Seasonal Celebrations",
@@ -246,7 +232,7 @@ function getRecipes() {
     }, {
         "name": "Flame-Roasted Maple Sweet Potato Pancakes with Bourbon Butter & Pecans",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
         "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
         "occasion": "Seasonal Celebrations",
@@ -255,7 +241,7 @@ function getRecipes() {
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
         "columns": 1,
-        "rows": 4,
+        "rows": 8,
         "download": "HeartyGrainsButternutSquashSoup.pdf",
         "image": "HeartyGrainsButternutSquashSoup.jpg",
         "occasion": "Seasonal Celebrations",
@@ -264,7 +250,7 @@ function getRecipes() {
     }, {
         "name": "Parisian Carrots in Brown Butter Sage Sauce with Redskin Mashed",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.pdf",
         "image": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.jpg",
         "occasion": "Seasonal Celebrations",
@@ -273,7 +259,7 @@ function getRecipes() {
     }, {
         "name": "Bourbon and Flame-Roasted Fuji Apple Glazed Turkey",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "BourbonandFlameRoastedFujiAppleGlazedTurkey.pdf",
         "image": "BourbonandFlameRoastedFujiAppleGlazedTurkey.jpg",
         "occasion": "Seasonal Celebrations",
@@ -282,7 +268,7 @@ function getRecipes() {
     }, {
         "name": "Bacon and Brussels Mashed with Stout Gravy",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "BaconBrusslesMashedStoutGravy.pdf",
         "image": "BaconBrusslesMashedStoutGravy.jpg",
         "occasion": "Seasonal Celebrations",
@@ -291,7 +277,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
         "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
         "occasion": "Seasonal Celebrations",
@@ -300,7 +286,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Sriracha SIDEWINDERS™",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "SpicySrirachaSIDEWINDERS.pdf",
         "image": "SpicySrirachaSIDEWINDERS.jpg",
         "occasion": "Game Day",
@@ -309,7 +295,7 @@ function getRecipes() {
     }, {
         "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
         "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
         "occasion": "Seasonal Celebrations",
@@ -318,7 +304,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Salmon with Redskin Mashed, Tri-Colored Carrots & Pesto",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.pdf",
         "image": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.jpg",
         "occasion": "Seasonal Celebrations",
@@ -327,7 +313,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Yukon Gold & Reds and Haricot Vert with Ancho Dust",
         "columns": 2,
-        "rows": 4,
+        "rows": 8,
         "download": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.pdf",
         "image": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.jpg",
         "occasion": "Seasonal Celebrations",
@@ -336,7 +322,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Sweet Potato Breakfast Hash",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "RoastedSweetPotatoBreakfastHash.pdf",
         "image": "RoastedSweetPotatoBreakfastHash.jpg",
         "occasion": "Seasonal Celebrations",
@@ -345,7 +331,7 @@ function getRecipes() {
     }, {
         "name": "Morel Waffle Mash Stacker with Shrimp, Scallops & Lobster",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "MoralWaffleMashStacker.pdf",
         "image": "MoralWaffleMashStacker.jpg",
         "occasion": "Game Day",
@@ -354,7 +340,7 @@ function getRecipes() {
     }, {
         "name": "Chipotle Breakfast Scramble",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "ChipotleBreakfastScramble.pdf",
         "image": "ChipotleBreakfastScramble.jpg",
         "occasion": "Game Day",
@@ -363,7 +349,7 @@ function getRecipes() {
     }, {
         "name": "South of the Border Mashed",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "SouthoftheBorderMashed.pdf",
         "image": "SouthoftheBorderMashed.jpg",
         "occasion": "Game Day",
@@ -372,7 +358,7 @@ function getRecipes() {
     }, {
         "name": "Fondue Frites",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "FondueFrites.pdf",
         "image": "FondueFrites.jpg",
         "occasion": "Game Day",
@@ -381,7 +367,7 @@ function getRecipes() {
     }, {
         "name": "Avocado Buffalo Chicken Sliders",
         "columns": 2,
-        "rows": 4,
+        "rows": 8,
         "download": "AvocadoBuffaloChickenSliders.pdf",
         "image": "AvocadoBuffaloChickenSliders.jpg",
         "occasion": "Game Day",
@@ -390,7 +376,7 @@ function getRecipes() {
     }, {
         "name": "Sweet Potatocado Smoothie",
         "columns": 2,
-        "rows": 4,
+        "rows": 8,
         "download": "SweetPotatocadoSmoothie.pdf",
         "image": "SweetPotatocadoSmoothie.jpg",
         "occasion": "Seasonal Celebrations",
@@ -399,7 +385,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Sweet Mashed Potatoes",
         "columns": 1,
-        "rows": 4,
+        "rows": 8,
         "download": "SpicySweetMashedPotatos.pdf",
         "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
@@ -408,7 +394,7 @@ function getRecipes() {
     }, {
         "name": "Oktoberfest Sausage Platter",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "OktoberfestSausagePlatter.pdf",
         "image": "OktoberfestSausagePlatter.jpg",
         "occasion": "Seasonal Celebrations",
@@ -417,7 +403,7 @@ function getRecipes() {
     }, {
         "name": "Brussels Sprouts with Corn & Jalapeno and Bacon",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
         "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
         "occasion": "Seasonal Celebrations",
@@ -426,7 +412,7 @@ function getRecipes() {
     }, {
         "name": "Pork Nachos with Pineapple and Pepper",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "PorkNachosWPineappleNPepper.pdf",
         "image": "PorkNachosWPineappleNPepper.jpg",
         "occasion": "Game Day",
@@ -435,7 +421,7 @@ function getRecipes() {
     }, {
         "name": "Quinoa Kale Stuffed Mushrooms",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "QuinoaKaleStuffedMushrooms.pdf",
         "image": "QuinoaKaleStuffedMushrooms.jpg",
         "occasion": "Seasonal Celebrations",
@@ -444,7 +430,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Pulled Pork Shepherd Pie",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "SpicyPulledPorkShepherdsPie.pdf",
         "image": "SpicyPulledPorkShepherdsPie.jpg",
         "occasion": "Seasonal Celebrations",
@@ -453,7 +439,7 @@ function getRecipes() {
     }, {
         "name": "Avocado Mary",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "AvocadoMary.pdf",
         "image": "AvocadoMary.jpg",
         "occasion": "Game Day",
@@ -462,7 +448,7 @@ function getRecipes() {
     }, {
         "name": "Marionberry Mule",
         "columns": 2,
-        "rows": 6,
+        "rows": 12,
         "download": "MarionberryMule.pdf",
         "image": "MarionberryMule.jpg",
         "occasion": "Game Day",
@@ -471,7 +457,7 @@ function getRecipes() {
     }, {
         "name": "Loaded Ghost Pepper Cheese & Pork Belly Sidewinders",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "LoadedGhostPepperCheeseNPorkBellySidewinders.pdf",
         "image": "LoadedGhostPepperCheeseNPorkBellySidewinders.jpg",
         "occasion": "Game Day",
@@ -480,7 +466,7 @@ function getRecipes() {
     }, {
         "name": "Ultimate Salted Caramel Fuji Apple Donutshake",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "UltimateSaltedCaramelFujiAppleDonutshake.pdf",
         "image": "UltimateSaltedCaramelFujiAppleDonutshake.jpg",
         "occasion": "Game Day",
@@ -489,7 +475,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Bourbon Peach Short Rib Sliders",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "SpicyBourbonPeachShortRibSliders.pdf",
         "image": "SpicyBourbonPeachShortRibSliders.jpg",
         "occasion": "Game Day",
@@ -498,7 +484,7 @@ function getRecipes() {
     }, {
         "name": "Angry Edamame",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "AngryEdamame.pdf",
         "image": "AngryEdamame.jpg",
         "occasion": "Game Day",
@@ -507,7 +493,7 @@ function getRecipes() {
     }, {
         "name": "Flame-Roasted Corn & Jalapeno Queso",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "FlameRoastedCornNJalapenoQueso.pdf",
         "image": "FlameRoastedCornNJalapenoQueso.jpg",
         "occasion": "Game Day",
@@ -516,7 +502,7 @@ function getRecipes() {
     }, {
         "name": "Eggs Benny Rosemary Brunch Fries",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "EggsBennyRosemaryBrunchFries.pdf",
         "image": "EggsBennyRosemaryBrunchFries.jpg",
         "occasion": "Seasonal Celebrations",
@@ -525,7 +511,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Pork Loin with Mango Mojo & Ancient Grains & Kale",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "RoastedPorkwithMangoMojoNAncientGrainsNKale.pdf",
         "image": "RoastedPorkwithMangoMojoNAncientGrainsNKale.jpg",
         "occasion": "Seasonal Celebrations",
@@ -534,7 +520,7 @@ function getRecipes() {
     }, {
         "name": "Cherry Old Fashioned Smash",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "CherryOldFashionedSmash.pdf",
         "image": "CherryOldFashionedSmash.jpg",
         "occasion": "Seasonal Celebrations",
@@ -543,7 +529,7 @@ function getRecipes() {
     }, {
         "name": "Fuji Apple Fizz",
         "columns": 1,
-        "rows": 3,
+        "rows": 6,
         "download": "FujiAppleFizz.pdf",
         "image": "FujiAppleFizz.jpg",
         "occasion": "Seasonal Celebrations",
@@ -552,7 +538,7 @@ function getRecipes() {
     }, {
         "name": "Sparkling Rosemary Berry Sangria",
         "columns": 2,
-        "rows": 3,
+        "rows": 6,
         "download": "SparklingRosemaryBerrySangria.pdf",
         "image": "SparklingRosemaryBerrySangria.jpg",
         "occasion": "Seasonal Celebrations",
@@ -561,7 +547,7 @@ function getRecipes() {
     }, {
         "name": "Sweet Potato & Bacon Alfredo Pizza",
         "columns": 1,
-        "rows": 2,
+        "rows": 4,
         "download": "SweetPotatoNBaconAlfredoPizza.pdf",
         "image": "SweetPotatoNBaconAlfredoPizza.jpg",
         "occasion": "Seasonal Celebrations",

@@ -628,21 +628,20 @@
                 <strong>RECIPES</strong>
               </h1>
               <div class="row">
-                <div class="col-md-16 push-md-4">
+                <div class="col-xs-22 push-xs-1 col-md-16 push-md-4">
                   <h4 class="intro-text center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Our collection of seasonal recipes offer on-trend inspiration that is sure to delight. Featuring Simplot products used in fun and unique ways, we hope these menu ideas help your patrons celebrate the season and inspire you to enjoy savings of up to $2500.
                   </h4>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-23">
+                <div class="push-xs-1 col-xs-23">
                   <h5 class="sort-by">SORT BY</h5>
                 </div>
               </div>
               <div class="row form-row">
-                <div class="col-md-1"></div>
-                <div class="col-md-15 filter-container fluid-container">
+                <div class="col-xs-1"></div>
+                <div class="col-xs-22 col-md-16 filter-container fluid-container">
                   <form id="form-recipe-filters" name="form-recipe-filters">
                     <span>
                       <label for="season-filter">Occasion:</label>
@@ -673,12 +672,13 @@
               </span>
             </form>
           </div>
-          <div class="col-md-7">
+          <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1">
             <form id="form-recipe-search" name="form-recipe-search">
               <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
               <input type="text" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
             </form>
           </div>
+          <div class="col-xs-1"></div>
         </div>
         <style>
         .smoothify * {
@@ -708,17 +708,17 @@
 
         </style>
         <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-22">
+          <div class="col-xs-1"></div>
+          <div class="col-xs-22">
             <div class="recipe-card-container">
               <div class="row">
                 <md-content class="smoothify">
-                <md-grid-list md-cols="4" md-cols-sm="2" md-cols-md="3" md-row-height="5em" md-gutter="25px">
+                <md-grid-list md-cols="4" md-col-xs="1" md-cols-sm="2" md-cols-md="3" md-row-height="5em" md-gutter="25px">
                   <md-grid-tile
                     ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
                     ng-class="{'double-wide': recipe.columns===2}"
                     md-colspan="{{recipe.columns}}"
-                    md-rowspan="{{recipe.rows*2}}">
+                    md-rowspan="{{recipe.rows}}">
                     <div class="card" style="height:100%; width:100%;">
                       <a href="pdf/{{recipe.download}}" target="_blank">
                         <div class="hovereffect">

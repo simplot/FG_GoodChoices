@@ -5331,6 +5331,9 @@ html, body {
   height: 100%;
   background: none #fff; }
 
+body > .ng-scope {
+  overflow: hidden; }
+
 md-content.md-default-theme, md-content {
   background-color: #fff; }
 
@@ -5841,18 +5844,26 @@ span.reg {
 #recipes .form-row {
   margin-bottom: 1rem; }
 
-#recipes .sort-by {
-  margin-bottom: 0.5rem; }
-
 #recipes #form-recipe-filters > span {
   display: inline-block;
   margin-right: 1rem; }
   #recipes #form-recipe-filters > span label {
-    display: block; }
+    display: block;
+    margin-top: 0.5rem; }
+  @media (max-width: 767px) {
+    #recipes #form-recipe-filters > span {
+      width: 100%; }
+      #recipes #form-recipe-filters > span select {
+        width: 100%; } }
 
 #recipes #form-recipe-search {
   float: right;
   margin-top: 2rem; }
+  @media (max-width: 767px) {
+    #recipes #form-recipe-search {
+      float: none; }
+      #recipes #form-recipe-search input {
+        width: 100%; } }
 
 #recipes md-grid-list {
   margin: 20px auto 40px;
@@ -5870,11 +5881,6 @@ span.reg {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35); }
-  #recipes .card.double-wide {
-    width: 629px; }
-    @media (max-width: 718px) {
-      #recipes .card.double-wide {
-        width: 301px; } }
   #recipes .card a {
     text-decoration: none; }
     #recipes .card a > .inner {
