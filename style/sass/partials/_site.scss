@@ -265,33 +265,32 @@ span.reg {
     display: block;
     text-align: center;
     margin-top: 20px;
+    @media( max-width: '767px' ) {
+      margin-bottom: 20px;
+    }
   }
   .callout {
     // padding: 0 2%;
-    position: relative;
-    width: 605px;
-    height: 315px;
+    // position: relative;
+    min-width: 300px;
+    // height: 315px;
     margin: 0 auto;
-    iframe {
-      width: 100%;
-      height: 100%;
-    }
-
     a {
       &:hover {
         cursor: pointer;
       }
     }
     .image-link {
-      // background-repeat: no-repeat;
-      // background-position: center;
-      // background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       border: 5px solid;
-
       width: 100%;
       height: 100%;
       // margin-bottom: 34%;
       position: relative;
+      min-width: 300px;
+
       //height: 320px;
       // height: 100%;
       display: block;
@@ -299,7 +298,8 @@ span.reg {
       // margin-bottom: 10px;
       > img {
           position: absolute;
-          max-width: 100%;
+          width: 100%;
+          height: auto;
       }
       .overlay {
         position: relative;
@@ -310,7 +310,7 @@ span.reg {
         background: rgba(0, 0, 0, 0.35);
       }
       .inner {
-        padding: 20px 0 0;
+        padding: 100px 0 74px;
         display: table-cell;
         vertical-align: middle;
         img {
@@ -327,61 +327,63 @@ span.reg {
 
     &.seasonal {
     //  margin-right: 22.5px;
-      iframe {
-        border: 5px solid $brand-primary;
-      }
-      a {
-      //  margin-left: 90px;
-      }
+      // iframe {
+      //   border: 5px solid $brand-primary;
+      // }
+      // a {
+      // //  margin-left: 90px;
+      // }
       .image-link {
+        background-image: url(../img/seasonal-tablescape-angled-hands.jpg);
         border-color: $brand-primary;
       }
     }
     &.gameday {
       //margin-left: 22.5px;
       // float: right;
-      iframe {
-        border: 5px solid $brand-secondary;
-      }
-      a {
-      //  margin-right: 90px;
-      }
+      // iframe {
+      //   border: 5px solid $brand-secondary;
+      // }
+      // a {
+      // //  margin-right: 90px;
+      // }
       .image-link {
+        background-image: url(../img/game-day-tablescape-204.jpg);
         border-color: $brand-secondary;
       }
     }
-    @media( max-width: '767px' ) {
-      margin: 0 auto;
-      &.gameday {
-        margin-top: 20px;
-      }
-    }
-    @media( min-width: '674px' ) and ( max-width: '767px' ) {
-      margin: 0 auto;
-      &.gameday {
-        margin-top: 20px;
-      }
-    }
-    @media( min-width: '768px' ) and ( max-width: '1200px' ) {
-      width: 360px;
-      height: 187px;
-      .inner {
-          img {
-            width: 40px;
-            height: 40px;
-          }
-          h3 {
-          margin-bottom: 10px;
-          strong {
-            display: block;
-          }
-        }
-      }
-    }
-    @media( min-width: '1201px' ) and ( max-width: '1400px' ) {
-      width: 500px;
-      height: 260px;
-    }
+    // @media( max-width: '767px' ) {
+    //   margin: 0 auto;
+    //   &.gameday {
+    //     margin-top: 20px;
+    //   }
+    // }
+    // @media( min-width: '674px' ) and ( max-width: '767px' ) {
+    //   margin: 0 auto;
+    //   &.gameday {
+    //     margin-top: 20px;
+    //   }
+    // }
+    // @media( min-width: '768px' ) and ( max-width: '1200px' ) {
+    //   width: 360px;
+    //   height: 187px;
+    //   .inner {
+    //       img {
+    //         width: 40px;
+    //         height: 40px;
+    //       }
+    //       h3 {
+    //       margin-bottom: 10px;
+    //       strong {
+    //         display: block;
+    //       }
+    //     }
+    //   }
+    // }
+    // @media( min-width: '1201px' ) and ( max-width: '1400px' ) {
+    //   width: 500px;
+    //   height: 260px;
+    // }
   }
 }
 #seasonal {
@@ -798,6 +800,9 @@ span.reg {
   }
   .recipe-card-container {
     padding: 0;
+    > .row {
+      margin: 0 auto;
+    }
     // margin: 0 auto;
     // max-width: 1281px;
     // @media ( max-width: '718px' ) {
@@ -901,6 +906,16 @@ span.reg {
     margin-top: $spacer-y * 2;
     a {
       margin-right: $spacer-x;
+    }
+    @media( max-width: '1024px' ) {
+      float: none;
+      margin-top: 20px;
+      display: block;
+      text-align: center;
+      .copyright {
+        display: block;
+        text-align: center;
+      }
     }
   }
 }
