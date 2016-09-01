@@ -107,6 +107,10 @@ span.reg {
   padding-left: 0;
   border-bottom: 0;
   margin-bottom: 0;
+  .link-container {
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+  }
   li {
     padding: 0 2px;
     text-align: center;
@@ -117,8 +121,6 @@ span.reg {
       padding-right: 0;
     }
     .inner {
-      border-top: 5px solid;
-      border-bottom: 5px solid;
       a {
         text-decoration: none;
         @include transition( all .2s );
@@ -138,6 +140,7 @@ span.reg {
 #navigation {
   li {
     width: 20%;
+    margin-top: 4.5%;
     float: left;
     &:first-child {
       padding-left: 0;
@@ -145,9 +148,35 @@ span.reg {
     &:last-child {
       padding-right: 0;
     }
-    .inner {
-      margin-top: 26%;
-      &.logo {
+    @media( max-width: '639px' ) {
+      width: 25%;
+    //  position: relative;
+      transform: translateY( 80px );
+    }
+    @media( min-width: '640px' ) and ( max-width: '1079px' ) {
+      width: calc( 25% - 38px );
+      margin-top: 10px;
+      &:first-child {
+        // padding-left: 4px;
+      }
+      &:last-child {
+        // padding-right: 4px;
+      }
+    }
+    &.logo {
+      margin-top: 0;
+      @media( max-width: '639px' ) {
+        transform: none;
+        position: absolute;
+        left: calc( 50% - 76px );
+        // margin: 0 auto;
+        // text-align: center;
+      }
+      @media( max-width: '1079px' ) {
+        width: 152px;
+      //  max-height: 100px;
+      }
+      .inner {
         margin: 0;
         padding: 0;
         border: 0;
@@ -156,6 +185,41 @@ span.reg {
             max-width: 100%;
           }
         }
+      }
+    }
+    .link-container {
+      position: relative;
+      .inner {
+        //margin-top: 26%;
+        // display: table-cell;
+        // vertical-align: middle;
+        // position: absolute;
+        width: 100%;
+      }
+      @media( max-width: '1079px' ) {
+        // margin-top: 10px;
+        height: 74px;
+        width: 100%;
+        position: relative;
+        margin-top: 5px;
+        .inner {
+          display: table;
+          margin-top: 3px;
+          margin-bottom: 3px;
+          a {
+            height: 58px;
+            display: table-cell;
+            vertical-align: middle;
+            @media( max-width: '479px' ) {
+              font-size: 11px;
+            }
+          }
+        }
+
+          // &.single-line {
+          //   padding-top: 17px;
+          //   padding-bottom: 17px;
+          // }
       }
     }
   }
@@ -175,6 +239,12 @@ span.reg {
     }
   }
 }
+#main {
+  @media( max-width: '639px' ) {
+  //  position: relative;
+    transform: translateY( 90px );
+  }
+}
 #top {
   .hero {
     margin-top: -40px;
@@ -183,34 +253,56 @@ span.reg {
     width: 100%;
     position: relative;
     z-index: 0;
+    @media( max-width: '1079px' ) {
+      margin-top: 0;
+    }
     img {
       padding: 0;
     //  width: 100%;
     }
   }
+  .learn-more {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
   .callout {
     // padding: 0 2%;
     position: relative;
+    width: 605px;
+    height: 315px;
+    margin: 0 auto;
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
     a {
       &:hover {
         cursor: pointer;
       }
     }
-    .learn-more {
-      display: block;
-      text-align: center;
-    }
     .image-link {
+      // background-repeat: no-repeat;
+      // background-position: center;
+      // background-size: cover;
       border: 5px solid;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 310px;
-      display: block;
+
+      width: 100%;
       height: 100%;
+      // margin-bottom: 34%;
+      position: relative;
+      //height: 320px;
+      // height: 100%;
+      display: block;
       color: $white;
-      margin-bottom: 10px;
+      // margin-bottom: 10px;
+      > img {
+          position: absolute;
+          max-width: 100%;
+      }
       .overlay {
+        position: relative;
         height: 100%;
         width: 100%;
         display: table;
@@ -218,10 +310,12 @@ span.reg {
         background: rgba(0, 0, 0, 0.35);
       }
       .inner {
-        padding: 100px 0 0;
+        padding: 20px 0 0;
+        display: table-cell;
+        vertical-align: middle;
         img {
           display: block;
-          margin: 0 auto 50px;
+          margin: 0 auto;
         }
       }
       &:hover {
@@ -230,9 +324,9 @@ span.reg {
         }
       }
     }
-    &.seasonal {
-      margin-right: 22.5px;
 
+    &.seasonal {
+    //  margin-right: 22.5px;
       iframe {
         border: 5px solid $brand-primary;
       }
@@ -244,8 +338,8 @@ span.reg {
       }
     }
     &.gameday {
-      margin-left: 22.5px;
-
+      //margin-left: 22.5px;
+      // float: right;
       iframe {
         border: 5px solid $brand-secondary;
       }
@@ -256,6 +350,38 @@ span.reg {
         border-color: $brand-secondary;
       }
     }
+    @media( max-width: '767px' ) {
+      margin: 0 auto;
+      &.gameday {
+        margin-top: 20px;
+      }
+    }
+    @media( min-width: '674px' ) and ( max-width: '767px' ) {
+      margin: 0 auto;
+      &.gameday {
+        margin-top: 20px;
+      }
+    }
+    @media( min-width: '768px' ) and ( max-width: '1200px' ) {
+      width: 360px;
+      height: 187px;
+      .inner {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+          h3 {
+          margin-bottom: 10px;
+          strong {
+            display: block;
+          }
+        }
+      }
+    }
+    @media( min-width: '1201px' ) and ( max-width: '1400px' ) {
+      width: 500px;
+      height: 260px;
+    }
   }
 }
 #seasonal {
@@ -263,13 +389,25 @@ span.reg {
   .outline {
     border: 5px solid $brand-primary;
     padding: $spacer-y * 2 $spacer-x / 2 $spacer-y;
+    @media( max-width: '767px' ) {
+      border: none;
+      padding: 0;
+    }
   }
   h1 {
     color: $brand-primary;
+    @media( min-width: '767px' ) and ( max-width: '979px' ) {
+      strong {
+        display: block;
+      }
+    }
   }
   .product-group {
     padding: 0 $spacer-x * 2;
     display: none;
+    @media( max-width: '767px' ) {
+      padding: 0;
+    }
     &.active {
       display: block !important;
     }
@@ -280,6 +418,12 @@ span.reg {
     position: absolute;
     right: $spacer-x;
     top: -$spacer-y * 2;
+    @media( max-width: '767px' ) {
+      position: relative;
+      margin: 0 auto;
+      right: 0;
+      top: 0;
+    }
     img {
       width: 100%;
       position: relative;
@@ -320,9 +464,10 @@ span.reg {
   .nav-tabs:not( .scroll-tabs ) {
     margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
-      .inner {
-        border-color: $brand-primary;
-        // transition: all .2s;
+      .link-container {
+        @media( max-width: '767px' ) {
+          margin-bottom: 20px;
+        }
         a {
           color: $brand-primary;
           @include transition( all .2s );
@@ -335,6 +480,9 @@ span.reg {
         }
         &:hover, &.active {
           margin-top: -32px;
+          @media( max-width: '767px' ) {
+            margin-top: 0;
+          }
           a {
             background: $brand-primary;
             color: $white;
@@ -353,6 +501,9 @@ span.reg {
   }
   .carousel {
     padding: 0 $spacer-x * 2;
+    @media( max-width: '767px' ) {
+      padding: 0;
+    }
     .carousel-inner {
       margin-left: $grid-gutter-width / 2;
       margin-right: $grid-gutter-width / 2;
@@ -417,6 +568,15 @@ span.reg {
     > .inner {
       padding: 30px;
       height: 260px;
+      @media( max-width: '767px' ) {
+        min-height: 0;
+        height: auto;
+        padding-bottom: 60px;
+      }
+      @media( min-width: '768px' ) and ( max-width: '1220px' ) {
+        min-height: 340px;
+        height: auto;
+      }
       h6 {
         margin-bottom: $spacer-y / 2;
         text-transform: uppercase;
@@ -444,6 +604,13 @@ span.reg {
         bottom: $spacer-y;
         right: $spacer-x * 2;
       }
+      @media( max-width: '767px' ) {
+        float: right;
+        margin-right: 0;
+        > .inner {
+          position: static;
+        }
+      }
       a {
         text-decoration: none;
         color: $brand-primary;
@@ -459,6 +626,11 @@ span.reg {
       > .inner {
         padding: 25px;
         border: 5px solid $brand-primary;
+        @media( max-width: '767px' ) {
+          min-height: 0;
+          height: auto;
+          padding-bottom: 55px;
+        }
       }
     }
   }
@@ -474,11 +646,14 @@ span.reg {
   }
   .circle-stat {
     left: $spacer-x;
+    @media( max-width: '767px' ) {
+      left: 0;
+    }
   }
   .nav-tabs:not( .scroll-tabs ) {
     // margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
     li {
-      .inner {
+      .link-container {
         border-color: $brand-secondary;
         a {
           color: $brand-secondary;
@@ -528,54 +703,69 @@ span.reg {
 
 .scroll-tabs {
   margin-top: 2.5rem;
-  li .inner {
-    &:hover {
-       margin-top: 0 !important;
+  li {
+    .inner {
+      &:hover {
+         margin-top: 0 !important;
+      }
+    }
+    @media( max-width: '767px' ) {
+      margin-bottom: 20px;
     }
   }
 }
-.nav-tabs li .inner {
+.nav-tabs li {
   &:hover {
   //  margin-top: 0 !important;
   }
+  .link-container {
+    border-color: $brand-primary;
+  }
   &.seasonal {
-    border-color: $brand-primary !important;
-    background: none;
-    a {
-      color: $brand-primary !important;
-      &:hover, &:active {
-        background: none $brand-primary !important;
-        color: $white !important;
+    .link-container {
+      border-color: $brand-primary !important;
+      a {
+        color: $brand-primary !important;
+        &:hover, &:active {
+          background: $brand-primary !important;
+          color: $white !important;
+        }
       }
     }
   }
   &.gameday {
-    border-color: $brand-secondary !important;
-    a {
-      color: $brand-secondary !important;
-      &:hover, &:active {
-        background: $brand-secondary !important;
-        color: $white !important;
+    .link-container {
+      border-color: $brand-secondary !important;
+      a {
+        color: $brand-secondary !important;
+        &:hover, &:active {
+          background: $brand-secondary !important;
+          color: $white !important;
+        }
       }
     }
   }
   &.recipes {
-    border-color: $gray !important;
-    a {
-      color: $gray !important;
-      &:hover, &:active {
-        background: $gray !important;
-        color: $white !important;
+    .link-container {
+      border-color: $gray !important;
+      a {
+        color: $gray !important;
+        &:hover, &:active {
+          background: $gray !important;
+          color: $white !important;
+        }
       }
     }
   }
   &.save {
-    border-color: $gray-light !important;
-    a {
-      color: $gray-light !important;
-      &:hover, &:active {
-        background: $gray-light !important;
-        color: $white !important;
+    .link-container {
+      border-color: $gray-light !important;
+      a {
+        color: $gray-light !important;
+        &:hover, &:active {
+          background: $gray-light !important;
+          color: $white !important;
+        }
       }
     }
   }
@@ -682,6 +872,10 @@ span.reg {
   }
 }
 #primary-footer {
+  @media( max-width: '639px' ) {
+  //  position: relative;
+    transform: translateY( 90px );
+  }
   .footer-divider {
     position: relative;
     height: 5px;
@@ -771,4 +965,18 @@ span.reg {
     letter-spacing: 1px;
     font-family: $font-family-serif-2;
   }
+}
+@media (min-width: 832px) {
+  .modal-dialog {
+    max-width: 832px;
+  }
+}
+.modal-content iframe{
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  @media (max-width: 831px) {
+      padding-bottom: 80%;
+  }
+    // padding-bottom: 44%;
 }

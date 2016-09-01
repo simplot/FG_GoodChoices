@@ -19,8 +19,8 @@ function pageReady() {
         }
         $('#seasonal-carousel').carousel(carousel_index);
         // console.log(id_selector, id);
-        $('#seasonal .nav-tabs .inner').removeClass('active');
-        $(this).parent().addClass('active');
+        $('#seasonal .nav-tabs .link-container').removeClass('active');
+        $(this).parent().parent().addClass('active');
         $('#seasonal .product-group').removeClass('active');
         $('#seasonal .product-group.group-' + id).addClass('active');
 
@@ -64,8 +64,8 @@ function pageReady() {
         }
         $('#gameday-carousel').carousel(carousel_index);
         // console.log(id_selector, id);
-        $('#gameday .nav-tabs .inner').removeClass('active');
-        $(this).parent().addClass('active');
+        $('#gameday .nav-tabs .link-container').removeClass('active');
+        $(this).parent().parent().addClass('active');
         $('#gameday .product-group').removeClass('active');
         $('#gameday .product-group.group-' + id).addClass('active');
 
@@ -113,17 +113,38 @@ function pageReady() {
   		}
   	});
 
+    $('#seasonal-video-link').click(function () {
+        var src = 'https://www.youtube.com/embed/xCdMYL0zUM4?rel=0&showinfo=0';
+        $('#seasonal-video-modal').modal('show');
+        $('#seasonal-video-modal iframe').attr('src', src);
+    });
+
+    $('#seasonal-video-modal button').click(function () {
+        $('#seasonal-video-modal iframe').removeAttr('src');
+    });
+
+    $('#gameday-video-link').click(function () {
+        var src = 'https://www.youtube.com/embed/IHPC0zfiQ48?rel=0&showinfo=0';
+        $('#gameday-video-modal').modal('show');
+        $('#gameday-video-modal iframe').attr('src', src);
+    });
+
+    $('#gameday-video-modal button').click(function () {
+        $('#gameday-video-modal iframe').removeAttr('src');
+    });
+
+
     //Play videos when still cover image is clicked
-    $( '#seasonal-video-link' ).click( function(e) {
-      e.preventDefault();
-      $(this).hide();
-      $(this).next().show();
-    });
-    $( '#gameday-video-link' ).click( function(e) {
-      e.preventDefault();
-      $(this).hide();
-      $(this).next().show();
-    });
+    // $( '#seasonal-video-link' ).click( function(e) {
+    //   e.preventDefault();
+    //   $(this).hide();
+    //   $(this).next().show();
+    // });
+    // $( '#gameday-video-link' ).click( function(e) {
+    //   e.preventDefault();
+    //   $(this).hide();
+    //   $(this).next().show();
+    // });
 
 
 }
