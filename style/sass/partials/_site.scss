@@ -580,26 +580,33 @@ span.reg {
           top: 8rem;
           left: 16rem
         }
-        &.bottom-left {
-          bottom: $spacer-y * 2;
-          left: $spacer-x * 2;
-        }
-        &.bottom-right {
-          bottom: $spacer-y * 2;
-          right: $spacer-x * 2;
-        }
-        &.top-right {
-          top: $spacer-y * 2;
-          right: $spacer-x * 2;
-        }
-        &.top-left {
-          top: $spacer-y * 2;
-          left: $spacer-x * 2;
-        }
         &.center-left {
           margin: 0 auto;
           top: 8rem;
           left: 16rem
+        }
+        @media( max-width: '767px' ) {
+          max-width: 70%;
+          &.bottom {
+             bottom: $spacer-y / 2;
+          }
+          &.top {
+             top: $spacer-y / 2;
+          }
+          &.right {
+            right: $spacer-x / 2;
+          }
+          &.left {
+            left: $spacer-x / 2;
+          }
+          &.center {
+            top: $spacer-y / 2;
+            left: $spacer-x / 2;
+          }
+          &.center-left {
+            top: $spacer-y / 2;
+            left: $spacer-x / 2;
+          }
         }
       }
     }
@@ -832,6 +839,7 @@ span.reg {
 
       }
       @media ( max-width: '767px' ) {
+        padding-right: $spacer-x;
         width: 100%;
         select {
           width: 100%;

@@ -5723,22 +5723,27 @@ span.reg {
           margin: 0 auto;
           top: 8rem;
           left: 16rem; }
-        #seasonal .carousel .carousel-item .overlay.bottom-left, #gameday .carousel .carousel-item .overlay.bottom-left {
-          bottom: 2rem;
-          left: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.bottom-right, #gameday .carousel .carousel-item .overlay.bottom-right {
-          bottom: 2rem;
-          right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top-right, #gameday .carousel .carousel-item .overlay.top-right {
-          top: 2rem;
-          right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top-left, #gameday .carousel .carousel-item .overlay.top-left {
-          top: 2rem;
-          left: 2rem; }
         #seasonal .carousel .carousel-item .overlay.center-left, #gameday .carousel .carousel-item .overlay.center-left {
           margin: 0 auto;
           top: 8rem;
           left: 16rem; }
+        @media (max-width: 767px) {
+          #seasonal .carousel .carousel-item .overlay, #gameday .carousel .carousel-item .overlay {
+            max-width: 70%; }
+            #seasonal .carousel .carousel-item .overlay.bottom, #gameday .carousel .carousel-item .overlay.bottom {
+              bottom: 0.5rem; }
+            #seasonal .carousel .carousel-item .overlay.top, #gameday .carousel .carousel-item .overlay.top {
+              top: 0.5rem; }
+            #seasonal .carousel .carousel-item .overlay.right, #gameday .carousel .carousel-item .overlay.right {
+              right: 0.5rem; }
+            #seasonal .carousel .carousel-item .overlay.left, #gameday .carousel .carousel-item .overlay.left {
+              left: 0.5rem; }
+            #seasonal .carousel .carousel-item .overlay.center, #gameday .carousel .carousel-item .overlay.center {
+              top: 0.5rem;
+              left: 0.5rem; }
+            #seasonal .carousel .carousel-item .overlay.center-left, #gameday .carousel .carousel-item .overlay.center-left {
+              top: 0.5rem;
+              left: 0.5rem; } }
   #seasonal article > .inner, #gameday article > .inner {
     padding: 30px;
     height: 260px; }
@@ -5892,6 +5897,7 @@ span.reg {
     margin-top: 0.5rem; }
   @media (max-width: 767px) {
     #recipes #form-recipe-filters > span {
+      padding-right: 1rem;
       width: 100%; }
       #recipes #form-recipe-filters > span select {
         width: 100%; } }

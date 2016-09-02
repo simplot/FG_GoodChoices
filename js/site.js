@@ -114,7 +114,7 @@ function pageReady() {
   	});
 
     $('#seasonal-video-link').click(function () {
-        var src = 'https://www.youtube.com/embed/xCdMYL0zUM4?rel=0&showinfo=0';
+        var src = 'https://www.youtube.com/embed/xCdMYL0zUM4?rel=0&showinfo=0&autoplay=1';
         $('#seasonal-video-modal').modal('show');
         $('#seasonal-video-modal iframe').attr('src', src);
     });
@@ -124,7 +124,7 @@ function pageReady() {
     });
 
     $('#gameday-video-link').click(function () {
-        var src = 'https://www.youtube.com/embed/IHPC0zfiQ48?rel=0&showinfo=0';
+        var src = 'https://www.youtube.com/embed/IHPC0zfiQ48?rel=0&showinfo=0&autoplay=1';
         $('#gameday-video-modal').modal('show');
         $('#gameday-video-modal iframe').attr('src', src);
     });
