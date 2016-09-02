@@ -218,7 +218,7 @@ function getRecipes() {
         "download": "BaconWrappedCrackedPepperFries.pdf",
         "image": "BaconWrappedCrackedPepperFries.jpg",
         "occasion": "Game Day",
-        "trends": ["Extreme Indulgence", "Sharables"],
+        "trends": ["Extreme Indulgence", "Shareables"],
         "products": ["Fries"]
     }, {
         "name": "Curried Vegetables",
@@ -236,7 +236,7 @@ function getRecipes() {
         "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
         "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables", "Classics with a Twist"],
+        "trends": ["Shareables", "Classics with a Twist"],
         "products": ["Roasted"]
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
@@ -290,7 +290,7 @@ function getRecipes() {
         "download": "SpicySrirachaSIDEWINDERS.pdf",
         "image": "SpicySrirachaSIDEWINDERS.jpg",
         "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Sharables"],
+        "trends": ["Spicy & Bold", "Shareables"],
         "products": ["Fries"]
     }, {
         "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
@@ -371,7 +371,7 @@ function getRecipes() {
         "download": "AvocadoBuffaloChickenSliders.pdf",
         "image": "AvocadoBuffaloChickenSliders.jpg",
         "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Sharables"],
+        "trends": ["Spicy & Bold", "Shareables"],
         "products": ["Avocado"]
     }, {
         "name": "Sweet Potatocado Smoothie",
@@ -407,7 +407,7 @@ function getRecipes() {
         "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
         "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables", "Classics with a Twist"],
+        "trends": ["Shareables", "Classics with a Twist"],
         "products": ["Vegetables", "Roasted"]
     }, {
         "name": "Pork Nachos with Pineapple and Pepper",
@@ -425,7 +425,7 @@ function getRecipes() {
         "download": "QuinoaKaleStuffedMushrooms.pdf",
         "image": "QuinoaKaleStuffedMushrooms.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables"],
+        "trends": ["Shareables"],
         "products": ["Grains"]
     }, {
         "name": "Spicy Pulled Pork Shepherd Pie",
@@ -434,7 +434,7 @@ function getRecipes() {
         "download": "SpicyPulledPorkShepherdsPie.pdf",
         "image": "SpicyPulledPorkShepherdsPie.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Sharables"],
+        "trends": ["Classics with a Twist", "Shareables"],
         "products": ["Mashed"]
     }, {
         "name": "Avocado Mary",
@@ -479,7 +479,7 @@ function getRecipes() {
         "download": "SpicyBourbonPeachShortRibSliders.pdf",
         "image": "SpicyBourbonPeachShortRibSliders.jpg",
         "occasion": "Game Day",
-        "trends": ["Sharables"],
+        "trends": ["Shareables"],
         "products": ["Fruit"]
     }, {
         "name": "Angry Edamame",
@@ -488,7 +488,7 @@ function getRecipes() {
         "download": "AngryEdamame.pdf",
         "image": "AngryEdamame.jpg",
         "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Sharables"],
+        "trends": ["Spicy & Bold", "Shareables"],
         "products": ["Vegetables"]
     }, {
         "name": "Flame-Roasted Corn & Jalapeno Queso",
@@ -497,7 +497,7 @@ function getRecipes() {
         "download": "FlameRoastedCornNJalapenoQueso.pdf",
         "image": "FlameRoastedCornNJalapenoQueso.jpg",
         "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Sharables"],
+        "trends": ["Spicy & Bold", "Shareables"],
         "products": ["Roasted"]
     }, {
         "name": "Eggs Benny Rosemary Brunch Fries",
@@ -506,7 +506,7 @@ function getRecipes() {
         "download": "EggsBennyRosemaryBrunchFries.pdf",
         "image": "EggsBennyRosemaryBrunchFries.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Sharables"],
+        "trends": ["Classics with a Twist", "Shareables"],
         "products": ["Fries"]
     }, {
         "name": "Roasted Pork Loin with Mango Mojo & Ancient Grains & Kale",
@@ -515,7 +515,7 @@ function getRecipes() {
         "download": "RoastedPorkwithMangoMojoNAncientGrainsNKale.pdf",
         "image": "RoastedPorkwithMangoMojoNAncientGrainsNKale.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Sharables"],
+        "trends": ["Classics with a Twist", "Shareables"],
         "products": ["Fruit", "Grains"]
     }, {
         "name": "Cherry Old Fashioned Smash",
@@ -551,7 +551,7 @@ function getRecipes() {
         "download": "SweetPotatoNBaconAlfredoPizza.pdf",
         "image": "SweetPotatoNBaconAlfredoPizza.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables"],
+        "trends": ["Shareables"],
         "products": ["Roasted"]
     }];
 }
