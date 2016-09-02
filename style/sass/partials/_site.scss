@@ -353,6 +353,9 @@ span.reg {
         padding: 100px 0 74px;
         display: table-cell;
         vertical-align: middle;
+        @media( max-width: '1024px' ) {
+          padding: 14% 0 7%;
+        }
         img {
           display: block;
           margin: 0 auto;
@@ -541,6 +544,9 @@ span.reg {
               width: 75%;
               margin: 0 auto;
               display: block !important;
+              @media( max-width: '1024px' ) {
+                width: 95%;
+              }
             }
           }
         }

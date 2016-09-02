@@ -5590,6 +5590,9 @@ span.reg {
       padding: 100px 0 74px;
       display: table-cell;
       vertical-align: middle; }
+      @media (max-width: 1024px) {
+        #top .callout .image-link .inner {
+          padding: 14% 0 7%; } }
       #top .callout .image-link .inner img {
         display: block;
         margin: 0 auto; }
@@ -5699,6 +5702,9 @@ span.reg {
           width: 75%;
           margin: 0 auto;
           display: block !important; }
+          @media (max-width: 1024px) {
+            #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a p {
+              width: 95%; } }
   #seasonal .carousel, #gameday .carousel {
     padding: 0 2rem; }
     @media (max-width: 767px) {
