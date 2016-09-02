@@ -236,7 +236,7 @@ function getRecipes() {
         "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
         "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables", "Classics with a twist"],
+        "trends": ["Sharables", "Classics with a Twist"],
         "products": ["Roasted"]
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
@@ -380,7 +380,7 @@ function getRecipes() {
         "download": "SweetPotatocadoSmoothie.pdf",
         "image": "SweetPotatocadoSmoothie.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages", "Classics with a twist"],
+        "trends": ["Seasonal Beverages", "Classics with a Twist"],
         "products": ["Avocado", "Mashed"]
     }, {
         "name": "Spicy Sweet Mashed Potatoes",
@@ -389,7 +389,7 @@ function getRecipes() {
         "download": "SpicySweetMashedPotatos.pdf",
         "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Spicy & Bold", "Classics with a twist"],
+        "trends": ["Spicy & Bold", "Classics with a Twist"],
         "products": ["Mashed"]
     }, {
         "name": "Oktoberfest Sausage Platter",
@@ -407,7 +407,7 @@ function getRecipes() {
         "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
         "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
         "occasion": "Seasonal Celebrations",
-        "trends": ["Sharables", "Classics with a twist"],
+        "trends": ["Sharables", "Classics with a Twist"],
         "products": ["Vegetables", "Roasted"]
     }, {
         "name": "Pork Nachos with Pineapple and Pepper",
@@ -416,7 +416,7 @@ function getRecipes() {
         "download": "PorkNachosWPineappleNPepper.pdf",
         "image": "PorkNachosWPineappleNPepper.jpg",
         "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareable"],
+        "trends": ["Spicy & Bold", "Shareables"],
         "products": ["Roasted", "Fries", "Fruit"]
     }, {
         "name": "Quinoa Kale Stuffed Mushrooms",
