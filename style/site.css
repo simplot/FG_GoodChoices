@@ -5409,6 +5409,9 @@ span.reg {
   .no-gutter {
     padding-left: 0;
     padding-right: 0; } }
+  @media (max-width: 767px) and (max-width: 599px) {
+    .no-gutter {
+      padding-right: 12.5px; } }
 
 .nav-tabs {
   list-style: none;

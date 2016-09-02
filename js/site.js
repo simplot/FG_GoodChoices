@@ -295,7 +295,7 @@ function getRecipes() {
     }, {
         "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
         "columns": 1,
-        "rows": 5,
+        "rows": 4,
         "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
         "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
         "occasion": "Seasonal Celebrations",

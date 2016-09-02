@@ -380,8 +380,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-xs-1"></div>
-            <div class="col-xs-22">
+            <div class="push-xs-1 col-xs-22">
               <div class="fluid-container outline">
                 <h1 class="center no-margin">
                   <strong>GAME DAY</strong> CELEBRATIONS
@@ -712,7 +711,8 @@
             <div class="recipe-card-container">
               <div class="row">
                 <md-content class="smoothify">
-                <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height="5em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
+                <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height-xs="4.8em"
+               md-row-height-sm="4.8em" md-row-height="4.9em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
                   <md-grid-tile
                     ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
                     ng-class="{'double-wide': recipe.columns===2}"
@@ -750,8 +750,7 @@
 </div>
 <footer id="primary-footer" class="fluid-container">
   <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="footer-divider col-xs-22">
+    <div class="footer-divider push-xs-1 col-xs-22">
       <div class="inner">
         <img src="img/fall-harvest-footer-logo.png" />
       </div>
