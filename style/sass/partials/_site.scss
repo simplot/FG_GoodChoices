@@ -55,7 +55,7 @@ h4, h5, h6 {
   letter-spacing: 1px;
 }
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 25px;
+  margin-bottom: $spacer-y;
   line-height: 120%;
   &.no-margin {
     margin-bottom: 0;
@@ -63,6 +63,10 @@ h1, h2, h3, h4, h5, h6 {
   &.intro-text {
     letter-spacing: 0;
     line-height: 140%;
+    @media( max-width: '767px' ) {
+      margin-bottom: $spacer-y / 2;
+      font-size: 1.2rem;
+    }
   }
 }
 strong {
@@ -115,15 +119,24 @@ span.reg {
   .link-container {
     border-top: 5px solid;
     border-bottom: 5px solid;
+    @media( max-width: '767px' ) {
+      border: none;
+    }
   }
   li {
     padding: 0 2px;
     text-align: center;
     &:first-child {
       padding-left: 0;
+      @media( max-width: '767px' ) {
+        padding-left: 2px;
+      }
     }
     &:last-child {
       padding-right: 0;
+      @media( max-width: '767px' ) {
+        padding-right: 2px;
+      }
     }
     .inner {
       a {
@@ -194,6 +207,10 @@ span.reg {
     }
     .link-container {
       position: relative;
+      @media( max-width: '767px' ) {
+        border-top: 5px solid;
+        border-bottom: 5px solid;
+      }
       .inner {
         //margin-top: 26%;
         // display: table-cell;
@@ -217,14 +234,13 @@ span.reg {
             vertical-align: middle;
             @media( max-width: '479px' ) {
               font-size: 11px;
+              height: 44px;
             }
           }
         }
-
-          // &.single-line {
-          //   padding-top: 17px;
-          //   padding-bottom: 17px;
-          // }
+      }
+      @media( max-width: '479px' ) {
+          height: 60px;
       }
     }
   }
@@ -309,7 +325,7 @@ span.reg {
       .overlay {
         position: relative;
         height: 100%;
-        width: 100%;
+        width: 100.1%;
         display: table;
         @include transition( background-color .2s );
         background: rgba(0, 0, 0, 0.35);
@@ -427,7 +443,7 @@ span.reg {
     top: -$spacer-y * 2;
     @media( max-width: '767px' ) {
       position: relative;
-      margin: 0 auto;
+      margin: 0 auto $spacer-y;
       right: 0;
       top: 0;
     }
@@ -470,10 +486,13 @@ span.reg {
   }
   .nav-tabs:not( .scroll-tabs ) {
     margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
+    @media( max-width: '767px' ) {
+      margin-top: $spacer-y;
+    }
     li {
       .link-container {
         @media( max-width: '767px' ) {
-          margin-bottom: 20px;
+          margin-bottom: $spacer-y / 4;
         }
         a {
           color: $brand-primary;
@@ -495,6 +514,9 @@ span.reg {
             color: $white;
             header {
               font-size: 24px;
+              @media( max-width: '1024px' ) {
+                font-size: 18px;
+              }
             }
             p {
               width: 75%;
@@ -578,7 +600,7 @@ span.reg {
       @media( max-width: '767px' ) {
         min-height: 0;
         height: auto;
-        padding-bottom: 60px;
+        padding: 15px 15px 50px;
       }
       @media( min-width: '768px' ) and ( max-width: '1220px' ) {
         min-height: 340px;
@@ -636,7 +658,7 @@ span.reg {
         @media( max-width: '767px' ) {
           min-height: 0;
           height: auto;
-          padding-bottom: 55px;
+          padding: 10px 10px 45px;
         }
       }
     }
@@ -709,7 +731,7 @@ span.reg {
 }
 
 .scroll-tabs {
-  margin-top: 2.5rem;
+  margin-top: $spacer-y * 2 ;
   li {
     .inner {
       &:hover {
@@ -717,7 +739,7 @@ span.reg {
       }
     }
     @media( max-width: '767px' ) {
-      margin-bottom: 20px;
+      margin-bottom: $spacer-y / 2;
     }
   }
 }

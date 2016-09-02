@@ -5344,13 +5344,17 @@ h4, h5, h6 {
   letter-spacing: 1px; }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
   line-height: 120%; }
   h1.no-margin, h2.no-margin, h3.no-margin, h4.no-margin, h5.no-margin, h6.no-margin {
     margin-bottom: 0; }
   h1.intro-text, h2.intro-text, h3.intro-text, h4.intro-text, h5.intro-text, h6.intro-text {
     letter-spacing: 0;
     line-height: 140%; }
+    @media (max-width: 767px) {
+      h1.intro-text, h2.intro-text, h3.intro-text, h4.intro-text, h5.intro-text, h6.intro-text {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem; } }
 
 strong {
   font-family: "Bitter", serif;
@@ -5406,13 +5410,22 @@ span.reg {
   .nav-tabs .link-container {
     border-top: 5px solid;
     border-bottom: 5px solid; }
+    @media (max-width: 767px) {
+      .nav-tabs .link-container {
+        border: none; } }
   .nav-tabs li {
     padding: 0 2px;
     text-align: center; }
     .nav-tabs li:first-child {
       padding-left: 0; }
+      @media (max-width: 767px) {
+        .nav-tabs li:first-child {
+          padding-left: 2px; } }
     .nav-tabs li:last-child {
       padding-right: 0; }
+      @media (max-width: 767px) {
+        .nav-tabs li:last-child {
+          padding-right: 2px; } }
     .nav-tabs li .inner a {
       text-decoration: none;
       -moz-transition: all 0.2s;
@@ -5461,6 +5474,10 @@ span.reg {
         max-width: 100%; }
   #navigation li .link-container {
     position: relative; }
+    @media (max-width: 767px) {
+      #navigation li .link-container {
+        border-top: 5px solid;
+        border-bottom: 5px solid; } }
     #navigation li .link-container .inner {
       width: 100%; }
     @media (max-width: 1079px) {
@@ -5479,7 +5496,11 @@ span.reg {
             vertical-align: middle; } }
       @media (max-width: 1079px) and (max-width: 479px) {
         #navigation li .link-container .inner a {
-          font-size: 11px; } }
+          font-size: 11px;
+          height: 44px; } }
+    @media (max-width: 479px) {
+      #navigation li .link-container {
+        height: 60px; } }
 
 .down-arrow {
   position: relative;
@@ -5544,7 +5565,7 @@ span.reg {
     #top .callout .image-link .overlay {
       position: relative;
       height: 100%;
-      width: 100%;
+      width: 100.1%;
       display: table;
       -moz-transition: background-color 0.2s;
       -webkit-transition: background-color 0.2s;
@@ -5597,7 +5618,7 @@ span.reg {
     @media (max-width: 767px) {
       #seasonal .circle-stat, #gameday .circle-stat {
         position: relative;
-        margin: 0 auto;
+        margin: 0 auto 1rem;
         right: 0;
         top: 0; } }
     #seasonal .circle-stat img, #gameday .circle-stat img {
@@ -5632,8 +5653,11 @@ span.reg {
   #seasonal .nav-tabs:not(.scroll-tabs), #gameday .nav-tabs:not(.scroll-tabs) {
     margin: 2rem 0.25rem 1rem; }
     @media (max-width: 767px) {
+      #seasonal .nav-tabs:not(.scroll-tabs), #gameday .nav-tabs:not(.scroll-tabs) {
+        margin-top: 1rem; } }
+    @media (max-width: 767px) {
       #seasonal .nav-tabs:not(.scroll-tabs) li .link-container, #gameday .nav-tabs:not(.scroll-tabs) li .link-container {
-        margin-bottom: 20px; } }
+        margin-bottom: 0.25rem; } }
     #seasonal .nav-tabs:not(.scroll-tabs) li .link-container a, #gameday .nav-tabs:not(.scroll-tabs) li .link-container a {
       color: #d2983c;
       -moz-transition: all 0.2s;
@@ -5653,6 +5677,9 @@ span.reg {
         color: #fff; }
         #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a header {
           font-size: 24px; }
+          @media (max-width: 1024px) {
+            #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a header {
+              font-size: 18px; } }
         #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a p {
           width: 75%;
           margin: 0 auto;
@@ -5711,7 +5738,7 @@ span.reg {
       #seasonal article > .inner, #gameday article > .inner {
         min-height: 0;
         height: auto;
-        padding-bottom: 60px; } }
+        padding: 15px 15px 50px; } }
     @media (min-width: 768px) and (max-width: 1220px) {
       #seasonal article > .inner, #gameday article > .inner {
         min-height: 340px;
@@ -5757,7 +5784,7 @@ span.reg {
       #seasonal article.active > .inner, #gameday article.active > .inner {
         min-height: 0;
         height: auto;
-        padding-bottom: 55px; } }
+        padding: 10px 10px 45px; } }
 
 #gameday .outline {
   border-color: #942e37; }
@@ -5799,12 +5826,12 @@ span.reg {
   border: 5px solid #942e37; }
 
 .scroll-tabs {
-  margin-top: 2.5rem; }
+  margin-top: 2rem; }
   .scroll-tabs li .inner:hover {
     margin-top: 0 !important; }
   @media (max-width: 767px) {
     .scroll-tabs li {
-      margin-bottom: 20px; } }
+      margin-bottom: 0.5rem; } }
 
 .nav-tabs li .link-container {
   border-color: #d2983c; }
