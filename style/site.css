@@ -5348,7 +5348,7 @@ h4, h5, h6 {
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
-  line-height: 120%; }
+  line-height: 110%; }
   h1.no-margin, h2.no-margin, h3.no-margin, h4.no-margin, h5.no-margin, h6.no-margin {
     margin-bottom: 0; }
   h1.intro-text, h2.intro-text, h3.intro-text, h4.intro-text, h5.intro-text, h6.intro-text {
@@ -5358,6 +5358,10 @@ h1, h2, h3, h4, h5, h6 {
       h1.intro-text, h2.intro-text, h3.intro-text, h4.intro-text, h5.intro-text, h6.intro-text {
         margin-bottom: 0.5rem;
         font-size: 1.2rem; } }
+
+@media (max-width: 479px) {
+  h1 {
+    font-size: 2rem; } }
 
 strong {
   font-family: "Bitter", serif;
