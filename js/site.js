@@ -221,15 +221,6 @@ function getRecipes() {
         "trends": ["Extreme Indulgence", "Shareables"],
         "products": ["Fries"]
     }, {
-        "name": "Curried Vegetables",
-        "columns": 2,
-        "rows": 8,
-        "download": "CurriedCauliflower.pdf",
-        "image": "CurriedCauliflower.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Spicy & Bold"],
-        "products": ["Vegetables"]
-    }, {
         "name": "Flame-Roasted Maple Sweet Potato Pancakes with Bourbon Butter & Pecans",
         "columns": 1,
         "rows": 5,
@@ -238,6 +229,15 @@ function getRecipes() {
         "occasion": "Seasonal Celebrations",
         "trends": ["Shareables", "Classics with a Twist"],
         "products": ["Roasted"]
+    }, {
+        "name": "Curried Vegetables",
+        "columns": 2,
+        "rows": 8,
+        "download": "CurriedCauliflower.pdf",
+        "image": "CurriedCauliflower.jpg",
+        "occasion": "Seasonal Celebrations",
+        "trends": ["Classics with a Twist", "Spicy & Bold"],
+        "products": ["Vegetables"]
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
         "columns": 1,
