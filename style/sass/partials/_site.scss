@@ -927,6 +927,7 @@ span.reg {
   @media( max-width: '639px' ) {
   //  position: relative;
     transform: translateY( 90px );
+    margin-bottom: 100px;
   }
   .footer-divider {
     position: relative;
@@ -950,7 +951,7 @@ span.reg {
   }
   .footer-links {
     float: right;
-    margin-top: $spacer-y * 2;
+    margin-top: $spacer-y * 2.5;
     a {
       margin-right: $spacer-x;
     }

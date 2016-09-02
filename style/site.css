@@ -5962,7 +5962,8 @@ span.reg {
 
 @media (max-width: 639px) {
   #primary-footer {
-    transform: translateY(90px); } }
+    transform: translateY(90px);
+    margin-bottom: 100px; } }
 
 #primary-footer .footer-divider {
   position: relative;
@@ -5982,7 +5983,7 @@ span.reg {
 
 #primary-footer .footer-links {
   float: right;
-  margin-top: 2rem; }
+  margin-top: 2.5rem; }
   #primary-footer .footer-links a {
     margin-right: 1rem; }
   @media (max-width: 1024px) {
