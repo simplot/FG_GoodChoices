@@ -5754,12 +5754,12 @@ span.reg {
   #seasonal article > .inner, #gameday article > .inner {
     padding: 30px;
     height: 260px; }
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       #seasonal article > .inner, #gameday article > .inner {
         min-height: 0;
         height: auto;
         padding: 15px 15px 50px; } }
-    @media (min-width: 768px) and (max-width: 1220px) {
+    @media (min-width: 1025px) and (max-width: 1220px) {
       #seasonal article > .inner, #gameday article > .inner {
         min-height: 340px;
         height: auto; } }
@@ -5784,7 +5784,7 @@ span.reg {
       position: absolute;
       bottom: 1rem;
       right: 2rem; }
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       #seasonal article .recipe-link, #gameday article .recipe-link {
         float: right;
         margin-right: 0; }
@@ -5800,7 +5800,7 @@ span.reg {
   #seasonal article.active > .inner, #gameday article.active > .inner {
     padding: 25px;
     border: 5px solid #d2983c; }
-    @media (max-width: 767px) {
+    @media (max-width: 1024px) {
       #seasonal article.active > .inner, #gameday article.active > .inner {
         min-height: 0;
         height: auto;

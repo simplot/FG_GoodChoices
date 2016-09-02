@@ -623,12 +623,12 @@ span.reg {
     > .inner {
       padding: 30px;
       height: 260px;
-      @media( max-width: '767px' ) {
+      @media( max-width: '1024px' ) {
         min-height: 0;
         height: auto;
         padding: 15px 15px 50px;
       }
-      @media( min-width: '768px' ) and ( max-width: '1220px' ) {
+      @media( min-width: '1025px' ) and ( max-width: '1220px' ) {
         min-height: 340px;
         height: auto;
       }
@@ -659,7 +659,7 @@ span.reg {
         bottom: $spacer-y;
         right: $spacer-x * 2;
       }
-      @media( max-width: '767px' ) {
+      @media( max-width: '1024px' ) {
         float: right;
         margin-right: 0;
         > .inner {
@@ -681,7 +681,7 @@ span.reg {
       > .inner {
         padding: 25px;
         border: 5px solid $brand-primary;
-        @media( max-width: '767px' ) {
+        @media( max-width: '1024px' ) {
           min-height: 0;
           height: auto;
           padding: 10px 10px 45px;
