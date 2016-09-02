@@ -48,6 +48,9 @@ body {
 md-content.md-default-theme, md-content {
   background-color: $white;
 }
+md-content {
+  overflow: hidden;
+}
 h1, h2, h3 {
   letter-spacing: 2px;
 }
@@ -110,6 +113,14 @@ span.reg {
   text-align: center;
   width: 100%;
   display: inline-block;
+}
+.no-gutter {
+  @media( max-width: '767px' ) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  // margin-right: 12.5px;
+  // padding-right: 0;
 }
 .nav-tabs {
   list-style: none;
@@ -806,7 +817,10 @@ span.reg {
     margin-bottom: $spacer-y;
   }
   .sort-by {
-    // margin-bottom: $spacer-y / 2;
+    @media ( max-width: '767px' ) {
+      margin-bottom: 0;
+      margin-top: $spacer-y;
+    }
   }
   #form-recipe-filters {
     > span {
@@ -838,43 +852,14 @@ span.reg {
   md-grid-list {
     margin: 20px auto 40px;
     max-width: 1281px;
-    // @media ( max-width: '718px' ) {
-    //   max-width: 326px;
-    // //  width: auto;
-    // }
-    // @media( min-width: '719px' ) and ( max-width: '1059px' ) {
-    //   max-width: 631px;
-    // }
-    // @media( min-width: '1060px' ) and ( max-width: '1100px' ) {
-    //   max-width: 950px;
-    // }
   }
   md-grid-tile {
-    // width: 301px !important;
-    // &.double-wide {
-    //   width: 629px !important;
-    //   @media ( max-width: '767px' ) {
-    //     width: 301px !important;
-    //   }
-    // }
   }
   .recipe-card-container {
     padding: 0;
     > .row {
       margin: 0 auto;
     }
-    // margin: 0 auto;
-    // max-width: 1281px;
-    // @media ( max-width: '718px' ) {
-    //   max-width: 326px;
-    // //  width: auto;
-    // }
-    // @media( min-width: '719px' ) and ( max-width: '1059px' ) {
-    //   max-width: 631px;
-    // }
-    // @media( min-width: '1060px' ) and ( max-width: '1400px' ) {
-    //   max-width: 960px;
-    // }
   }
   .card, .grid-sizer {
 //    width: calc(25% - 25px);
@@ -913,6 +898,9 @@ span.reg {
     font-weight: bold;
     // width: 80%;
     text-transform: uppercase;
+    @media( max-width: '959px' ) {
+      font-size: 16px;
+    }
   }
   .card-subtitle {
     text-transform: uppercase;

@@ -214,7 +214,7 @@ function getRecipes() {
     return [{
         "name": "Bacon Wrapped Cracked Pepper Fries",
         "columns": 1,
-        "rows": 8,
+        "rows": 7,
         "download": "BaconWrappedCrackedPepperFries.pdf",
         "image": "BaconWrappedCrackedPepperFries.jpg",
         "occasion": "Game Day",
@@ -232,7 +232,7 @@ function getRecipes() {
     }, {
         "name": "Flame-Roasted Maple Sweet Potato Pancakes with Bourbon Butter & Pecans",
         "columns": 1,
-        "rows": 6,
+        "rows": 5,
         "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
         "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
         "occasion": "Seasonal Celebrations",
@@ -241,7 +241,7 @@ function getRecipes() {
     }, {
         "name": "Hearty Grains & Butternut Squash Soup",
         "columns": 1,
-        "rows": 8,
+        "rows": 7,
         "download": "HeartyGrainsButternutSquashSoup.pdf",
         "image": "HeartyGrainsButternutSquashSoup.jpg",
         "occasion": "Seasonal Celebrations",
@@ -250,7 +250,7 @@ function getRecipes() {
     }, {
         "name": "Parisian Carrots in Brown Butter Sage Sauce with Redskin Mashed",
         "columns": 1,
-        "rows": 6,
+        "rows": 5,
         "download": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.pdf",
         "image": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.jpg",
         "occasion": "Seasonal Celebrations",
@@ -259,7 +259,7 @@ function getRecipes() {
     }, {
         "name": "Bourbon and Flame-Roasted Fuji Apple Glazed Turkey",
         "columns": 1,
-        "rows": 6,
+        "rows": 7,
         "download": "BourbonandFlameRoastedFujiAppleGlazedTurkey.pdf",
         "image": "BourbonandFlameRoastedFujiAppleGlazedTurkey.jpg",
         "occasion": "Seasonal Celebrations",
@@ -268,7 +268,7 @@ function getRecipes() {
     }, {
         "name": "Bacon and Brussels Mashed with Stout Gravy",
         "columns": 1,
-        "rows": 6,
+        "rows": 5,
         "download": "BaconBrusslesMashedStoutGravy.pdf",
         "image": "BaconBrusslesMashedStoutGravy.jpg",
         "occasion": "Seasonal Celebrations",
@@ -277,7 +277,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
         "columns": 2,
-        "rows": 6,
+        "rows": 7,
         "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
         "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
         "occasion": "Seasonal Celebrations",
@@ -295,7 +295,7 @@ function getRecipes() {
     }, {
         "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
         "columns": 1,
-        "rows": 4,
+        "rows": 5,
         "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
         "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
         "occasion": "Seasonal Celebrations",
@@ -313,7 +313,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Yukon Gold & Reds and Haricot Vert with Ancho Dust",
         "columns": 2,
-        "rows": 8,
+        "rows": 7,
         "download": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.pdf",
         "image": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.jpg",
         "occasion": "Seasonal Celebrations",
@@ -385,7 +385,7 @@ function getRecipes() {
     }, {
         "name": "Spicy Sweet Mashed Potatoes",
         "columns": 1,
-        "rows": 8,
+        "rows": 7,
         "download": "SpicySweetMashedPotatos.pdf",
         "image": "SpicySweetMashedPotatos.jpg",
         "occasion": "Seasonal Celebrations",
@@ -448,7 +448,7 @@ function getRecipes() {
     }, {
         "name": "Marionberry Mule",
         "columns": 2,
-        "rows": 12,
+        "rows": 11,
         "download": "MarionberryMule.pdf",
         "image": "MarionberryMule.jpg",
         "occasion": "Game Day",
@@ -511,7 +511,7 @@ function getRecipes() {
     }, {
         "name": "Roasted Pork Loin with Mango Mojo & Ancient Grains & Kale",
         "columns": 1,
-        "rows": 4,
+        "rows": 5,
         "download": "RoastedPorkwithMangoMojoNAncientGrainsNKale.pdf",
         "image": "RoastedPorkwithMangoMojoNAncientGrainsNKale.jpg",
         "occasion": "Seasonal Celebrations",
@@ -520,7 +520,7 @@ function getRecipes() {
     }, {
         "name": "Cherry Old Fashioned Smash",
         "columns": 1,
-        "rows": 6,
+        "rows": 7,
         "download": "CherryOldFashionedSmash.pdf",
         "image": "CherryOldFashionedSmash.jpg",
         "occasion": "Seasonal Celebrations",

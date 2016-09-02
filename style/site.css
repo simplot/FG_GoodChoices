@@ -5337,6 +5337,9 @@ body > .ng-scope {
 md-content.md-default-theme, md-content {
   background-color: #fff; }
 
+md-content {
+  overflow: hidden; }
+
 h1, h2, h3 {
   letter-spacing: 2px; }
 
@@ -5401,6 +5404,11 @@ span.reg {
   text-align: center;
   width: 100%;
   display: inline-block; }
+
+@media (max-width: 767px) {
+  .no-gutter {
+    padding-left: 0;
+    padding-right: 0; } }
 
 .nav-tabs {
   list-style: none;
@@ -5871,6 +5879,11 @@ span.reg {
 #recipes .form-row {
   margin-bottom: 1rem; }
 
+@media (max-width: 767px) {
+  #recipes .sort-by {
+    margin-bottom: 0;
+    margin-top: 1rem; } }
+
 #recipes #form-recipe-filters > span {
   display: inline-block;
   margin-right: 1rem; }
@@ -5924,6 +5937,9 @@ span.reg {
 #recipes .card-title {
   font-weight: bold;
   text-transform: uppercase; }
+  @media (max-width: 959px) {
+    #recipes .card-title {
+      font-size: 16px; } }
 
 #recipes .card-subtitle {
   text-transform: uppercase;
