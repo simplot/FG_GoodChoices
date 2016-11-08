@@ -643,23 +643,14 @@
                 <div class="col-xs-22 col-md-16 filter-container fluid-container">
                   <form id="form-recipe-filters" name="form-recipe-filters">
                     <span>
-                      <label for="season-filter">Occasion:</label>
+                      <label for="season-filter">Daypart:</label>
                       <select name="season-filter"
-                      ng-model="vm.filterParameters.occasion"
+                      ng-model="vm.filterParameters.daypart"
                       ng-change="vm.updateFilterResults()"
-                      ng-options="option for option in vm.occasionTerms track by option">
+                      ng-options="option for option in vm.daypartTerms track by option">
                       <option value="">All</option>
                     </select>
                   </span>
-                  <span>
-                    <label for="trend-filter">Trend:</label>
-                    <select name="trend-filter"
-                    ng-model="vm.filterParameters.trend"
-                    ng-change="vm.updateFilterResults()"
-                    ng-options="option for option in vm.trendTerms track by option">
-                    <option value="">All</option>
-                  </select>
-                </span>
                 <span>
                   <label for="product-filter">Product:</label>
                   <select name="product-filter"
@@ -720,7 +711,7 @@
                     md-colspan="{{recipe.columns}}"
                     md-rowspan="{{recipe.rows}}">
                     <div class="card" style="height:100%; width:100%;">
-                      <a href="pdf/{{recipe.download}}" target="_blank">
+                      <a href="pdf/{{recipe.pdf}}" target="_blank">
                         <div class="hovereffect">
                           <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
                           <div class="overlay">
@@ -733,7 +724,7 @@
                         </div>
                         <div class="inner">
                           <h5 class="card-title">{{recipe.name}}</h5>
-                          <small class="card-subtitle">Trends: {{recipe.trends.join(', ')}}</small>
+                          <small class="card-subtitle">Products: {{recipe.products.join(', ')}}</small>
                           <div class="card-link">
                             RECIPE
                           </div>

@@ -150,27 +150,24 @@ app.controller('FallHarvestController', function($scope, $timeout) {
     vm.recipes = getRecipes();
     initializeRecipes(vm.recipes);
 
-    vm.occasionTerms = extractTerms(vm.recipes, 'occasion');
+    vm.daypartTerms = extractTerms(vm.recipes, 'dayparts');
     vm.productTerms = extractTerms(vm.recipes, 'products');
-    vm.trendTerms = extractTerms(vm.recipes, 'trends');
 
     vm.filterParameters = {
         text: '',
-        occasion: '',
+        daypart: '',
         product: '',
-        trend: ''
     };
 
     vm.updateFilterResults = function () {
         var filterText = vm.filterParameters.text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
         vm.recipes.forEach(function (recipe) {
-            var occasionMatch = !vm.filterParameters.occasion || recipe.occasion == vm.filterParameters.occasion;
+            var daypartMatch = !vm.filterParameters.daypart || recipe.dayparts.indexOf(vm.filterParameters.daypart) >= 0;
             var productMatch = !vm.filterParameters.product || recipe.products.indexOf(vm.filterParameters.product) >= 0;
-            var trendMatch = !vm.filterParameters.trend || recipe.trends.indexOf(vm.filterParameters.trend) >= 0;
             var textMatch = !filterText || recipe.searchText.indexOf(filterText) >= 0;
 
-            recipe.isVisible = occasionMatch && productMatch && trendMatch && textMatch;
+            recipe.isVisible = daypartMatch && productMatch && textMatch;
         });
     }
     vm.updateFilterResults();
@@ -208,352 +205,350 @@ app.directive('emitOnUpdate', function($timeout) {
 
 // exported a csv from the recipes spreadsheet, then used http://papaparse.com/demo to parse it ("," delimiter)
 // finally, used the console to view the result and save as global and then
-// JSON.stringify(result.data.map(x=>{ return { name: x[0].trim(), columns: 1, rows: 1, download: x[1].trim(), image: x[2].trim(), occasion: x[3].trim(), trends: (x[4].trim() + '|' + x[5].trim()).replace(/(^\|)|(\|$)/,'').split('|'), products: (x[6].trim() + '|' + x[7].trim()).replace(/(^\|)|(\|$)/,'').split('|')}; }))
+// JSON.stringify(result.data.map(x=>{ return { name: x[0].trim(), columns: 1, rows: 1, download: x[1].trim(), image: x[2].trim(), daypart: x[3].trim(), [4].trim() + '|' + x[5].trim()).replace(/(^\|)|(\|$)/,'').split('|'), products: (x[6].trim() + '|' + x[7].trim()).replace(/(^\|)|(\|$)/,'').split('|')}; }))
 // to have something to copy-n-paste to here
 function getRecipes() {
-    return [{
-        "name": "Bacon Wrapped Cracked Pepper Fries",
-        "columns": 1,
-        "rows": 7,
-        "download": "BaconWrappedCrackedPepperFries.pdf",
-        "image": "BaconWrappedCrackedPepperFries.jpg",
-        "occasion": "Game Day",
-        "trends": ["Extreme Indulgence", "Shareables"],
-        "products": ["Fries"]
+    var recipes = [{
+        name: "Thai Style Pasty",
+        image: "GGThaiStylePotPies.jpg",
+        thumbnail: "GGThaiStylePotPiesThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "ThaiStylePasty.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Flame-Roasted Maple Sweet Potato Pancakes with Bourbon Butter & Pecans",
-        "columns": 1,
-        "rows": 5,
-        "download": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.pdf",
-        "image": "FlameRoastedMapleSweetPotatoPancakesWBourbonButterPecans.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Shareables", "Classics with a Twist"],
-        "products": ["Roasted"]
+        name: "Brussels Sprouts with Corn, Bacon & Jalapeno",
+        image: "RWBlendsCornJlpnoBrussels.jpg",
+        thumbnail: "RWBlendsCornJlpnoBrusselsThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "BrsslSprtJlpnCorn.pdf",
+        dayparts: "Appetizer | Side",
+        products: "Vegetables | Roasted"
     }, {
-        "name": "Curried Vegetables",
-        "columns": 2,
-        "rows": 8,
-        "download": "CurriedCauliflower.pdf",
-        "image": "CurriedCauliflower.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Spicy & Bold"],
-        "products": ["Vegetables"]
+        name: "Pork Nachos with Pineapple & Pepper ",
+        image: "RWBlendsPineapplePepprNachos.jpg",
+        thumbnail: "RWBlendsPineapplePepprNachosThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "PinePplJlpnNch.pdf",
+        dayparts: "Appetizer | Side | Lunch | Dinner",
+        products: "Vegetables | Roasted | Potatoes"
     }, {
-        "name": "Hearty Grains & Butternut Squash Soup",
-        "columns": 1,
-        "rows": 7,
-        "download": "HeartyGrainsButternutSquashSoup.pdf",
-        "image": "HeartyGrainsButternutSquashSoup.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Grains"]
+        name: "Mango Smoothie Bowl",
+        image: "MangoSmoothieBowl.jpg",
+        thumbnail: "MangoSmoothieBowlThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "MngSmthBwl.pdf",
+        dayparts: "Breakfast | Side | Lunch",
+        products: "Fruit"
     }, {
-        "name": "Parisian Carrots in Brown Butter Sage Sauce with Redskin Mashed",
-        "columns": 1,
-        "rows": 5,
-        "download": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.pdf",
-        "image": "ParisianCarrotsinBrownButterSaucewithRedskinMashed.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Vegetables", "Roasted"]
+        name: "Artisanal Grilled Cheese and Fire Roasted Apples",
+        image: "FujiApplePanini.jpg",
+        thumbnail: "FujiApplePaniniThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "ArtsnlGrlldChsNFrRstdApple.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Fruit | Roasted"
     }, {
-        "name": "Bourbon and Flame-Roasted Fuji Apple Glazed Turkey",
-        "columns": 1,
-        "rows": 7,
-        "download": "BourbonandFlameRoastedFujiAppleGlazedTurkey.pdf",
-        "image": "BourbonandFlameRoastedFujiAppleGlazedTurkey.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Roasted"]
+        name: "Pineapple & Bacon Cheese Burger",
+        image: "RWBlendsPineapplePepprBurger.jpg",
+        thumbnail: "RWBlendsPineapplePepprBurgerThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "PneAppleBcnChsBrgr.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Fruit | Roasted"
     }, {
-        "name": "Bacon and Brussels Mashed with Stout Gravy",
-        "columns": 1,
-        "rows": 5,
-        "download": "BaconBrusslesMashedStoutGravy.pdf",
-        "image": "BaconBrusslesMashedStoutGravy.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Mashed", "Vegetables"]
+        name: "Mediterranean Stuffed Mushrooms",
+        image: "GGAncientGrainsKaleMedMush.jpg",
+        thumbnail: "GGAncientGrainsKaleMedMushThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "MdtrrnnStffdMshrms.pdf",
+        dayparts: "Appetizer | Side",
+        products: "Grains"
     }, {
-        "name": "Roasted Maple Sweet Potatoes with Chili Flakes & Pumpkin Seeds",
-        "columns": 2,
-        "rows": 7,
-        "download": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.pdf",
-        "image": "RoastedMapleSweetPotatoeswithChiliFlakesNPumpkinSeeds.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Spicy & Bold"],
-        "products": ["Roasted"]
+        name: "Asian Grain Salad",
+        image: "GGAncientGrainsKaleSsmeSalad.jpg",
+        thumbnail: "GGAncientGrainsKaleSsmeSaladThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "AsnGrnSld.pdf",
+        dayparts: "Lunch | Dinner | Side",
+        products: "Grains"
     }, {
-        "name": "Spicy Sriracha SIDEWINDERS™",
-        "columns": 1,
-        "rows": 4,
-        "download": "SpicySrirachaSIDEWINDERS.pdf",
-        "image": "SpicySrirachaSIDEWINDERS.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareables"],
-        "products": ["Fries"]
+        name: "Corn & Jalapeno Ho Cakes",
+        image: "RWBlendsCornJlpnoHoCakes.jpg",
+        thumbnail: "RWBlendsCornJlpnoHoCakesThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "CrnJlpnHoCakes.pdf",
+        dayparts: "Breakfast | Side | Lunch | Appetizer",
+        products: "Avocado | Vegetables | Roasted"
     }, {
-        "name": "Haricot de Deux with Raspberry Honey Vinaigrette",
-        "columns": 1,
-        "rows": 4,
-        "download": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.pdf",
-        "image": "HaricotdeDeuxwithRaspberryHoneyVinaigrette.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Vegetables"]
+        name: "Citrus Grain & Kale Salad",
+        image: "GGAncientGrainsKaleSldPomgrnt.jpg",
+        thumbnail: "GGAncientGrainsKaleSldPomgrntThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "CtrsGrnKlSld.pdf",
+        dayparts: "Side | Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Roasted Salmon with Redskin Mashed, Tri-Colored Carrots & Pesto",
-        "columns": 2,
-        "rows": 6,
-        "download": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.pdf",
-        "image": "RoastedSalmonwithRedskinMashedTriColoredCarrotsNPesto.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Mashed"]
+        name: "Miso Glazed Salmon with Pineapple Salsa",
+        image: "RWBlendsPineapplePepprSalmon.jpg",
+        thumbnail: "RWBlendsPineapplePepprSalmonThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "MzGlzdSlmnwPnpplPpprBlnd.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Roasted | Fruit"
     }, {
-        "name": "Roasted Yukon Gold & Reds and Haricot Vert with Ancho Dust",
-        "columns": 2,
-        "rows": 7,
-        "download": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.pdf",
-        "image": "RoastedYukonGoldNRedsandHaricotVertwithAnchoDust.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Spicy & Bold"],
-        "products": ["Roasted", "Vegetables"]
+        name: "Pineapple and Poke Tower",
+        image: "RWBlendsPineapplePepprAhiTower.jpg",
+        thumbnail: "RWBlendsPineapplePepprAhiTowerThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "PnpplePkTwr.pdf",
+        dayparts: "Appetizer | Lunch | Dinner",
+        products: "Avocado | Fruit | Roasted"
     }, {
-        "name": "Roasted Sweet Potato Breakfast Hash",
-        "columns": 2,
-        "rows": 6,
-        "download": "RoastedSweetPotatoBreakfastHash.pdf",
-        "image": "RoastedSweetPotatoBreakfastHash.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Roasted"]
+        name: "Mango and Strawberry Salsa",
+        image: "MangoSalsaTrio.jpg",
+        thumbnail: "MangoSalsaTrioThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "MngStrwbrrySls.pdf",
+        dayparts: "Appetizer | Side",
+        products: "Fruit"
     }, {
-        "name": "Morel Waffle Mash Stacker with Shrimp, Scallops & Lobster",
-        "columns": 1,
-        "rows": 4,
-        "download": "MoralWaffleMashStacker.pdf",
-        "image": "MoralWaffleMashStacker.jpg",
-        "occasion": "Game Day",
-        "trends": ["Extreme Indulgence"],
-        "products": ["Mashed"]
+        name: "Mango and Cucumber Salsa",
+        image: "MangoSalsaTrio.jpg",
+        thumbnail: "MangoSalsaTrioThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "MngCukeoSls.pdf",
+        dayparts: "Appetizer | Side",
+        products: "Fruit"
     }, {
-        "name": "Chipotle Breakfast Scramble",
-        "columns": 1,
-        "rows": 4,
-        "download": "ChipotleBreakfastScramble.pdf",
-        "image": "ChipotleBreakfastScramble.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold"],
-        "products": ["Mashed", "Avocado"]
+        name: "Mango Guacamole",
+        image: "MangoSalsaTrio.jpg",
+        thumbnail: "MangoSalsaTrioThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "MngGucmole.pdf",
+        dayparts: "Appetizer | Side",
+        products: "Avocado | Fruit"
     }, {
-        "name": "South of the Border Mashed",
-        "columns": 1,
-        "rows": 4,
-        "download": "SouthoftheBorderMashed.pdf",
-        "image": "SouthoftheBorderMashed.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold"],
-        "products": ["Mashed", "Avocado"]
+        name: "Elote Street Corn",
+        image: "RWBlendsCornJlpnoElote.jpg",
+        thumbnail: "RWBlendsCornJlpnoEloteThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "EloteStrCrn.pdf",
+        dayparts: "Apppetizer | Side | Lunch",
+        products: "Vegetables | Roasted"
     }, {
-        "name": "Fondue Frites",
-        "columns": 1,
-        "rows": 4,
-        "download": "FondueFrites.pdf",
-        "image": "FondueFrites.jpg",
-        "occasion": "Game Day",
-        "trends": ["Extreme Indulgence"],
-        "products": ["Fries"]
+        name: "Shrimp Taco",
+        image: "RWBlendsCornJlpnoShrimpTacos.jpg",
+        thumbnail: "RWBlendsCornJlpnoShrimpTacosThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "ShrimpTacos.pdf",
+        dayparts: "Appetizer | Lunch | Dinner",
+        products: "Avocado | Vegetables | Roasted"
     }, {
-        "name": "Avocado Buffalo Chicken Sliders",
-        "columns": 2,
-        "rows": 8,
-        "download": "AvocadoBuffaloChickenSliders.pdf",
-        "image": "AvocadoBuffaloChickenSliders.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareables"],
-        "products": ["Avocado"]
+        name: "Salmon Burger Patties",
+        image: "GGAncientGrainsKaleSalmBrgr.jpg",
+        thumbnail: "GGAncientGrainsKaleSalmBrgrThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "BrsdPrkRstdRtVgtblsFrtCmpt.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Sweet Potatocado Smoothie",
-        "columns": 2,
-        "rows": 8,
-        "download": "SweetPotatocadoSmoothie.pdf",
-        "image": "SweetPotatocadoSmoothie.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages", "Classics with a Twist"],
-        "products": ["Avocado", "Mashed"]
+        name: "Shrimp Spring Rolls ",
+        image: "GGThaiStyleSpringRolls.jpg",
+        thumbnail: "GGThaiStyleSpringRollsThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "ShrimpSprngRlls.pdf",
+        dayparts: "Appetizer | Side | Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Spicy Sweet Mashed Potatoes",
-        "columns": 1,
-        "rows": 7,
-        "download": "SpicySweetMashedPotatos.pdf",
-        "image": "SpicySweetMashedPotatos.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Spicy & Bold", "Classics with a Twist"],
-        "products": ["Mashed"]
+        name: "Peanut Chicken Salad",
+        image: "GGThaiStylePeanutChixSalad.jpg",
+        thumbnail: "GGThaiStylePeanutChixSaladThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "PeanutChickenSalad.pdf",
+        dayparts: "Side | Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Oktoberfest Sausage Platter",
-        "columns": 1,
-        "rows": 4,
-        "download": "OktoberfestSausagePlatter.pdf",
-        "image": "OktoberfestSausagePlatter.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist"],
-        "products": ["Mashed"]
+        name: "Short Ribs Lettuce Wraps",
+        image: "GGThaiStyleLettuceVegWraps.jpg",
+        thumbnail: "GGThaiStyleLettuceVegWrapsThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "ShrtRibLettuceWraps.pdf",
+        dayparts: "Appetizer | Side | Lunch | Dinner",
+        products: "Grains"
     }, {
-        "name": "Brussels Sprouts with Corn & Jalapeno and Bacon",
-        "columns": 2,
-        "rows": 6,
-        "download": "BrusslesSproutswithCornNJalapenosandBacon.pdf",
-        "image": "BrusselsSproutswithCornNJalapenoandBacon.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Shareables", "Classics with a Twist"],
-        "products": ["Vegetables", "Roasted"]
+        name: "Kimchi Rice Bowl",
+        image: "KimChiRice.jpg",
+        thumbnail: "KimChiRiceThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "Kimchi Rice Bowl.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Avocado"
     }, {
-        "name": "Pork Nachos with Pineapple and Pepper",
-        "columns": 1,
-        "rows": 4,
-        "download": "PorkNachosWPineappleNPepper.pdf",
-        "image": "PorkNachosWPineappleNPepper.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareables"],
-        "products": ["Roasted", "Fries", "Fruit"]
+        name: "Flatbread Especial",
+        image: "FlatBreadEspecial.jpg",
+        thumbnail: "FlatBreadEspecialThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "FlatbreadEspecial.pdf",
+        dayparts: "Lunch | Dinner | Appetizer",
+        products: "Avocado"
     }, {
-        "name": "Quinoa Kale Stuffed Mushrooms",
-        "columns": 1,
-        "rows": 4,
-        "download": "QuinoaKaleStuffedMushrooms.pdf",
-        "image": "QuinoaKaleStuffedMushrooms.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Shareables"],
-        "products": ["Grains"]
+        name: "Avocado and Bean Wrap",
+        image: "AvoBeanWrap.jpg",
+        thumbnail: "AvoBeanWrapThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "AvocadoBeanWrap.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Avocado"
     }, {
-        "name": "Spicy Pulled Pork Shepherd Pie",
-        "columns": 1,
-        "rows": 4,
-        "download": "SpicyPulledPorkShepherdsPie.pdf",
-        "image": "SpicyPulledPorkShepherdsPie.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Shareables"],
-        "products": ["Mashed"]
+        name: "Avocado and Egg Sandwich",
+        image: "AvoEggSaladSandwich.jpg",
+        thumbnail: "AvoEggSaladSandwichThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "AvocadoEggSldSndwch.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Avocado"
     }, {
-        "name": "Avocado Mary",
-        "columns": 1,
-        "rows": 6,
-        "download": "AvocadoMary.pdf",
-        "image": "AvocadoMary.jpg",
-        "occasion": "Game Day",
-        "trends": ["Craft Cocktails/Mocktails"],
-        "products": ["Avocado"]
+        name: "Avocado Breakfast Pizza",
+        image: "AvoBreakfastPizza.jpg",
+        thumbnail: "AvoBreakfastPizzaThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "AvocadoBrkfstPzza.pdf",
+        dayparts: "Breakfast | Lunch",
+        products: "Avocado"
     }, {
-        "name": "Marionberry Mule",
-        "columns": 2,
-        "rows": 11,
-        "download": "MarionberryMule.pdf",
-        "image": "MarionberryMule.jpg",
-        "occasion": "Game Day",
-        "trends": ["Craft Cocktails/Mocktails"],
-        "products": ["Fruit"]
+        name: "Green Applecado Smoothie",
+        image: "AplecadoSmoothie.jpg",
+        thumbnail: "AplecadoSmoothieThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "GrnApplecdoSmthie.pdf",
+        dayparts: "Breakfast | Appetizer | Side",
+        products: "Avocado"
     }, {
-        "name": "Loaded Ghost Pepper Cheese & Pork Belly Sidewinders",
-        "columns": 1,
-        "rows": 4,
-        "download": "LoadedGhostPepperCheeseNPorkBellySidewinders.pdf",
-        "image": "LoadedGhostPepperCheeseNPorkBellySidewinders.jpg",
-        "occasion": "Game Day",
-        "trends": ["Extreme Indulgence"],
-        "products": ["Fries", "Avocado"]
+        name: "Pacific Berry Smoothie",
+        image: "PacificBerrySmoothie.jpg",
+        thumbnail: "PacificBerrySmoothieThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "PcfcBrrySmthie.pdf",
+        dayparts: "Breakfast | Appetizer | Side",
+        products: "Avocado | Fruit"
     }, {
-        "name": "Ultimate Salted Caramel Fuji Apple Donutshake",
-        "columns": 1,
-        "rows": 4,
-        "download": "UltimateSaltedCaramelFujiAppleDonutshake.pdf",
-        "image": "UltimateSaltedCaramelFujiAppleDonutshake.jpg",
-        "occasion": "Game Day",
-        "trends": ["Extreme Indulgence"],
-        "products": ["Roasted", "Fruit"]
+        name: "APB Smoothie",
+        image: "APBSmoothie.jpg",
+        thumbnail: "APBSmoothieThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "APBSmthie.pdf",
+        dayparts: "Breakfast | Appetizer | Side",
+        products: "Avocado"
     }, {
-        "name": "Spicy Bourbon Peach Short Rib Sliders",
-        "columns": 1,
-        "rows": 4,
-        "download": "SpicyBourbonPeachShortRibSliders.pdf",
-        "image": "SpicyBourbonPeachShortRibSliders.jpg",
-        "occasion": "Game Day",
-        "trends": ["Shareables"],
-        "products": ["Fruit"]
+        name: "Stawvocado Smoothie",
+        image: "StrawberryAvoSmoothie.jpg",
+        thumbnail: "StrawberryAvoSmoothieThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "StrwvcdSmthie.pdf",
+        dayparts: "Breakfast | Appetizer | Side",
+        products: "Avocado | Fruit"
     }, {
-        "name": "Angry Edamame",
-        "columns": 1,
-        "rows": 4,
-        "download": "AngryEdamame.pdf",
-        "image": "AngryEdamame.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareables"],
-        "products": ["Vegetables"]
+        name: "Fiesta Salad Bowl",
+        image: "FstaSldBwl.jpg",
+        thumbnail: "FstaSldBwlThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "FiestaSldBwl.pdf",
+        dayparts: "Lunch|Dinner",
+        products: "Vegetables"
     }, {
-        "name": "Flame-Roasted Corn & Jalapeno Queso",
-        "columns": 1,
-        "rows": 4,
-        "download": "FlameRoastedCornNJalapenoQueso.pdf",
-        "image": "FlameRoastedCornNJalapenoQueso.jpg",
-        "occasion": "Game Day",
-        "trends": ["Spicy & Bold", "Shareables"],
-        "products": ["Roasted"]
+        name: "Bourbon and Flame-Roasted Fuji Apple Glazed Turkey",
+        image: "BourbonFlRstdFujiApTurkey.jpg",
+        thumbnail: "BourbonFlRstdFujiApTurkeyThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "BrbnFlmRstdFjApplGlzdTrky.pdf",
+        dayparts: "Dinner",
+        products: "Roasted | Vegetables | Fruit | Potatoes"
     }, {
-        "name": "Eggs Benny Rosemary Brunch Fries",
-        "columns": 2,
-        "rows": 6,
-        "download": "EggsBennyRosemaryBrunchFries.pdf",
-        "image": "EggsBennyRosemaryBrunchFries.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Shareables"],
-        "products": ["Fries"]
+        name: "Parisian Carrots in  Brown Butter Sage Sauce with Redskin Mashed  ",
+        image: "PrsnCrtsBrnBtrSgScRdsknMshd.jpg  ",
+        thumbnail: "PrsnCrtsBrnBtrSgScRdsknMshdThumbnail.jpg  ",
+        columns: 1,
+        rows: 4,
+        pdf: "PrsnCrrtsBrnBttrSgScRdsknMshd.pdf",
+        dayparts: "Side | Dinner",
+        products: "Vegetables | Potatoes"
     }, {
-        "name": "Roasted Pork Loin with Mango Mojo & Ancient Grains & Kale",
-        "columns": 1,
-        "rows": 5,
-        "download": "RoastedPorkwithMangoMojoNAncientGrainsNKale.pdf",
-        "image": "RoastedPorkwithMangoMojoNAncientGrainsNKale.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Classics with a Twist", "Shareables"],
-        "products": ["Fruit", "Grains"]
+        name: "Curried Cauliflower",
+        image: "CurriedCauliflower.jpg",
+        thumbnail: "CurriedCauliflowerThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "CrrdClflwr.pdf",
+        dayparts: "Side | Dinner",
+        products: "Vegetables"
     }, {
-        "name": "Cherry Old Fashioned Smash",
-        "columns": 1,
-        "rows": 7,
-        "download": "CherryOldFashionedSmash.pdf",
-        "image": "CherryOldFashionedSmash.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages"],
-        "products": ["Fruit"]
+        name: "Roasted Salmon with Redskin Mashed, Tri-Colored Carrots & Pesto",
+        image: "RstdSlmnRdsknMshd.jpg",
+        thumbnail: "RstdSlmnRdsknMshdThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "RstdSlmnRdsknMshd.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Potatoes | Vegetables"
     }, {
-        "name": "Fuji Apple Fizz",
-        "columns": 1,
-        "rows": 6,
-        "download": "FujiAppleFizz.pdf",
-        "image": "FujiAppleFizz.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages"],
-        "products": ["Fruit"]
+        name: "Braised Pork and Roasted Root Vegetables with Fruit Compote",
+        image: "BrsdPrkRootVeg.jpg",
+        thumbnail: "BrsdPrkRootVegThumbnail.jpg",
+        columns: 2,
+        rows: 4,
+        pdf: "BrsdPrkRstdRtVgtblsFrtCmpt.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Vegetables | Potatoes | Fruit | Roasted"
     }, {
-        "name": "Sparkling Rosemary Berry Sangria",
-        "columns": 2,
-        "rows": 6,
-        "download": "SparklingRosemaryBerrySangria.pdf",
-        "image": "SparklingRosemaryBerrySangria.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Seasonal Beverages"],
-        "products": ["Fruit"]
-    }, {
-        "name": "Sweet Potato & Bacon Alfredo Pizza",
-        "columns": 1,
-        "rows": 4,
-        "download": "SweetPotatoNBaconAlfredoPizza.pdf",
-        "image": "SweetPotatoNBaconAlfredoPizza.jpg",
-        "occasion": "Seasonal Celebrations",
-        "trends": ["Shareables"],
-        "products": ["Roasted"]
+        name: "Haricot de Deux with Raspberry Honey Vinaigrette",
+        image: "HrctDeDeuxRspbVin.jpg",
+        thumbnail: "HrctDeDeuxRspbVinThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "HrctDeDxRspbrrHnyVngrtt.pdf",
+        dayparts: "Side",
+        products: "Vegetables | Fruit"
     }];
+
+    recipes.forEach(function (recipe) {
+        recipe.dayparts = recipe.dayparts.split('|').map(function (daypart) { return daypart.trim(); });
+        recipe.products = recipe.products.split('|').map(function (product) { return product.trim(); });
+    });
+
+    return recipes;
 }
 
 function initializeRecipes(recipes) {
