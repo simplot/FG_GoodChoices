@@ -45,14 +45,14 @@ $images: '../img';
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #5f5150 !default; // brand brown
+$gray-dark:                 #5e514e !default; // brand brown
 $gray:                      #5f514e !default;
 $gray-light:                #838b7e !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #d2983c !default; // brand yellow
-$brand-secondary:           #7dba41; // green primary
+$brand-primary:             #d2983c !default; // brand yellowv
+$brand-secondary:           #7cba42; // green primary
 
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
@@ -61,6 +61,7 @@ $brand-danger:              #d9534f !default;
 $brand-inverse:             $gray-dark !default;
 
 $white:                     #fff;
+$background-color:          #f7f6f4;
 
 // Options
 //
@@ -164,11 +165,14 @@ $grid-gutter-width: 25px !default;
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-sans-serif: 'Roboto', sans-serif !default;
+$font-family-sans-serif-condensed: 'Roboto Condensed', sans-serif !default;
+
 $font-family-serif:       'Slabo 13px', serif !default;
 $font-family-serif-2:     'Bitter', serif;
+
 $font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
-$font-family-base:       $font-family-serif !default;
+$font-family-base:       $font-family-sans-serif !default;
 
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 16px !default;

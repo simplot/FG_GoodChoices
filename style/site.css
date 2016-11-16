@@ -287,10 +287,10 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Slabo 13px", serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  color: #5f5150;
+  color: #5e514e;
   background-color: #fff; }
 
 [tabindex="-1"]:focus {
@@ -606,7 +606,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  color: #5f5150; }
+  color: #5e514e; }
   pre code {
     padding: 0;
     font-size: inherit;
@@ -1996,7 +1996,7 @@ pre {
 
 .thead-inverse th {
   color: #fff;
-  background-color: #5f5150; }
+  background-color: #5e514e; }
 
 .thead-default th {
   color: #5f514e;
@@ -2004,7 +2004,7 @@ pre {
 
 .table-inverse {
   color: #eceeef;
-  background-color: #5f5150; }
+  background-color: #5e514e; }
   .table-inverse th,
   .table-inverse td,
   .table-inverse thead th {
@@ -2361,20 +2361,20 @@ fieldset[disabled] a.btn {
     border-color: #d2983c; }
 
 .btn-secondary {
-  color: #5f5150;
+  color: #5e514e;
   background-color: #fff;
   border-color: #ccc; }
   .btn-secondary:hover {
-    color: #5f5150;
+    color: #5e514e;
     background-color: #e6e6e6;
     border-color: #adadad; }
   .btn-secondary:focus, .btn-secondary.focus {
-    color: #5f5150;
+    color: #5e514e;
     background-color: #e6e6e6;
     border-color: #adadad; }
   .btn-secondary:active, .btn-secondary.active,
   .open > .btn-secondary.dropdown-toggle {
-    color: #5f5150;
+    color: #5e514e;
     background-color: #e6e6e6;
     border-color: #adadad;
     background-image: none; }
@@ -2382,7 +2382,7 @@ fieldset[disabled] a.btn {
     .open > .btn-secondary.dropdown-toggle:hover,
     .open > .btn-secondary.dropdown-toggle:focus,
     .open > .btn-secondary.dropdown-toggle.focus {
-      color: #5f5150;
+      color: #5e514e;
       background-color: #d4d4d4;
       border-color: #8c8c8c; }
   .btn-secondary.disabled:focus, .btn-secondary.disabled.focus, .btn-secondary:disabled:focus, .btn-secondary:disabled.focus {
@@ -2798,7 +2798,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 1rem;
-  color: #5f5150;
+  color: #5e514e;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -2818,13 +2818,13 @@ tbody.collapse.in {
   padding: 3px 20px;
   clear: both;
   font-weight: normal;
-  color: #5f5150;
+  color: #5e514e;
   text-align: inherit;
   white-space: nowrap;
   background: none;
   border: 0; }
   .dropdown-item:focus, .dropdown-item:hover {
-    color: #514544;
+    color: #504542;
     text-decoration: none;
     background-color: #f5f5f5; }
   .dropdown-item.active, .dropdown-item.active:focus, .dropdown-item.active:hover {
@@ -4625,7 +4625,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Slabo 13px", serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -4707,7 +4707,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Slabo 13px", serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5028,10 +5028,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   background-color: #c9302c !important; }
 
 .bg-inverse {
-  background-color: #5f5150 !important; }
+  background-color: #5e514e !important; }
 
 a.bg-inverse:focus, a.bg-inverse:hover {
-  background-color: #433939 !important; }
+  background-color: #423937 !important; }
 
 .rounded {
   border-radius: 0.25rem; }
@@ -5439,10 +5439,10 @@ a.text-danger:focus, a.text-danger:hover {
   color: #c9302c !important; }
 
 .text-gray-dark {
-  color: #5f5150 !important; }
+  color: #5e514e !important; }
 
 a.text-gray-dark:focus, a.text-gray-dark:hover {
-  color: #433939 !important; }
+  color: #423937 !important; }
 
 .text-hide {
   font: 0/0 a;
@@ -5533,7 +5533,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 
 html, body {
   height: 100%;
-  background: none #fff; }
+  background: none #f7f6f4; }
 
 body > .ng-scope {
   overflow: hidden; }
@@ -5568,11 +5568,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2rem; } }
 
 strong {
-  font-family: "Bitter", serif;
   font-weight: 700; }
 
-body, #header {
-  max-width: 1400px;
+body {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   z-index: 1; }
 
@@ -5659,629 +5659,910 @@ span.reg {
       .nav-tabs li .inner a:hover {
         cursor: pointer; }
 
-#navigation li {
-  width: 20%;
-  margin-top: 4.5%;
-  float: left; }
-  #navigation li:first-child {
-    padding-left: 0; }
-  #navigation li:last-child {
-    padding-right: 0; }
-  @media (max-width: 639px) {
-    #navigation li {
+body {
+  background: url(../img/wood-texture.jpg); }
+
+#container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+#header .message {
+  background: #7cba42;
+  color: #fff; }
+
+/*
+#navigation {
+  li {
+    width: 20%;
+    margin-top: 4.5%;
+    float: left;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+    @media( max-width: '639px' ) {
       width: 25%;
-      transform: translateY(80px); } }
-  @media (min-width: 640px) and (max-width: 1079px) {
-    #navigation li {
-      width: calc( 25% - 38px);
-      margin-top: 10px; } }
-  #navigation li.logo {
-    margin-top: 0; }
-    @media (max-width: 639px) {
-      #navigation li.logo {
+    //  position: relative;
+      transform: translateY( 80px );
+    }
+    @media( min-width: '640px' ) and ( max-width: '1079px' ) {
+      width: calc( 25% - 38px );
+      margin-top: 10px;
+      &:first-child {
+        // padding-left: 4px;
+      }
+      &:last-child {
+        // padding-right: 4px;
+      }
+    }
+    &.logo {
+      margin-top: 0;
+      @media( max-width: '639px' ) {
         transform: none;
         position: absolute;
-        left: calc( 50% - 76px); } }
-    @media (max-width: 1079px) {
-      #navigation li.logo {
-        width: 152px; } }
-    #navigation li.logo .inner {
-      margin: 0;
-      padding: 0;
-      border: 0; }
-      #navigation li.logo .inner a img {
-        max-width: 100%; }
-  #navigation li .link-container {
-    position: relative; }
-    @media (max-width: 767px) {
-      #navigation li .link-container {
+        left: calc( 50% - 76px );
+        // margin: 0 auto;
+        // text-align: center;
+      }
+      @media( max-width: '1079px' ) {
+        width: 152px;
+      //  max-height: 100px;
+      }
+      .inner {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        a {
+          img {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .link-container {
+      position: relative;
+      @media( max-width: '767px' ) {
         border-top: 5px solid;
-        border-bottom: 5px solid; } }
-    #navigation li .link-container .inner {
-      width: 100%; }
-    @media (max-width: 1079px) {
-      #navigation li .link-container {
+        border-bottom: 5px solid;
+      }
+      .inner {
+        //margin-top: 26%;
+        // display: table-cell;
+        // vertical-align: middle;
+        // position: absolute;
+        width: 100%;
+      }
+      @media( max-width: '1079px' ) {
+        // margin-top: 10px;
         height: 74px;
         width: 100%;
         position: relative;
-        margin-top: 5px; }
-        #navigation li .link-container .inner {
+        margin-top: 5px;
+        .inner {
           display: table;
           margin-top: 3px;
-          margin-bottom: 3px; }
-          #navigation li .link-container .inner a {
+          margin-bottom: 3px;
+          a {
             height: 58px;
             display: table-cell;
-            vertical-align: middle; } }
-      @media (max-width: 1079px) and (max-width: 479px) {
-        #navigation li .link-container .inner a {
-          font-size: 11px;
-          height: 44px; } }
-    @media (max-width: 479px) {
-      #navigation li .link-container {
-        height: 60px; } }
+            vertical-align: middle;
+            @media( max-width: '479px' ) {
+              font-size: 11px;
+              height: 44px;
+            }
+          }
+        }
+      }
+      @media( max-width: '479px' ) {
+          height: 60px;
+      }
+    }
+  }
+}
 
 .down-arrow {
   position: relative;
   width: 100%;
-  margin: 50px 0; }
-  .down-arrow a {
+  margin: 50px 0;
+  a {
     display: block;
     text-align: center;
-    -moz-transition: opacity 0.2s;
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s; }
-    .down-arrow a:hover {
+    @include transition(opacity .2s);
+    &:hover {
       cursor: pointer;
-      opacity: 0.7;
-      filter: alpha(opacity=70); }
-
-@media (max-width: 639px) {
-  #main {
-    transform: translateY(90px); } }
-
-#top .hero {
-  margin-top: -40px;
-  margin-bottom: 25px;
-  display: inline-block;
-  width: 100%;
-  position: relative;
-  z-index: 0; }
-  @media (max-width: 1079px) {
-    #top .hero {
-      margin-top: 0; } }
-  #top .hero img {
-    padding: 0; }
-
-#top .learn-more {
-  display: block;
-  text-align: center;
-  margin-top: 20px; }
-  @media (max-width: 767px) {
-    #top .learn-more {
-      margin-bottom: 20px; } }
-
-#top .callout {
-  min-width: 300px;
-  margin: 0 auto; }
-  #top .callout a:hover {
-    cursor: pointer; }
-  #top .callout .image-link {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border: 5px solid;
+      @include opacity(0.7);
+    }
+  }
+}
+#main {
+  @media( max-width: '639px' ) {
+  //  position: relative;
+    transform: translateY( 90px );
+  }
+}
+#top {
+  .hero {
+    margin-top: -40px;
+    margin-bottom: 25px;
+    display: inline-block;
     width: 100%;
-    height: 100%;
     position: relative;
-    min-width: 300px;
+    z-index: 0;
+    @media( max-width: '1079px' ) {
+      margin-top: 0;
+    }
+    img {
+      padding: 0;
+    //  width: 100%;
+    }
+  }
+  .learn-more {
     display: block;
-    color: #fff; }
-    #top .callout .image-link > img {
-      position: absolute;
+    text-align: center;
+    margin-top: 20px;
+    @media( max-width: '767px' ) {
+      margin-bottom: 20px;
+    }
+  }
+  .callout {
+    // padding: 0 2%;
+    // position: relative;
+    min-width: 300px;
+    // height: 315px;
+    margin: 0 auto;
+    a {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .image-link {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border: 5px solid;
       width: 100%;
-      height: auto; }
-    #top .callout .image-link .overlay {
-      position: relative;
       height: 100%;
-      width: 100.1%;
-      display: table;
-      -moz-transition: background-color 0.2s;
-      -webkit-transition: background-color 0.2s;
-      transition: background-color 0.2s;
-      background: rgba(0, 0, 0, 0.35); }
-    #top .callout .image-link .inner {
-      padding: 100px 0 74px;
-      display: table-cell;
-      vertical-align: middle; }
-      @media (max-width: 1024px) {
-        #top .callout .image-link .inner {
-          padding: 14% 0 7%; } }
-      #top .callout .image-link .inner img {
-        display: block;
-        margin: 0 auto; }
-    #top .callout .image-link:hover .overlay {
-      background: transparent; }
-  #top .callout.seasonal .image-link {
-    background-image: url(../img/seasonal-tablescape-angled-hands.jpg);
-    border-color: #d2983c; }
-  #top .callout.gameday .image-link {
-    background-image: url(../img/game-day-tablescape-204.jpg);
-    border-color: #7dba41; }
+      // margin-bottom: 34%;
+      position: relative;
+      min-width: 300px;
 
-#seasonal, #gameday {
-  position: relative; }
-  #seasonal .outline, #gameday .outline {
-    border: 5px solid #d2983c;
-    padding: 2rem 0.5rem 1rem; }
-    @media (max-width: 767px) {
-      #seasonal .outline, #gameday .outline {
-        border: none;
-        padding: 0; } }
-  #seasonal h1, #gameday h1 {
-    color: #d2983c; }
-    @media (min-width: 767px) and (max-width: 979px) {
-      #seasonal h1 strong, #gameday h1 strong {
-        display: block; } }
-  #seasonal .product-group, #gameday .product-group {
-    padding: 0 2rem;
-    display: none; }
-    @media (max-width: 767px) {
-      #seasonal .product-group, #gameday .product-group {
-        padding: 0; } }
-    #seasonal .product-group.active, #gameday .product-group.active {
-      display: block !important; }
-  #seasonal .circle-stat, #gameday .circle-stat {
+      //height: 320px;
+      // height: 100%;
+      display: block;
+      color: $white;
+      // margin-bottom: 10px;
+      > img {
+          position: absolute;
+          width: 100%;
+          height: auto;
+      }
+      .overlay {
+        position: relative;
+        height: 100%;
+        width: 100.1%;
+        display: table;
+        @include transition( background-color .2s );
+        background: rgba(0, 0, 0, 0.35);
+      }
+      .inner {
+        padding: 100px 0 74px;
+        display: table-cell;
+        vertical-align: middle;
+        @media( max-width: '1024px' ) {
+          padding: 14% 0 7%;
+        }
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      &:hover {
+        .overlay {
+          background: rgba(0, 0, 0, 0);
+        }
+      }
+    }
+
+    &.seasonal {
+    //  margin-right: 22.5px;
+      // iframe {
+      //   border: 5px solid $brand-primary;
+      // }
+      // a {
+      // //  margin-left: 90px;
+      // }
+      .image-link {
+        background-image: url(../img/seasonal-tablescape-angled-hands.jpg);
+        border-color: $brand-primary;
+      }
+    }
+    &.gameday {
+      //margin-left: 22.5px;
+      // float: right;
+      // iframe {
+      //   border: 5px solid $brand-secondary;
+      // }
+      // a {
+      // //  margin-right: 90px;
+      // }
+      .image-link {
+        background-image: url(../img/game-day-tablescape-204.jpg);
+        border-color: $brand-secondary;
+      }
+    }
+    // @media( max-width: '767px' ) {
+    //   margin: 0 auto;
+    //   &.gameday {
+    //     margin-top: 20px;
+    //   }
+    // }
+    // @media( min-width: '674px' ) and ( max-width: '767px' ) {
+    //   margin: 0 auto;
+    //   &.gameday {
+    //     margin-top: 20px;
+    //   }
+    // }
+    // @media( min-width: '768px' ) and ( max-width: '1200px' ) {
+    //   width: 360px;
+    //   height: 187px;
+    //   .inner {
+    //       img {
+    //         width: 40px;
+    //         height: 40px;
+    //       }
+    //       h3 {
+    //       margin-bottom: 10px;
+    //       strong {
+    //         display: block;
+    //       }
+    //     }
+    //   }
+    // }
+    // @media( min-width: '1201px' ) and ( max-width: '1400px' ) {
+    //   width: 500px;
+    //   height: 260px;
+    // }
+  }
+}
+#seasonal {
+  position: relative;
+  .outline {
+    border: 5px solid $brand-primary;
+    padding: $spacer-y * 2 $spacer-x / 2 $spacer-y;
+    @media( max-width: '767px' ) {
+      border: none;
+      padding: 0;
+    }
+  }
+  h1 {
+    color: $brand-primary;
+    @media( min-width: '767px' ) and ( max-width: '979px' ) {
+      strong {
+        display: block;
+      }
+    }
+  }
+  .product-group {
+    padding: 0 $spacer-x * 2;
+    display: none;
+    @media( max-width: '767px' ) {
+      padding: 0;
+    }
+    &.active {
+      display: block !important;
+    }
+  }
+  .circle-stat {
     width: 185px;
     height: 185px;
     position: absolute;
-    right: 1rem;
-    top: -2rem; }
-    @media (max-width: 767px) {
-      #seasonal .circle-stat, #gameday .circle-stat {
-        position: relative;
-        margin: 0 auto 1rem;
-        right: 0;
-        top: 0; } }
-    #seasonal .circle-stat img, #gameday .circle-stat img {
+    right: $spacer-x;
+    top: -$spacer-y * 2;
+    @media( max-width: '767px' ) {
+      position: relative;
+      margin: 0 auto $spacer-y;
+      right: 0;
+      top: 0;
+    }
+    img {
       width: 100%;
       position: relative;
-      z-index: 10; }
-    #seasonal .circle-stat .overlay, #gameday .circle-stat .overlay {
+      z-index: 10;
+    }
+    .overlay {
       position: absolute;
       top: 0;
       display: table;
       width: 100%;
-      height: 100%; }
-      #seasonal .circle-stat .overlay .inner, #gameday .circle-stat .overlay .inner {
+      height: 100%;
+      .inner {
         text-align: center;
         display: table-cell;
         vertical-align: middle;
         position: relative;
         z-index: 20;
-        color: #fff;
-        font-family: "Bitter", serif; }
-        #seasonal .circle-stat .overlay .inner h3, #gameday .circle-stat .overlay .inner h3, #seasonal .circle-stat .overlay .inner p, #gameday .circle-stat .overlay .inner p {
+        color: $white;
+        font-family: $font-family-serif-2;
+        h3, p {
           margin-bottom: 0;
-          line-height: 130%; }
-        #seasonal .circle-stat .overlay .inner h3, #gameday .circle-stat .overlay .inner h3 {
-          font-weight: 900; }
-        #seasonal .circle-stat .overlay .inner p, #gameday .circle-stat .overlay .inner p {
+          line-height: 130%;
+        }
+        h3 {
+          font-weight: 900;
+        }
+        p {
           font-size: 15px;
-          font-style: italic; }
-        #seasonal .circle-stat .overlay .inner small, #gameday .circle-stat .overlay .inner small {
+          font-style: italic;
+        }
+        small {
           font-size: 11px;
-          font-style: italic; }
-  #seasonal .nav-tabs:not(.scroll-tabs), #gameday .nav-tabs:not(.scroll-tabs) {
-    margin: 2rem 0.25rem 1rem; }
-    @media (max-width: 767px) {
-      #seasonal .nav-tabs:not(.scroll-tabs), #gameday .nav-tabs:not(.scroll-tabs) {
-        margin-top: 1rem; } }
-    @media (max-width: 767px) {
-      #seasonal .nav-tabs:not(.scroll-tabs) li .link-container, #gameday .nav-tabs:not(.scroll-tabs) li .link-container {
-        margin-bottom: 0.25rem; } }
-    #seasonal .nav-tabs:not(.scroll-tabs) li .link-container a, #gameday .nav-tabs:not(.scroll-tabs) li .link-container a {
-      color: #d2983c;
-      -moz-transition: all 0.2s;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s; }
-      #seasonal .nav-tabs:not(.scroll-tabs) li .link-container a span, #gameday .nav-tabs:not(.scroll-tabs) li .link-container a span {
-        font-weight: 900; }
-      #seasonal .nav-tabs:not(.scroll-tabs) li .link-container a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container a p {
-        display: none !important; }
-    #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active {
-      margin-top: -32px; }
-      @media (max-width: 767px) {
-        #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active {
-          margin-top: 0; } }
-      #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a {
-        background: #d2983c;
-        color: #fff; }
-        #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a header {
-          font-size: 24px; }
-          @media (max-width: 1024px) {
-            #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a header, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a header, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a header {
-              font-size: 18px; } }
-        #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a p {
-          width: 75%;
-          margin: 0 auto;
-          display: block !important; }
-          @media (max-width: 1024px) {
-            #seasonal .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a p, #seasonal .nav-tabs:not(.scroll-tabs) li .link-container.active a p, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a p {
-              width: 95%; } }
-  #seasonal .carousel, #gameday .carousel {
-    padding: 0 2rem; }
-    @media (max-width: 767px) {
-      #seasonal .carousel, #gameday .carousel {
-        padding: 0; } }
-    #seasonal .carousel .carousel-inner, #gameday .carousel .carousel-inner {
-      margin-left: 12.5px;
-      margin-right: 12.5px; }
-    #seasonal .carousel .carousel-item, #gameday .carousel .carousel-item {
-      margin: 1rem 0 1.5rem;
-      border: 5px solid #d2983c;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .nav-tabs:not( .scroll-tabs ) {
+    margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
+    @media( max-width: '767px' ) {
+      margin-top: $spacer-y;
+    }
+    li {
+      .link-container {
+        @media( max-width: '767px' ) {
+          margin-bottom: $spacer-y / 4;
+        }
+        a {
+          color: $brand-primary;
+          @include transition( all .2s );
+          span {
+            font-weight: 900;
+          }
+          p {
+            display: none !important;
+          }
+        }
+        &:hover, &.active {
+          margin-top: -32px;
+          @media( max-width: '767px' ) {
+            margin-top: 0;
+          }
+          a {
+            background: $brand-primary;
+            color: $white;
+            header {
+              font-size: 24px;
+              @media( max-width: '1024px' ) {
+                font-size: 18px;
+              }
+            }
+            p {
+              width: 75%;
+              margin: 0 auto;
+              display: block !important;
+              @media( max-width: '1024px' ) {
+                width: 95%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .carousel {
+    padding: 0 $spacer-x * 2;
+    @media( max-width: '767px' ) {
+      padding: 0;
+    }
+    .carousel-inner {
+      margin-left: $grid-gutter-width / 2;
+      margin-right: $grid-gutter-width / 2;
+    }
+    .carousel-item {
+      margin: $spacer-y 0 $spacer-y * 1.5;
+      border: 5px solid $brand-primary;
       padding-left: 0;
       padding-right: 0;
-      width: calc(100% - 25px); }
-      #seasonal .carousel .carousel-item img, #gameday .carousel .carousel-item img {
-        max-width: 100%; }
-      #seasonal .carousel .carousel-item .overlay, #gameday .carousel .carousel-item .overlay {
+      // margin-left: $grid-gutter-width / 2;
+      // margin-right: $grid-gutter-width / 2;
+      width: calc(100% - 25px);
+      //position: relative;
+      img {
+        max-width: 100%;
+      }
+      .overlay {
         position: absolute;
-        max-width: 45%; }
-        #seasonal .carousel .carousel-item .overlay.bottom, #gameday .carousel .carousel-item .overlay.bottom {
-          bottom: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.top, #gameday .carousel .carousel-item .overlay.top {
-          top: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.right, #gameday .carousel .carousel-item .overlay.right {
-          right: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.left, #gameday .carousel .carousel-item .overlay.left {
-          left: 2rem; }
-        #seasonal .carousel .carousel-item .overlay.center, #gameday .carousel .carousel-item .overlay.center {
+        max-width: 45%;
+        &.bottom {
+          bottom: $spacer-y * 2;
+        }
+        &.top {
+          top: $spacer-y * 2;
+        }
+        &.right {
+          right: $spacer-x * 2;
+        }
+        &.left {
+          left: $spacer-x * 2;
+        }
+        &.center {
           margin: 0 auto;
           top: 8rem;
-          left: 16rem; }
-        #seasonal .carousel .carousel-item .overlay.center-left, #gameday .carousel .carousel-item .overlay.center-left {
+          left: 16rem
+        }
+        &.center-left {
           margin: 0 auto;
           top: 8rem;
-          left: 16rem; }
-        @media (max-width: 767px) {
-          #seasonal .carousel .carousel-item .overlay, #gameday .carousel .carousel-item .overlay {
-            max-width: 70%; }
-            #seasonal .carousel .carousel-item .overlay.bottom, #gameday .carousel .carousel-item .overlay.bottom {
-              bottom: 0.5rem; }
-            #seasonal .carousel .carousel-item .overlay.top, #gameday .carousel .carousel-item .overlay.top {
-              top: 0.5rem; }
-            #seasonal .carousel .carousel-item .overlay.right, #gameday .carousel .carousel-item .overlay.right {
-              right: 0.5rem; }
-            #seasonal .carousel .carousel-item .overlay.left, #gameday .carousel .carousel-item .overlay.left {
-              left: 0.5rem; }
-            #seasonal .carousel .carousel-item .overlay.center, #gameday .carousel .carousel-item .overlay.center {
-              top: 0.5rem;
-              left: 0.5rem; }
-            #seasonal .carousel .carousel-item .overlay.center-left, #gameday .carousel .carousel-item .overlay.center-left {
-              top: 0.5rem;
-              left: 0.5rem; } }
-  #seasonal article > .inner, #gameday article > .inner {
-    padding: 30px;
-    height: 260px; }
-    @media (max-width: 1024px) {
-      #seasonal article > .inner, #gameday article > .inner {
+          left: 16rem
+        }
+        @media( max-width: '767px' ) {
+          max-width: 70%;
+          &.bottom {
+             bottom: $spacer-y / 2;
+          }
+          &.top {
+             top: $spacer-y / 2;
+          }
+          &.right {
+            right: $spacer-x / 2;
+          }
+          &.left {
+            left: $spacer-x / 2;
+          }
+          &.center {
+            top: $spacer-y / 2;
+            left: $spacer-x / 2;
+          }
+          &.center-left {
+            top: $spacer-y / 2;
+            left: $spacer-x / 2;
+          }
+        }
+      }
+    }
+  }
+  article {
+    > .inner {
+      padding: 30px;
+      height: 260px;
+      @media( max-width: '1024px' ) {
         min-height: 0;
         height: auto;
-        padding: 15px 15px 50px; } }
-    @media (min-width: 1025px) and (max-width: 1220px) {
-      #seasonal article > .inner, #gameday article > .inner {
+        padding: 15px 15px 50px;
+      }
+      @media( min-width: '1025px' ) and ( max-width: '1220px' ) {
         min-height: 340px;
-        height: auto; } }
-    #seasonal article > .inner h6, #gameday article > .inner h6 {
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      font-family: "Bitter", serif;
-      font-weight: 900; }
-      #seasonal article > .inner h6 a, #gameday article > .inner h6 a {
-        color: #d2983c; }
-        #seasonal article > .inner h6 a:hover, #gameday article > .inner h6 a:hover {
-          cursor: pointer;
-          color: #5f514e; }
-    #seasonal article > .inner p strong, #gameday article > .inner p strong {
-      color: #d2983c; }
-  #seasonal article .recipe-link, #gameday article .recipe-link {
-    display: inline-block; }
-    #seasonal article .recipe-link > .inner, #gameday article .recipe-link > .inner {
-      border-top: 2px solid #d2983c;
-      border-bottom: 2px solid #d2983c;
-      padding: 0.25rem 0;
-      position: absolute;
-      bottom: 1rem;
-      right: 2rem; }
-    @media (max-width: 1024px) {
-      #seasonal article .recipe-link, #gameday article .recipe-link {
-        float: right;
-        margin-right: 0; }
-        #seasonal article .recipe-link > .inner, #gameday article .recipe-link > .inner {
-          position: static; } }
-    #seasonal article .recipe-link a, #gameday article .recipe-link a {
-      text-decoration: none;
-      color: #d2983c;
-      padding: 0.25rem 1rem; }
-      #seasonal article .recipe-link a:hover, #gameday article .recipe-link a:hover {
-        background: #d2983c;
-        color: #fff; }
-  #seasonal article.active > .inner, #gameday article.active > .inner {
-    padding: 25px;
-    border: 5px solid #d2983c; }
-    @media (max-width: 1024px) {
-      #seasonal article.active > .inner, #gameday article.active > .inner {
-        min-height: 0;
         height: auto;
-        padding: 10px 10px 45px; } }
+      }
+      h6 {
+        margin-bottom: $spacer-y / 2;
+        text-transform: uppercase;
+        font-family: $font-family-serif-2;
+        font-weight: 900;
+        a {
+          color: $brand-primary;
+          &:hover {
+            cursor: pointer;
+            color: $gray;
+          }
+        }
+      }
+      p strong {
+        color: $brand-primary;
+      }
+    }
+    .recipe-link {
+      display: inline-block;
+      > .inner {
+        border-top: 2px solid $brand-primary;
+        border-bottom: 2px solid $brand-primary;
+        padding: $spacer-y / 4 0;
+        position: absolute;
+        bottom: $spacer-y;
+        right: $spacer-x * 2;
+      }
+      @media( max-width: '1024px' ) {
+        float: right;
+        margin-right: 0;
+        > .inner {
+          position: static;
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $brand-primary;
+        padding: $spacer-y / 4 $spacer-x;
+      //  margin: $spacer-y / 2 0;
+        &:hover {
+          background: $brand-primary;
+          color: $white;
+        }
+      }
+    }
+    &.active {
+      > .inner {
+        padding: 25px;
+        border: 5px solid $brand-primary;
+        @media( max-width: '1024px' ) {
+          min-height: 0;
+          height: auto;
+          padding: 10px 10px 45px;
+        }
+      }
+    }
+  }
+}
 
-#gameday .outline {
-  border-color: #7dba41; }
-
-#gameday h1 {
-  color: #7dba41; }
-
-#gameday .circle-stat {
-  left: 1rem; }
-  @media (max-width: 767px) {
-    #gameday .circle-stat {
-      left: 0; } }
-
-#gameday .nav-tabs:not(.scroll-tabs) li .link-container {
-  border-color: #7dba41; }
-  #gameday .nav-tabs:not(.scroll-tabs) li .link-container a {
-    color: #7dba41; }
-  #gameday .nav-tabs:not(.scroll-tabs) li .link-container:hover a, #gameday .nav-tabs:not(.scroll-tabs) li .link-container.active a {
-    background: #7dba41; }
-
-#gameday .carousel .carousel-item {
-  border-color: #7dba41; }
-
-#gameday article > .inner h6 a {
-  color: #7dba41; }
-
-#gameday article > .inner p strong {
-  color: #7dba41; }
-
-#gameday article .recipe-link > .inner {
-  border-color: #7dba41; }
-
-#gameday article .recipe-link a {
-  color: #7dba41; }
-  #gameday article .recipe-link a:hover {
-    background: #7dba41; }
-
-#gameday article.active > .inner {
-  border: 5px solid #7dba41; }
+#gameday {
+  @extend #seasonal;
+  .outline {
+    border-color: $brand-secondary;
+  }
+  h1 {
+    color: $brand-secondary;
+  }
+  .circle-stat {
+    left: $spacer-x;
+    @media( max-width: '767px' ) {
+      left: 0;
+    }
+  }
+  .nav-tabs:not( .scroll-tabs ) {
+    // margin: $spacer-y * 2 $spacer-x / 4 $spacer-y;
+    li {
+      .link-container {
+        border-color: $brand-secondary;
+        a {
+          color: $brand-secondary;
+        }
+        &:hover, &.active {
+          a {
+            background: $brand-secondary;
+          }
+        }
+      }
+    }
+  }
+  .carousel {
+    .carousel-item {
+      border-color: $brand-secondary;
+  }
+  }
+  article {
+    > .inner {
+      h6 {
+        a {
+          color: $brand-secondary;
+        }
+      }
+      p strong {
+        color: $brand-secondary;
+      }
+    }
+    .recipe-link {
+      > .inner {
+        border-color: $brand-secondary;
+      }
+      a {
+        color: $brand-secondary;
+        &:hover {
+          background: $brand-secondary;
+        }
+      }
+    }
+    &.active {
+      > .inner {
+        border: 5px solid $brand-secondary;
+      }
+    }
+  }
+}
 
 .scroll-tabs {
-  margin-top: 2rem; }
-  .scroll-tabs li .inner:hover {
-    margin-top: 0 !important; }
-  @media (max-width: 767px) {
-    .scroll-tabs li {
-      margin-bottom: 0.5rem; } }
+  margin-top: $spacer-y * 2 ;
+  li {
+    .inner {
+      &:hover {
+         margin-top: 0 !important;
+      }
+    }
+    @media( max-width: '767px' ) {
+      margin-bottom: $spacer-y / 2;
+    }
+  }
+}
+.nav-tabs li {
+  &:hover {
+  //  margin-top: 0 !important;
+  }
+  .link-container {
+    border-color: $brand-primary;
+  }
+  &.seasonal {
+    .link-container {
+      border-color: $brand-primary !important;
+      a {
+        color: $brand-primary !important;
+        &:hover, &:active {
+          background: $brand-primary !important;
+          color: $white !important;
+        }
+      }
+    }
+  }
+  &.gameday {
+    .link-container {
+      border-color: $brand-secondary !important;
+      a {
+        color: $brand-secondary !important;
+        &:hover, &:active {
+          background: $brand-secondary !important;
+          color: $white !important;
+        }
+      }
+    }
+  }
+  &.recipes {
+    .link-container {
+      border-color: $gray !important;
+      a {
+        color: $gray !important;
+        &:hover, &:active {
+          background: $gray !important;
+          color: $white !important;
+        }
+      }
+    }
+  }
+  &.save {
+    .link-container {
+      border-color: $gray-light !important;
+      a {
+        color: $gray-light !important;
+        &:hover, &:active {
+          background: $gray-light !important;
+          color: $white !important;
+        }
+      }
+    }
+  }
+}
 
-.nav-tabs li .link-container {
-  border-color: #d2983c; }
+#recipes {
+//  margin-top: 120px;
+  .form-row {
+    margin-bottom: $spacer-y;
+  }
+  .sort-by {
+    @media ( max-width: '767px' ) {
+      margin-bottom: 0;
+      margin-top: $spacer-y;
+    }
+  }
+  #form-recipe-filters {
+    > span {
+      display: inline-block;
+      margin-right: $spacer-x;
+      label {
+        display: block;
+        margin-top: $spacer-y / 2;
 
-.nav-tabs li.seasonal .link-container {
-  border-color: #d2983c !important; }
-  .nav-tabs li.seasonal .link-container a {
-    color: #d2983c !important; }
-    .nav-tabs li.seasonal .link-container a:hover, .nav-tabs li.seasonal .link-container a:active {
-      background: #d2983c !important;
-      color: #fff !important; }
-
-.nav-tabs li.gameday .link-container {
-  border-color: #7dba41 !important; }
-  .nav-tabs li.gameday .link-container a {
-    color: #7dba41 !important; }
-    .nav-tabs li.gameday .link-container a:hover, .nav-tabs li.gameday .link-container a:active {
-      background: #7dba41 !important;
-      color: #fff !important; }
-
-.nav-tabs li.recipes .link-container {
-  border-color: #5f514e !important; }
-  .nav-tabs li.recipes .link-container a {
-    color: #5f514e !important; }
-    .nav-tabs li.recipes .link-container a:hover, .nav-tabs li.recipes .link-container a:active {
-      background: #5f514e !important;
-      color: #fff !important; }
-
-.nav-tabs li.save .link-container {
-  border-color: #838b7e !important; }
-  .nav-tabs li.save .link-container a {
-    color: #838b7e !important; }
-    .nav-tabs li.save .link-container a:hover, .nav-tabs li.save .link-container a:active {
-      background: #838b7e !important;
-      color: #fff !important; }
-
-#recipes .form-row {
-  margin-bottom: 1rem; }
-
-@media (max-width: 767px) {
-  #recipes .sort-by {
-    margin-bottom: 0;
-    margin-top: 1rem; } }
-
-#recipes #form-recipe-filters > span {
-  display: inline-block;
-  margin-right: 1rem; }
-  #recipes #form-recipe-filters > span label {
-    display: block;
-    margin-top: 0.5rem; }
-  @media (max-width: 767px) {
-    #recipes #form-recipe-filters > span {
-      padding-right: 1rem;
-      width: 100%; }
-      #recipes #form-recipe-filters > span select {
-        width: 100%; } }
-
-#recipes #form-recipe-search {
-  float: right;
-  margin-top: 2rem; }
-  @media (max-width: 767px) {
-    #recipes #form-recipe-search {
-      float: none; }
-      #recipes #form-recipe-search input {
-        width: 100%; } }
-
-#recipes md-grid-list {
-  margin: 20px auto 40px;
-  max-width: 1281px; }
-
-#recipes .recipe-card-container {
-  padding: 0; }
-  #recipes .recipe-card-container > .row {
-    margin: 0 auto; }
-
-#recipes .card, #recipes .grid-sizer {
-  width: 301px; }
-
-#recipes .card {
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35); }
-  #recipes .card a {
-    text-decoration: none; }
-    #recipes .card a > .inner {
-      padding: 0.75rem;
-      display: inline-block; }
-    #recipes .card a:hover {
-      cursor: pointer; }
-
-#recipes .card-img {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  width: 100%; }
-
-#recipes .card-title {
-  font-weight: bold;
-  text-transform: uppercase; }
-  @media (max-width: 959px) {
-    #recipes .card-title {
-      font-size: 16px; } }
-
-#recipes .card-subtitle {
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  display: block; }
-
-#recipes .card-link {
-  text-decoration: underline;
-  font-weight: bold;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem; }
-  #recipes .card-link:hover {
-    text-decoration: none; }
-
-#recipes .view-more-recipes {
-  width: 100%;
-  text-align: center;
-  margin: 2rem 0; }
-
-@media (max-width: 639px) {
-  #primary-footer {
-    transform: translateY(90px);
-    margin-bottom: 100px; } }
-
-#primary-footer .footer-divider {
-  position: relative;
-  height: 5px;
-  background-color: #5f514e;
-  margin-top: 2rem;
-  margin-bottom: 2rem; }
-  #primary-footer .footer-divider .inner {
+      }
+      @media ( max-width: '767px' ) {
+        padding-right: $spacer-x;
+        width: 100%;
+        select {
+          width: 100%;
+        }
+      }
+    }
+  }
+  #form-recipe-search {
+    float: right;
+    margin-top: $spacer-y * 2;
+    @media ( max-width: '767px' ) {
+      float: none;
+      input {
+        width: 100%;
+      }
+    }
+  }
+  md-grid-list {
+    margin: 20px auto 40px;
+    max-width: 1281px;
+  }
+  md-grid-tile {
+  }
+  .recipe-card-container {
+    padding: 0;
+    > .row {
+      margin: 0 auto;
+    }
+  }
+  .card, .grid-sizer {
+//    width: calc(25% - 25px);
+     width: 301px;
+  }
+  .card {
+    @include box-shadow( 0, 2px, 4px, rgba( 0, 0, 0, .35 ) );
+    // margin: $grid-gutter-width / 2;
+    // padding-right: 0;
+    // padding-left: 0;
+    // float: left;
+    // &.double-wide {
+    //   width: 629px;
+    //   @media ( max-width: '718px' ) {
+    //     width: 301px;
+    //   }
+    // }
+    a {
+      text-decoration: none;
+      > .inner {
+        padding: 0.75rem;
+        display: inline-block;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .card-img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  //  margin-bottom: $card-spacer-y;
     width: 100%;
-    text-align: center; }
-    #primary-footer .footer-divider .inner img {
-      width: 68px;
-      margin-top: -31px; }
-
-#primary-footer .footer-links-container {
-  margin-bottom: 1rem; }
-
-#primary-footer .footer-links {
-  float: right;
-  margin-top: 2.5rem; }
-  #primary-footer .footer-links a {
-    margin-right: 1rem; }
-  @media (max-width: 1024px) {
-    #primary-footer .footer-links {
+  }
+  .card-title {
+    font-weight: bold;
+    // width: 80%;
+    text-transform: uppercase;
+    @media( max-width: '959px' ) {
+      font-size: 16px;
+    }
+  }
+  .card-subtitle {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: $card-spacer-y;
+    display: block;
+  }
+  .card-link {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: $card-spacer-y * 2;
+    margin-bottom: $card-spacer-y * 2;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .view-more-recipes {
+    width: 100%;
+    text-align: center;
+    margin: $spacer-y * 2 0;
+  }
+}
+#primary-footer {
+  @media( max-width: '639px' ) {
+  //  position: relative;
+    transform: translateY( 90px );
+    margin-bottom: 100px;
+  }
+  .footer-divider {
+    position: relative;
+    height: 5px;
+  //  width: 100%;
+    background-color: $gray;
+    margin-top: $spacer-y * 2;
+    margin-bottom: $spacer-y * 2;
+    .inner {
+      width: 100%;
+      text-align: center;
+      img {
+        width: 68px;
+        margin-top: -31px;
+        //margin: 0 auto;
+      }
+    }
+  }
+  .footer-links-container {
+    margin-bottom: $spacer-y;
+  }
+  .footer-links {
+    float: right;
+    margin-top: $spacer-y * 2.5;
+    a {
+      margin-right: $spacer-x;
+    }
+    @media( max-width: '1024px' ) {
       float: none;
       margin-top: 20px;
       display: block;
-      text-align: center; }
-      #primary-footer .footer-links .copyright {
+      text-align: center;
+      .copyright {
         display: block;
-        text-align: center; } }
-
+        text-align: center;
+      }
+    }
+  }
+}
+*/
 /*
 // Hover effect for recipe card images
 */
+/*
 .hovereffect {
   width: 100%;
+  // height: 100%;
   float: left;
   overflow: hidden;
   position: relative;
   text-align: center;
-  cursor: default; }
-  .hovereffect .overlay {
+  cursor: default;
+  .overlay {
     position: absolute;
     overflow: hidden;
     width: 80%;
     height: 80%;
     left: 10%;
     top: 10%;
-    border-bottom: 2px solid #fff;
-    border-top: 2px solid #fff;
+    border-bottom: 2px solid $white;
+    border-top: 2px solid $white;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: scale(0, 1);
-    -ms-transform: scale(0, 1);
-    transform: scale(0, 1); }
-    .hovereffect .overlay .inner {
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+    .inner {
       display: table;
       width: 100%;
-      height: 100%; }
-  .hovereffect:hover {
-    cursor: pointer; }
-    .hovereffect:hover .overlay {
+      height: 100%;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    .overlay {
       opacity: 1;
       filter: alpha(opacity=100);
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
-      transform: scale(1); }
-    .hovereffect:hover img {
+      transform: scale(1);
+    }
+    img {
       filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
       filter: brightness(0.6);
-      -webkit-filter: brightness(0.6); }
-  .hovereffect img {
+      -webkit-filter: brightness(0.6);
+    }
+  }
+  img {
     display: block;
     position: relative;
-    -moz-transition: all 0.35s;
-    -webkit-transition: all 0.35s;
-    transition: all 0.35s; }
-  .hovereffect p {
-    color: #fff;
+    @include transition( all 0.35s );
+  }
+  p {
+    color: $white;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     font-weight: 900;
     letter-spacing: 1px;
-    font-family: "Bitter", serif; }
-
+    font-family: $font-family-serif-2;
+  }
+}
 @media (min-width: 832px) {
   .modal-dialog {
-    max-width: 832px; } }
-
-.modal-content iframe {
+    max-width: 832px;
+  }
+}
+.modal-content iframe{
   margin: 0 auto;
   display: block;
-  width: 100%; }
+  width: 100%;
   @media (max-width: 831px) {
-    .modal-content iframe {
-      padding-bottom: 80%; } }
+      padding-bottom: 80%;
+  }
+    // padding-bottom: 44%;
+}
+*/

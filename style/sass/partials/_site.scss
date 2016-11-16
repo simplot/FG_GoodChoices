@@ -1,3 +1,10 @@
+
+//------------------------------------------------------------------------------
+//
+//    Globals
+//
+//------------------------------------------------------------------------------
+
 // Hide only visually, but have it available for screenreaders:by Jon Neal
 // www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden
 @mixin visually-hidden {
@@ -38,7 +45,7 @@
 }
 html, body {
   height: 100%;
-  background: none $white;
+  background: none $background-color;
 }
 body {
   > .ng-scope {
@@ -78,11 +85,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 strong {
-  font-family: $font-family-serif-2;
+  //font-family: $font-family-serif-2;
   font-weight: 700;
 }
-body, #header {
-  max-width: 1400px;
+body {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   z-index: 1;
 }
@@ -174,6 +182,47 @@ span.reg {
     }
   }
 }
+
+//------------------------------------------------------------------------------
+//
+//    Layout
+//
+//------------------------------------------------------------------------------
+
+body {
+  background: url(../img/wood-texture.jpg);
+}
+
+#container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+//------------------------------------------------------------------------------
+//
+//    Header
+//
+//------------------------------------------------------------------------------
+
+#header {
+  .message {
+    background: $brand-secondary;
+    color: $white;
+  }
+}
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    OLD
+//
+//------------------------------------------------------------------------------
+
+/*
 #navigation {
   li {
     width: 20%;
@@ -989,10 +1038,13 @@ span.reg {
     }
   }
 }
+*/
+
 
 /*
 // Hover effect for recipe card images
 */
+/*
 .hovereffect {
   width: 100%;
   // height: 100%;
@@ -1065,3 +1117,4 @@ span.reg {
   }
     // padding-bottom: 44%;
 }
+*/
