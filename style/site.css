@@ -5660,7 +5660,8 @@ span.reg {
         cursor: pointer; }
 
 body {
-  background: url(../img/wood-texture.jpg); }
+  background: url(../img/wood-texture.jpg);
+  background-position: left bottom; }
 
 #container {
   width: 100%;
