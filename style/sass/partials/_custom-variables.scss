@@ -45,14 +45,15 @@ $images: '../img';
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #373a3c !default;
+$gray-dark:                 #5f5150 !default; // brand brown
 $gray:                      #5f514e !default;
 $gray-light:                #838b7e !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #d2983c !default; //yellow
-$brand-secondary:           #942e37; //red
+$brand-primary:             #d2983c !default; // brand yellow
+$brand-secondary:           #7dba41; // green primary
+
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
