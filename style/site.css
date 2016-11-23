@@ -5665,13 +5665,31 @@ body {
 
 #container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1380px;
   margin: 0 auto;
   padding: 0 10px; }
 
-#header .message {
-  background: #7cba42;
-  color: #fff; }
+#header {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 22.16%;
+  background: url(../img/header.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain; }
+  #header #logo {
+    display: block;
+    position: absolute;
+    top: 13%;
+    left: 4.5%;
+    width: 22.5%;
+    height: 42%;
+    outline: 1px solid red; }
+    #header #logo a {
+      display: block;
+      width: 100%;
+      height: 100%; }
 
 /*
 #navigation {
