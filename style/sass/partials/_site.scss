@@ -203,6 +203,18 @@ body {
 
 //------------------------------------------------------------------------------
 //
+//    Typography
+//
+//------------------------------------------------------------------------------
+
+h2 {
+  color: $brand-secondary;
+  font-family: $font-family-sans-serif-condensed;
+  font-weight: bold;
+}
+
+//------------------------------------------------------------------------------
+//
 //    Header
 //
 //------------------------------------------------------------------------------
@@ -224,14 +236,171 @@ body {
     left: 4.5%;
     width: 22.5%;
     height: 42%;
-    outline: 1px solid red;
+    //outline: 1px solid red;
     a {
       display: block;
       width: 100%;
       height: 100%;
     }
   }
+
+  #cta {
+    display: block;
+    position: absolute;
+    top: 9.5%;
+    left: auto;
+    right: 5.5%;
+    width: 9.5%;
+    height: 28%;
+    //outline: 1px solid red;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 47%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 27%;
+    margin: auto;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 18%;
+    ul {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      top: 50%;
+      padding-top: 5px;
+      -webkit-transform: translateY(-50%);
+         -ms-transform: translateY(-50%);
+             transform: translateY(-50%);
+      li {
+        float: left;
+        &:first-of-type {
+          margin-right: 40px;
+        }
+        @media(min-width: 1140px) {
+          &:first-of-type {
+            margin-right: 60px;
+          }
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: $font-family-sans-serif-condensed;
+          font-size: calc(10px + 1.25vw);
+          line-height: 1;
+          strong {
+            font-size: calc(16px + 1.5vw);
+          }
+          @media(min-width: 1380px) {
+            font-size: 27px;
+            strong {
+              font-size: 37px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
+//------------------------------------------------------------------------------
+//
+//    Intro
+//
+//------------------------------------------------------------------------------
+
+.intro-wrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+#intro {
+  [class*='col-'] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .col-left {
+    width: 305px;
+  }
+  .col-right {
+    width: calc(100% - 305px);
+  }
+
+  h2 {
+    display: block;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 50px 0 70px;
+    span {
+      position: relative;
+      display: inline-block;
+      color: $white;
+      margin-left: 5px;
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        background: $brand-secondary;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        box-shadow: 0 5px 10px rgba($black, 0.25);
+        top: -50px;
+        left: -7px;
+        z-index: -1;
+      }
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    line-height: 1.75;
+  }
+
+  .good-choices {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.75rem;
+      font-weight: normal;
+      float: left;
+      padding: 0 10px;
+      width: 20%;
+      img {
+        max-width: 100%;
+      }
+      span {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
 
 
 

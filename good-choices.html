@@ -19,37 +19,63 @@
 <body>
   <div ng-controller="FallHarvestController as vm" ng-cloak>
     <div id="container">
-      <!-- <header id="header" class="fluid-container">
+      <header id="header" class="fluid-container">
         <h1 id="logo">
-          <a href="#">
+          <a href="/">
             <span class="visually-hidden">Simplot Foods</span>
           </a>
         </h1>
-        <div class="message">
+        <div class="message" style="display: none;">
           <p>get 10 cases <strong>free</strong></p>
         </div>
-        <div class="cta">
-          <a href="#">save now</a>
+        <div id="cta">
+          <a href="#">
+            <span class="visually-hidden">save now</span>
+          </a>
         </div>
         <nav>
           <ul>
             <li>
-              <a href="#">Go to <strong>Videos</strong></a>
+              <a href="#videos">Go to <strong>Videos</strong></a>
             </li>
             <li>
-              <a href="#">Go to <strong>Recipes</strong></a>
+              <a href="#recipes">Go to <strong>Recipes</strong></a>
             </li>
           </ul>
         </nav>
-      </header> -->
-      <header id="header" class="fluid-container">
-        <h1 id="logo">
-          <a href="#">
-            <span class="visually-hidden">Simplot Foods</span>
-          </a>
-        </h1>
       </header>
       <div id="main">
+        <section id="intro">
+          <div class="intro-wrapper">
+            <div class="col-left">
+              <h2>good <span>choices</span></h2>
+            </div><div class="col-right"><!-- Markup is setup to remove white-space between cols -->
+              <p>Today’s consumers crave real goodness. They want to know what’s in their food so they can make more informed decisions. That’s why Simplot is excited to offer Good Choices – relevant brands featuring better-for-you products that offer the taste and integrity your patrons want. Explore our culinary video series or our delicious inspiration, all to inspire and excite as you create <strong>something good for everyone</strong>.</p>
+            </div>
+          </div>
+          <div class="good-choices">
+            <a href="#0">
+              <img src="img/good-choices/potatoes.png" alt="Potatoes">
+              <span>potatoes</span>
+            </a>
+            <a href="#0">
+              <img src="img/good-choices/avocados.png" alt="Avocados">
+              <span>avocados</span>
+            </a>
+            <a href="#0">
+              <img src="img/good-choices/fruits.png" alt="Fruits">
+              <span>fruits</span>
+            </a>
+            <a href="#0">
+              <img src="img/good-choices/vegetables.png" alt="Vegetables">
+              <span>vegetables</span>
+            </a>
+            <a href="#0">
+              <img src="img/good-choices/grains.png" alt="Grains">
+              <span>grains</span>
+            </a>
+          </div>
+        </section>
         <!-- <section id="recipes" class="page fluid-container">
           <div class="row">
             <div class="push-xs-1 col-xs-23">
