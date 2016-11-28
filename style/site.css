@@ -5531,7 +5531,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     position: static;
     width: auto; }
 
-html, body {
+html {
   height: 100%;
   background: none #f7f6f4; }
 
@@ -5661,7 +5661,9 @@ span.reg {
 
 body {
   background: url(../img/wood-texture.jpg);
-  background-position: left bottom; }
+  background-position: left bottom;
+  height: auto;
+  min-height: 100%; }
 
 #container {
   width: 100%;
@@ -5740,7 +5742,8 @@ h2 {
           text-transform: uppercase;
           font-family: "Roboto Condensed", sans-serif;
           font-size: calc(10px + 1.25vw);
-          line-height: 1; }
+          line-height: 1;
+          transition: 0.3s; }
           #header nav ul li a strong {
             font-size: calc(16px + 1.5vw); }
           @media (min-width: 1380px) {
@@ -5753,69 +5756,131 @@ h2 {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 60px; }
+  padding: 0 10px;
+  margin-top: 12px; }
+  @media (min-width: 640px) {
+    .intro-wrapper {
+      padding: 0 30px; } }
+  @media (min-width: 680px) {
+    .intro-wrapper {
+      padding: 0 60px; } }
+  @media (min-width: 960px) {
+    .intro-wrapper {
+      margin-top: -12px; } }
 
 #intro [class*='col-'] {
   display: inline-block;
   vertical-align: middle; }
 
 #intro .col-left {
-  width: 305px; }
+  width: 100%; }
+  @media (min-width: 960px) {
+    #intro .col-left {
+      width: 265px; } }
+  @media (min-width: 1024px) {
+    #intro .col-left {
+      width: 325px; } }
 
 #intro .col-right {
-  width: calc(100% - 305px); }
+  width: 100%; }
+  @media (min-width: 960px) {
+    #intro .col-right {
+      width: calc(100% - 265px); } }
+  @media (min-width: 1024px) {
+    #intro .col-right {
+      width: calc(100% - 325px); } }
 
 #intro h2 {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin: 0;
-  padding: 50px 0 70px; }
-  #intro h2 span {
-    position: relative;
-    display: inline-block;
-    color: #fff;
-    margin-left: 5px; }
-    #intro h2 span::before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #7cba42;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-      top: -50px;
-      left: -7px;
-      z-index: -1; }
+  padding-bottom: 24px; }
+  @media (min-width: 960px) {
+    #intro h2 {
+      font-size: 2.25rem; }
+      #intro h2 span {
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        margin-left: 5px; }
+        #intro h2 span::before {
+          content: "";
+          position: absolute;
+          display: block;
+          background: #7cba42;
+          width: 135px;
+          height: 135px;
+          border-radius: 50%;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+          top: -48px;
+          left: -5px;
+          z-index: -1; } }
+  @media (min-width: 1024px) {
+    #intro h2 {
+      font-size: 2.8rem; }
+      #intro h2 span::before {
+        width: 160px;
+        height: 160px;
+        top: -54px;
+        left: -5px; } }
 
 #intro p {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.75; }
+  @media (min-width: 680px) {
+    #intro p {
+      font-size: 1.25rem; } }
+  @media (min-width: 1140px) {
+    #intro p {
+      font-size: 1.5rem; } }
 
 #intro .good-choices {
   width: 100%;
   max-width: 1140px;
   margin: 0 auto;
-  padding: 0 20px; }
+  margin-top: 12px; }
   #intro .good-choices::after {
     content: "";
     display: table;
     clear: both; }
+  @media (min-width: 680px) {
+    #intro .good-choices {
+      margin-top: 24px;
+      padding: 0 20px; } }
+  @media (min-width: 960px) {
+    #intro .good-choices {
+      margin-top: 42px; } }
   #intro .good-choices a {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-weight: normal;
     float: left;
     padding: 0 10px;
-    width: 20%; }
+    margin-bottom: 24px;
+    width: 50%;
+    transition: 0.3s; }
     #intro .good-choices a img {
       max-width: 100%; }
     #intro .good-choices a span {
       position: relative;
       display: block;
-      width: 100%; }
+      width: 100%;
+      padding-top: 6px; }
+    #intro .good-choices a:hover {
+      opacity: 0.6; }
+    @media (min-width: 520px) {
+      #intro .good-choices a {
+        width: 33.3333333%; } }
+    @media (min-width: 768px) {
+      #intro .good-choices a {
+        width: 20%; } }
+    @media (min-width: 1024px) {
+      #intro .good-choices a {
+        font-size: 1.5rem; }
+        #intro .good-choices a span {
+          padding-top: 12px; } }
 
 /*
 #navigation {
