@@ -292,7 +292,6 @@ h2 {
     a {
       color: $brand-secondary;
       line-height: 32px;
-      font-size: 1.1rem;
       font-weight: bold;
       font-family: $font-family-sans-serif-condensed;
       text-decoration: none;
@@ -482,8 +481,11 @@ h2 {
           height: 135px;
           border-radius: 50%;
           box-shadow: 0 5px 10px rgba($black, 0.25);
-          top: -48px;
-          left: -5px;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+             -ms-transform: translate(-50%, -50%);
+                 transform: translate(-50%, -50%);
           z-index: -1;
         }
       }
@@ -494,8 +496,6 @@ h2 {
         &::before {
           width: 160px;
           height: 160px;
-          top: -54px;
-          left: -5px;
         }
       }
     }
