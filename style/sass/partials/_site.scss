@@ -1,3 +1,10 @@
+
+//------------------------------------------------------------------------------
+//
+//    Globals
+//
+//------------------------------------------------------------------------------
+
 // Hide only visually, but have it available for screenreaders:by Jon Neal
 // www.webaim.org/techniques/css/invisiblecontent/ & j.mp/visuallyhidden
 @mixin visually-hidden {
@@ -36,9 +43,9 @@
 .visually-hidden {
   @include visually-hidden;
 }
-html, body {
+html {
   height: 100%;
-  background: none $white;
+  background: none $background-color;
 }
 body {
   > .ng-scope {
@@ -78,11 +85,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 strong {
-  font-family: $font-family-serif-2;
+  //font-family: $font-family-serif-2;
   font-weight: 700;
 }
-body, #header {
-  max-width: 1400px;
+body {
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   z-index: 1;
 }
@@ -174,6 +182,407 @@ span.reg {
     }
   }
 }
+
+//------------------------------------------------------------------------------
+//
+//    Layout
+//
+//------------------------------------------------------------------------------
+
+body {
+  background: url(../img/wood-texture.jpg);
+  background-position: left bottom;
+  height: auto;
+  min-height: 100%;
+}
+
+#container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+//------------------------------------------------------------------------------
+//
+//    Typography
+//
+//------------------------------------------------------------------------------
+
+h2 {
+  color: $brand-secondary;
+  font-family: $font-family-sans-serif-condensed;
+  font-weight: bold;
+}
+
+//------------------------------------------------------------------------------
+//
+//    Header
+//
+//------------------------------------------------------------------------------
+
+#header {
+  position: relative;
+  width: 100%;
+  @media(min-width: 640px) {
+    height: 0;
+    padding-bottom: 22.16%;
+    background: url(../img/header.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+  }
+
+  #logo {
+    display: block;
+    background: url(../img/simplot-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 160px;
+    height: 63px;
+    margin: 10px auto;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    @media(min-width: 640px) {
+      position: absolute;
+      background: transparent;
+      margin: 0;
+      top: 13%;
+      left: 4.5%;
+      width: 22.5%;
+      height: 42%;
+    }
+  }
+
+  .message {
+    background: $brand-secondary;
+    color: $white;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 4px rgba($black, 0.45);
+    p {
+      margin-bottom: 0;
+      line-height: 1;
+      font-size: 1.35rem;
+    }
+    @media(min-width: 640px) {
+      position: absolute;
+      top: 0;
+      left: -99999px;
+    }
+  }
+
+  #cta {
+    display: block;
+    position: absolute;
+    top: 83px;
+    left: auto;
+    right: 10px;
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba($black, 0.2);
+    a {
+      color: $brand-secondary;
+      line-height: 32px;
+      font-weight: bold;
+      font-family: $font-family-sans-serif-condensed;
+      text-decoration: none;
+    }
+    @media(min-width: 640px) {
+      display: block;
+      position: absolute;
+      top: 9.5%;
+      left: auto;
+      right: 5.5%;
+      width: 9.5%;
+      height: 28%;
+      background: transparent;
+      border-radius: none;
+      box-shadow: none;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        span {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
+    }
+  }
+
+  nav {
+    position: relative;
+    width: 100%;
+    margin: 0 auto 24px;
+    text-align: center;
+    line-height: 1;
+    padding-top: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid $brand-secondary;
+    box-shadow: 0 6px 4px -4px rgba($black, 0.25);
+    @media(min-width: 640px) {
+      position: absolute;
+      top: 47%;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 27%;
+      line-height: 1.5;
+      margin: 0 auto;
+      padding-left: 25%;
+      padding-right: 18%;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      box-shadow: none;
+    }
+    ul {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      @media(min-width: 640px) {
+        top: 50%;
+        padding-top: 5px;
+        -webkit-transform: translateY(-50%);
+           -ms-transform: translateY(-50%);
+               transform: translateY(-50%);
+      }
+      li {
+        float: left;
+        &:first-of-type {
+          margin-right: 30px;
+        }
+        @media(min-width: 680px) {
+          &:first-of-type {
+            margin-right: 40px;
+          }
+        }
+        @media(min-width: 1140px) {
+          &:first-of-type {
+            margin-right: 60px;
+          }
+        }
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: $font-family-sans-serif-condensed;
+          font-size: calc(8px + 1.25vw);
+          line-height: 1;
+          transition: 0.3s;
+          strong {
+            font-size: calc(14px + 1.5vw);
+          }
+          @media(min-width: 680px) {
+            font-size: calc(10px + 1.25vw);
+            strong {
+              font-size: calc(16px + 1.5vw);
+            }
+          }
+          @media(min-width: 1380px) {
+            font-size: 27px;
+            strong {
+              font-size: 37px;
+            }
+          }
+          @media(max-width: 639px) {
+            font-size: calc(10px + 1.25vw);
+            strong {
+              font-size: calc(16px + 1.5vw);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//------------------------------------------------------------------------------
+//
+//    Intro
+//
+//------------------------------------------------------------------------------
+
+.intro-wrapper {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-top: 12px;
+  @media(min-width: 640px) {
+    padding: 0 30px;
+  }
+  @media(min-width: 680px) {
+    padding: 0 60px;
+  }
+  @media(min-width: 960px) {
+    margin-top: -12px;
+  }
+}
+
+#intro {
+  [class*='col-'] {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .col-left {
+    width: 100%;
+    @media(min-width: 960px) {
+      width: 265px;
+    }
+    @media(min-width: 1024px) {
+      width: 325px;
+    }
+  }
+  .col-right {
+    width: 100%;
+    @media(min-width: 960px) {
+      width: calc(100% - 265px);
+    }
+    @media(min-width: 1024px) {
+      width: calc(100% - 325px);
+    }
+  }
+
+  h2 {
+    display: block;
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 24px;
+    @media(min-width: 960px) {
+      font-size: 2.25rem;
+      span {
+        position: relative;
+        display: inline-block;
+        color: $white;
+        margin-left: 5px;
+        &::before {
+          content: "";
+          position: absolute;
+          display: block;
+          background: $brand-secondary;
+          width: 135px;
+          height: 135px;
+          border-radius: 50%;
+          box-shadow: 0 5px 10px rgba($black, 0.25);
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+             -ms-transform: translate(-50%, -50%);
+                 transform: translate(-50%, -50%);
+          z-index: -1;
+        }
+      }
+    }
+    @media(min-width: 1024px) {
+      font-size: 2.8rem;
+      span {
+        &::before {
+          width: 160px;
+          height: 160px;
+        }
+      }
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    @media(min-width: 680px) {
+      font-size: 1.25rem;
+    }
+    @media(min-width: 1140px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .good-choices {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 12px;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    @media(min-width: 680px) {
+      margin-top: 24px;
+      padding: 0 20px;
+    }
+    @media(min-width: 960px) {
+      margin-top: 42px;
+    }
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: normal;
+      float: left;
+      padding: 0 10px;
+      margin-bottom: 24px;
+      width: 50%;
+      transition: 0.3s;
+      img {
+        max-width: 100%;
+      }
+      span {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-top: 6px;
+      }
+      &:hover {
+        opacity: 0.6;
+      }
+      @media(min-width: 520px) {
+        width: 33.3333333%;
+      }
+      @media(min-width: 768px) {
+        width: 20%;
+      }
+      @media(min-width: 1024px) {
+        font-size: 1.5rem;
+        span {
+          padding-top: 12px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------
+//
+//    OLD
+//
+//------------------------------------------------------------------------------
+
+/*
 #navigation {
   li {
     width: 20%;
@@ -989,10 +1398,13 @@ span.reg {
     }
   }
 }
+*/
+
 
 /*
 // Hover effect for recipe card images
 */
+/*
 .hovereffect {
   width: 100%;
   // height: 100%;
@@ -1065,3 +1477,4 @@ span.reg {
   }
     // padding-bottom: 44%;
 }
+*/
