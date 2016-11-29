@@ -5973,6 +5973,150 @@ h2 {
         #intro .good-choices a span {
           padding-top: 12px; } }
 
+#footer-bg {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 16.06%;
+  background: url(../img/footer-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none; }
+
+#primary-footer {
+  position: relative;
+  margin-top: 42px; }
+  @media (min-width: 640px) {
+    #primary-footer {
+      margin-top: 96px; } }
+  @media (min-width: 640px) {
+    #primary-footer::before {
+      content: "";
+      position: absolute;
+      top: -24px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 89%;
+      height: 190px;
+      background: transparent;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      border-radius: 100px 100px 0 0;
+      z-index: -1; } }
+  @media (min-width: 680px) {
+    #primary-footer::before {
+      height: 200px; } }
+  @media (min-width: 790px) {
+    #primary-footer::before {
+      height: 212px; } }
+  @media (min-width: 940px) {
+    #primary-footer::before {
+      height: 224px; } }
+  @media (min-width: 1120px) {
+    #primary-footer::before {
+      top: -48px;
+      height: 192px; } }
+  #primary-footer::after {
+    content: "";
+    display: table;
+    clear: both; }
+  #primary-footer #footer-logo {
+    position: relative;
+    background: url(../img/simplot-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 140px;
+    height: 58px;
+    margin: auto;
+    margin-bottom: 20px; }
+    #primary-footer #footer-logo a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+    @media (max-width: 574px) {
+      #primary-footer #footer-logo {
+        margin: 0 10px;
+        margin-bottom: 20px; } }
+    @media (min-width: 1120px) {
+      #primary-footer #footer-logo {
+        position: absolute;
+        background: url(../img/footer-logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 190px;
+        height: 190px;
+        top: -87px;
+        left: 125px;
+        margin: auto; } }
+  #primary-footer nav {
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 20px; }
+    #primary-footer nav ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      list-style: none; }
+      #primary-footer nav ul li {
+        margin-bottom: 10px; }
+        @media (min-width: 575px) {
+          #primary-footer nav ul li {
+            float: left;
+            margin: 0 5px; }
+            #primary-footer nav ul li::after {
+              content: "|";
+              margin-left: 5px; }
+            #primary-footer nav ul li:last-of-type::after {
+              display: none; } }
+        @media (min-width: 800px) and (max-width: 1119px) {
+          #primary-footer nav ul li::after {
+            content: "|";
+            margin-left: 10px; }
+          #primary-footer nav ul li:last-of-type::after {
+            display: none; } }
+        @media (min-width: 1120px) {
+          #primary-footer nav ul li::after {
+            display: none; } }
+        @media (min-width: 1120px) {
+          #primary-footer nav ul li {
+            margin: 0 15px; } }
+        #primary-footer nav ul li a {
+          text-decoration: none;
+          font-size: 1.15rem;
+          font-family: "Roboto Condensed", sans-serif; }
+          @media (min-width: 720px) {
+            #primary-footer nav ul li a {
+              font-size: 1.25rem; } }
+          @media (min-width: 1120px) {
+            #primary-footer nav ul li a {
+              font-size: 1.4rem; } }
+    @media (max-width: 574px) {
+      #primary-footer nav {
+        text-align: left;
+        padding: 0 10px; } }
+    @media (min-width: 1120px) {
+      #primary-footer nav {
+        width: 89%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: right;
+        padding-right: 100px; } }
+    @media (min-width: 1320px) {
+      #primary-footer nav {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-right: 0; } }
+  #primary-footer .copyright-wrapper {
+    text-align: right;
+    padding: 0 10px 20px; }
+    @media (min-width: 640px) {
+      #primary-footer .copyright-wrapper {
+        padding: 0 20px 20px; } }
+
 /*
 #navigation {
   li {
