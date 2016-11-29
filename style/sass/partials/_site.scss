@@ -224,12 +224,6 @@ h2 {
 #header {
   position: relative;
   width: 100%;
-  // height: 0;
-  // padding-bottom: 22.16%;
-  // background: url(../img/header.png);
-  // background-repeat: no-repeat;
-  // background-position: left top;
-  // background-size: contain;
   @media(min-width: 640px) {
     height: 0;
     padding-bottom: 22.16%;
@@ -241,9 +235,12 @@ h2 {
 
   #logo {
     display: block;
-    width: 180px;
-    height: 60px;
-    outline: 1px solid red;
+    background: url(../img/simplot-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 160px;
+    height: 63px;
     margin: 10px auto;
     a {
       display: block;
@@ -252,6 +249,7 @@ h2 {
     }
     @media(min-width: 640px) {
       position: absolute;
+      background: transparent;
       margin: 0;
       top: 13%;
       left: 4.5%;
@@ -263,32 +261,81 @@ h2 {
   .message {
     background: $brand-secondary;
     color: $white;
+    width: calc(100% + 20px);
+    margin-left: -10px;
+    padding: 15px 20px;
+    box-shadow: 0 3px 4px rgba($black, 0.45);
+    p {
+      margin-bottom: 0;
+      line-height: 1;
+      font-size: 1.35rem;
+    }
     @media(min-width: 640px) {
-      display: none; // TODO: visaully hide instead of display none
+      position: absolute;
+      top: 0;
+      left: -99999px;
     }
   }
 
   #cta {
     display: block;
     position: absolute;
-    top: 9.5%;
+    top: 83px;
     left: auto;
-    right: 5.5%;
-    width: 9.5%;
-    height: 28%;
-    //outline: 1px solid red;
+    right: 10px;
+    width: 80px;
+    height: 32px;
+    text-align: center;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px rgba($black, 0.2);
     a {
+      color: $brand-secondary;
+      line-height: 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: $font-family-sans-serif-condensed;
+      text-decoration: none;
+    }
+    @media(min-width: 640px) {
       display: block;
-      width: 100%;
-      height: 100%;
+      position: absolute;
+      top: 9.5%;
+      left: auto;
+      right: 5.5%;
+      width: 9.5%;
+      height: 28%;
+      background: transparent;
+      border-radius: none;
+      box-shadow: none;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        span {
+          border: 0;
+          clip: rect(0 0 0 0);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
+        }
+      }
     }
   }
 
   nav {
     position: relative;
     width: 100%;
-    margin: 10px auto;
+    margin: 0 auto 24px;
     text-align: center;
+    line-height: 1;
+    padding-top: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid $brand-secondary;
+    box-shadow: 0 6px 4px -4px rgba($black, 0.25);
     @media(min-width: 640px) {
       position: absolute;
       top: 47%;
@@ -296,9 +343,14 @@ h2 {
       right: 0;
       width: 100%;
       height: 27%;
+      line-height: 1.5;
       margin: 0 auto;
       padding-left: 25%;
       padding-right: 18%;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+      box-shadow: none;
     }
     ul {
       position: relative;
@@ -348,6 +400,12 @@ h2 {
             font-size: 27px;
             strong {
               font-size: 37px;
+            }
+          }
+          @media(max-width: 639px) {
+            font-size: calc(10px + 1.25vw);
+            strong {
+              font-size: calc(16px + 1.5vw);
             }
           }
         }
