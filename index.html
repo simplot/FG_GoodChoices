@@ -76,7 +76,12 @@
           </div>
         </section>
 
-        <section>
+        <section id="videos" class="page fluid-container">
+          <div class="inner">
+            <hr class="divider" />
+            <h2>Videos</h2>
+            <p>See how delicious and versatile the Simplot product portfolio can be.</p>
+          </div>
           <div class="row">
             <div class="col-xs-24">
               <div class="carousel">
@@ -104,24 +109,25 @@
         </section>
 
         <section id="recipes" class="page fluid-container">
-          <div class="row">
-            <div class="push-xs-1 col-xs-23">
-              <h5 class="sort-by">SORT BY</h5>
-            </div>
+          <div class="inner">
+            <hr class="divider" />
+            <h2>Recipes</h2>
+            <p>Enjoy our better-for-you recipes that have been created with a little culinary flair.</p>
           </div>
           <div class="row form-row">
             <div class="col-xs-1"></div>
             <div class="col-xs-22 col-md-16 filter-container fluid-container">
+              <h4 class="sort-title">Sort by:</h4>
               <form id="form-recipe-filters" name="form-recipe-filters">
                 <span>
-                  <label for="season-filter">Daypart:</label>
-                  <select name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
+                  <label for="season-filter">Daypart</label>
+                  <select id="season-filter" name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
                 <span>
-                  <label for="product-filter">Product:</label>
-                  <select name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
+                  <label for="product-filter">Product</label>
+                  <select id="product-filter" name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
@@ -129,42 +135,42 @@
             </div>
             <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1">
               <form id="form-recipe-search" name="form-recipe-search">
-                <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
-                <input type="text" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
+                <label for="recipe-search">Search</label>
+                <input type="text" id="recipe-search" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
               </form>
             </div>
             <div class="col-xs-1"></div>
           </div>
           <style>
-          .smoothify * {
-            transition: all 1s;
-          }
-          /* The starting CSS styles for the enter animation */
-          .thingie.ng-enter {
-            transition: 0.5s linear all;
-            opacity: 0;
-          }
+            .smoothify * {
+              transition: all 1s;
+            }
+            /* The starting CSS styles for the enter animation */
+            .thingie.ng-enter {
+              transition: 0.5s linear all;
+              opacity: 0;
+            }
 
-          /* The finishing CSS styles for the enter animation */
-          .thingie.ng-enter.ng-enter-active {
-            opacity: 1;
-          }
+            /* The finishing CSS styles for the enter animation */
+            .thingie.ng-enter.ng-enter-active {
+              opacity: 1;
+            }
 
-          /* The starting CSS styles for the leave animation */
-          .thingie.ng-leave {
-            transition: 0.5s linear all;
-            opacity: 1;
-          }
+            /* The starting CSS styles for the leave animation */
+            .thingie.ng-leave {
+              transition: 0.5s linear all;
+              opacity: 1;
+            }
 
-          /* The finishing CSS styles for the leave animation */
-          .thingie.ng-leave.ng-leave-active {
-            opacity: 0;
-          }
+            /* The finishing CSS styles for the leave animation */
+            .thingie.ng-leave.ng-leave-active {
+              opacity: 0;
+            }
 
-          /* The starting CSS styles for the move animation */
-          .thingie.ng-move {
-            transition: 0.5s linear all;
-          }
+            /* The starting CSS styles for the move animation */
+            .thingie.ng-move {
+              transition: 0.5s linear all;
+            }
           </style>
           <div class="row">
             <div class="col-xs-1"></div>
@@ -174,16 +180,17 @@
                   <md-content class="smoothify">
                     <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height-xs="4.8em"
                     md-row-height-sm="4.8em" md-row-height="4.9em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
-                    <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
-                      <div class="card" style="height:100%; width:100%;">
-                        <a href="pdf/{{recipe.pdf}}" target="_blank">
-                          <div class="hovereffect">
-                            <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
-                            <div class="overlay">
-                              <div class="inner">
-                                <p>
-                                  DOWNLOAD RECIPE
-                                </p>
+                      <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
+                        <div class="card" style="height:100%; width:100%;">
+                          <a href="pdf/{{recipe.pdf}}" target="_blank">
+                            <div class="hovereffect">
+                              <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
+                              <div class="overlay">
+                                <div class="inner">
+                                  <p>
+                                    DOWNLOAD RECIPE
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -202,9 +209,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div> <!-- #main -->
+        </section> <!-- #recipes -->
+      </div> <!-- #main -->
 
     <footer id="primary-footer" class="fluid-container">
       <div id="footer-logo">
