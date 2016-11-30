@@ -738,22 +738,82 @@ h2 {
 
 //------------------------------------------------------------------------------
 //
-//    Recipes
+//    Divider
 //
 //------------------------------------------------------------------------------
 
-#recipes {
+hr.divider {
+  border: 0;
+  height: 2px;
+  position: relative;
+  margin: 0.5em 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 80%);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  &::before {
+    top: -0.5em;
+    height: 1em;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 80%);
+  }
+  &::after {
+    top: -8px;
+    height: 0.5em;
+    background: $background-color;
+    opacity: 0.85;
+  }
+}
+
+//------------------------------------------------------------------------------
+//
+//    Recipes & Videos Container
+//
+//------------------------------------------------------------------------------
+
+#recipes,
+#videos {
   > .inner {
     text-align: center;
-    max-width: 720px;
+    max-width: 860px;
     margin: 0 auto;
   }
   h2 {
     text-transform: uppercase;
     color: $gray-dark;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-size: calc(2rem + 1.75vw);
+    letter-spacing: 0.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    @media(min-width: 1140px) {
+      font-size: 3rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.75;
+    @media(min-width: 680px) {
+      font-size: 1.25rem;
+    }
+    @media(min-width: 1140px) {
+      font-size: 1.4rem;
+    }
   }
 }
+
+//------------------------------------------------------------------------------
+//
+//    Recipes
+//
+//------------------------------------------------------------------------------
+
+
+
+
 
 
 
