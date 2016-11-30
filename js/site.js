@@ -5,6 +5,7 @@ function pageReady(vm) {
 
     $('.carousel').slick({
     });
+    $('.carousel').slick('slickGoTo', vm.currentSlide);
 
     //Makes all anchor tags smooth scroll, except for carousel controls
     $('a[href^="#"]').on('click',function( event ) {
@@ -44,7 +45,7 @@ var app = angular.module('FallHarvestApp', ['ngMaterial']);
 
 ///////////////////////////////////////////////////////////////////////////////
 
-app.controller('FallHarvestController', function($scope, $timeout) {
+app.controller('FallHarvestController', function($scope, $timeout, $location) {
     var vm = this;
     window.gep = vm;
 
@@ -92,6 +93,13 @@ app.controller('FallHarvestController', function($scope, $timeout) {
         $('.carousel').slick('slickGoTo', n - 1);
         // note: vm.currentSlide will be updated as an effect, above
     };
+
+    // "pagelocation"/#?slide=name is the syntax
+    var slideName = $location.search()['slide'];
+    var slideNum = ['first', 'second', 'third' ,'fourth' , 'fifth', 'sixth', 'seventh'].indexOf(slideName);
+    if (slideNum >= 0) {
+        vm.currentSlide = slideNum; // for later initialization to move to.
+    }
 
     $timeout(function() {
         pageReady(vm);
