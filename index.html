@@ -82,30 +82,19 @@
             <h2>Recipes</h2>
             <p>Enjoy our better-for-you recipes that have been created with a little culinary flair.</p>
           </div>
-          <!--<div class="row">
-            <div class="push-xs-1 col-xs-23">
-              <h5 class="sort-by">SORT BY</h5>
-            </div>
-          </div>
           <div class="row form-row">
             <div class="col-xs-1"></div>
             <div class="col-xs-22 col-md-16 filter-container fluid-container">
               <form id="form-recipe-filters" name="form-recipe-filters">
                 <span>
                   <label for="season-filter">Daypart:</label>
-                  <select name="season-filter"
-                    ng-model="vm.filterParameters.daypart"
-                    ng-change="vm.updateFilterResults()"
-                    ng-options="option for option in vm.daypartTerms track by option">
+                  <select name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
                 <span>
                   <label for="product-filter">Product:</label>
-                  <select name="product-filter"
-                    ng-model="vm.filterParameters.product"
-                    ng-change="vm.updateFilterResults()"
-                    ng-options="option for option in vm.productTerms track by option">
+                  <select name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
@@ -126,24 +115,29 @@
             /* The starting CSS styles for the enter animation */
             .thingie.ng-enter {
               transition: 0.5s linear all;
-              opacity: 0; }
+              opacity: 0;
+            }
 
             /* The finishing CSS styles for the enter animation */
             .thingie.ng-enter.ng-enter-active {
-              opacity: 1; }
+              opacity: 1;
+            }
 
             /* The starting CSS styles for the leave animation */
             .thingie.ng-leave {
               transition: 0.5s linear all;
-              opacity: 1; }
+              opacity: 1;
+            }
 
             /* The finishing CSS styles for the leave animation */
             .thingie.ng-leave.ng-leave-active {
-              opacity: 0; }
+              opacity: 0;
+            }
 
             /* The starting CSS styles for the move animation */
             .thingie.ng-move {
-              transition: 0.5s linear all; }
+              transition: 0.5s linear all;
+            }
           </style>
           <div class="row">
             <div class="col-xs-1"></div>
@@ -153,11 +147,7 @@
                   <md-content class="smoothify">
                     <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height-xs="4.8em"
                     md-row-height-sm="4.8em" md-row-height="4.9em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
-                      <md-grid-tile
-                        ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
-                        ng-class="{'double-wide': recipe.columns===2}"
-                        md-colspan="{{recipe.columns}}"
-                        md-rowspan="{{recipe.rows}}">
+                      <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
                         <div class="card" style="height:100%; width:100%;">
                           <a href="pdf/{{recipe.pdf}}" target="_blank">
                             <div class="hovereffect">
@@ -185,7 +175,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
         </section> <!-- #recipes -->
       </div> <!-- #main -->
 
