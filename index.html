@@ -76,7 +76,7 @@
             </a>
           </div>
         </section>
-        <!-- <section id="recipes" class="page fluid-container">
+        <section id="recipes" class="page fluid-container">
           <div class="row">
             <div class="push-xs-1 col-xs-23">
               <h5 class="sort-by">SORT BY</h5>
@@ -88,19 +88,13 @@
               <form id="form-recipe-filters" name="form-recipe-filters">
                 <span>
                   <label for="season-filter">Daypart:</label>
-                  <select name="season-filter"
-                    ng-model="vm.filterParameters.daypart"
-                    ng-change="vm.updateFilterResults()"
-                    ng-options="option for option in vm.daypartTerms track by option">
+                  <select name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
                 <span>
                   <label for="product-filter">Product:</label>
-                  <select name="product-filter"
-                    ng-model="vm.filterParameters.product"
-                    ng-change="vm.updateFilterResults()"
-                    ng-options="option for option in vm.productTerms track by option">
+                  <select name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
@@ -115,30 +109,35 @@
             <div class="col-xs-1"></div>
           </div>
           <style>
-            .smoothify * {
-              transition: all 1s;
-            }
-            /* The starting CSS styles for the enter animation */
-            .thingie.ng-enter {
-              transition: 0.5s linear all;
-              opacity: 0; }
+          .smoothify * {
+            transition: all 1s;
+          }
+          /* The starting CSS styles for the enter animation */
+          .thingie.ng-enter {
+            transition: 0.5s linear all;
+            opacity: 0;
+          }
 
-            /* The finishing CSS styles for the enter animation */
-            .thingie.ng-enter.ng-enter-active {
-              opacity: 1; }
+          /* The finishing CSS styles for the enter animation */
+          .thingie.ng-enter.ng-enter-active {
+            opacity: 1;
+          }
 
-            /* The starting CSS styles for the leave animation */
-            .thingie.ng-leave {
-              transition: 0.5s linear all;
-              opacity: 1; }
+          /* The starting CSS styles for the leave animation */
+          .thingie.ng-leave {
+            transition: 0.5s linear all;
+            opacity: 1;
+          }
 
-            /* The finishing CSS styles for the leave animation */
-            .thingie.ng-leave.ng-leave-active {
-              opacity: 0; }
+          /* The finishing CSS styles for the leave animation */
+          .thingie.ng-leave.ng-leave-active {
+            opacity: 0;
+          }
 
-            /* The starting CSS styles for the move animation */
-            .thingie.ng-move {
-              transition: 0.5s linear all; }
+          /* The starting CSS styles for the move animation */
+          .thingie.ng-move {
+            transition: 0.5s linear all;
+          }
           </style>
           <div class="row">
             <div class="col-xs-1"></div>
@@ -148,77 +147,73 @@
                   <md-content class="smoothify">
                     <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height-xs="4.8em"
                     md-row-height-sm="4.8em" md-row-height="4.9em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
-                      <md-grid-tile
-                        ng-repeat="recipe in vm.recipes | filter:{isVisible: true}"
-                        ng-class="{'double-wide': recipe.columns===2}"
-                        md-colspan="{{recipe.columns}}"
-                        md-rowspan="{{recipe.rows}}">
-                        <div class="card" style="height:100%; width:100%;">
-                          <a href="pdf/{{recipe.pdf}}" target="_blank">
-                            <div class="hovereffect">
-                              <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
-                              <div class="overlay">
-                                <div class="inner">
-                                  <p>
-                                    DOWNLOAD RECIPE
-                                  </p>
-                                </div>
+                    <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
+                      <div class="card" style="height:100%; width:100%;">
+                        <a href="pdf/{{recipe.pdf}}" target="_blank">
+                          <div class="hovereffect">
+                            <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
+                            <div class="overlay">
+                              <div class="inner">
+                                <p>
+                                  DOWNLOAD RECIPE
+                                </p>
                               </div>
                             </div>
-                            <div class="inner">
-                              <h5 class="card-title">{{recipe.name}}</h5>
-                              <small class="card-subtitle">Products: {{recipe.products.join(', ')}}</small>
-                              <div class="card-link">
-                                RECIPE
-                              </div>
+                          </div>
+                          <div class="inner">
+                            <h5 class="card-title">{{recipe.name}}</h5>
+                            <small class="card-subtitle">Products: {{recipe.products.join(', ')}}</small>
+                            <div class="card-link">
+                              RECIPE
                             </div>
-                          </a>
-                        </div>
-                      </md-grid-tile>
-                    </md-grid-list>
-                  </md-content>
-                </div>
+                          </div>
+                        </a>
+                      </div>
+                    </md-grid-tile>
+                  </md-grid-list>
+                </md-content>
               </div>
             </div>
           </div>
-        </section> --> <!-- #recipes -->
-      </div> <!-- #main -->
-
-      <footer id="primary-footer" class="fluid-container">
-        <div id="footer-logo">
-          <a href="/">
-            <span class="visually-hidden">Simplot</span>
-          </a>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">contact us</a>
-            </li>
-            <li>
-              <a href="#">copyright</a>
-            </li>
-            <li>
-              <a href="#">privacy policy</a>
-            </li>
-            <li>
-              <a href="#">terms &amp; conditions</a>
-            </li>
-          </ul>
-        </nav>
-        <div id="footer-bg"></div>
-        <div class="copyright-wrapper">
-          <small class="footer-links">
-            <span class="copyright">&copy;
-              <script>
-              var dteNow = new Date();
-              var intYear = dteNow.getFullYear();
-              document.write(intYear);
-              </script>
-              J.R. Simplot Company</span>
-            </small>
-          </div>
-        </footer> <!-- #footer -->
+      </section>
+    </div> <!-- #main -->
+
+    <footer id="primary-footer" class="fluid-container">
+      <div id="footer-logo">
+        <a href="/">
+          <span class="visually-hidden">Simplot</span>
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">contact us</a>
+          </li>
+          <li>
+            <a href="#">copyright</a>
+          </li>
+          <li>
+            <a href="#">privacy policy</a>
+          </li>
+          <li>
+            <a href="#">terms &amp; conditions</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="footer-bg"></div>
+      <div class="copyright-wrapper">
+        <small class="footer-links">
+          <span class="copyright">&copy;
+            <script>
+            var dteNow = new Date();
+            var intYear = dteNow.getFullYear();
+            document.write(intYear);
+            </script>
+            J.R. Simplot Company</span>
+          </small>
+        </div>
+      </footer> <!-- #footer -->
 
     </div> <!-- #container -->
   </div> <!-- ng-controller -->
@@ -258,13 +253,13 @@
   <!-- site code -->
   <script src="js/site.js"></script>
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-81939343-1', 'auto');
-    ga('send', 'pageview');
+  ga('create', 'UA-81939343-1', 'auto');
+  ga('send', 'pageview');
 
   </script>
 </body>
