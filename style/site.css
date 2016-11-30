@@ -5581,11 +5581,13 @@ select {
   -moz-appearance: none;
   appearance: none;
   padding: 5px 80px 5px 10px;
-  background: url("../img/select-arrow-3.png") no-repeat right #fff;
+  background: url("../img/select-arrow-green.png") no-repeat right #fff;
+  color: #5e514e;
   border: 0;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); }
 
 select::-ms-expand {
   display: none; }
@@ -5596,9 +5598,9 @@ input {
   -moz-appearance: none;
   appearance: none;
   border: 0;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.45); }
 
 span.reg {
   font-size: 11px;
@@ -5658,6 +5660,9 @@ span.reg {
       width: 100%; }
       .nav-tabs li .inner a:hover {
         cursor: pointer; }
+
+*:focus {
+  outline-color: #7cba42 !important; }
 
 body {
   background: url(../img/wood-texture.jpg);
@@ -6138,38 +6143,40 @@ hr.divider {
     background: #f7f6f4;
     opacity: 0.85; }
 
-#recipes > .inner,
-#videos > .inner {
-  text-align: center;
-  max-width: 860px;
-  margin: 0 auto; }
-
-#recipes h2,
-#videos h2 {
-  text-transform: uppercase;
-  color: #5e514e;
-  font-size: 2rem;
-  font-size: calc(2rem + 1.75vw);
-  letter-spacing: 0.5rem;
-  margin-top: 1.75rem;
-  margin-bottom: 0.75rem; }
-  @media (min-width: 1140px) {
-    #recipes h2,
-    #videos h2 {
-      font-size: 3rem; } }
-
-#recipes p,
-#videos p {
-  font-size: 1rem;
-  line-height: 1.75; }
-  @media (min-width: 680px) {
-    #recipes p,
-    #videos p {
-      font-size: 1.25rem; } }
-  @media (min-width: 1140px) {
-    #recipes p,
-    #videos p {
-      font-size: 1.4rem; } }
+#recipes,
+#videos {
+  margin-top: 42px; }
+  #recipes > .inner,
+  #videos > .inner {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+    margin-bottom: 24px; }
+  #recipes h2,
+  #videos h2 {
+    text-transform: uppercase;
+    color: #5e514e;
+    font-size: 2rem;
+    font-size: calc(2rem + 1.75vw);
+    letter-spacing: 0.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem; }
+    @media (min-width: 1140px) {
+      #recipes h2,
+      #videos h2 {
+        font-size: 3rem; } }
+  #recipes p,
+  #videos p {
+    font-size: 1rem;
+    line-height: 1.75; }
+    @media (min-width: 680px) {
+      #recipes p,
+      #videos p {
+        font-size: 1.25rem; } }
+    @media (min-width: 1140px) {
+      #recipes p,
+      #videos p {
+        font-size: 1.4rem; } }
 
 #recipes .form-row {
   margin-bottom: 1rem; }
@@ -6179,12 +6186,24 @@ hr.divider {
     margin-bottom: 0;
     margin-top: 1rem; } }
 
+#recipes .sort-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  float: left;
+  margin-top: 9px;
+  margin-right: 20px; }
+
 #recipes #form-recipe-filters > span {
   display: inline-block;
   margin-right: 1rem; }
   #recipes #form-recipe-filters > span label {
     display: block;
-    margin-top: 0.5rem; }
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold; }
   @media (max-width: 767px) {
     #recipes #form-recipe-filters > span {
       padding-right: 1rem;
@@ -6193,13 +6212,23 @@ hr.divider {
         width: 100%; } }
 
 #recipes #form-recipe-search {
-  float: right;
-  margin-top: 2rem; }
+  float: right; }
+  #recipes #form-recipe-search input {
+    width: 100%; }
+  #recipes #form-recipe-search label {
+    display: block;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold; }
   @media (max-width: 767px) {
     #recipes #form-recipe-search {
-      float: none; }
-      #recipes #form-recipe-search input {
-        width: 100%; } }
+      float: none;
+      padding-right: 1rem; } }
+  @media (min-width: 880px) {
+    #recipes #form-recipe-search {
+      width: 295px; } }
 
 #recipes md-grid-list {
   margin: 20px auto 40px;

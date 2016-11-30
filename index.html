@@ -85,16 +85,17 @@
           <div class="row form-row">
             <div class="col-xs-1"></div>
             <div class="col-xs-22 col-md-16 filter-container fluid-container">
+              <h4 class="sort-title">Sort by:</h4>
               <form id="form-recipe-filters" name="form-recipe-filters">
                 <span>
-                  <label for="season-filter">Daypart:</label>
-                  <select name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
+                  <label for="season-filter">Daypart</label>
+                  <select id="season-filter" name="season-filter" ng-model="vm.filterParameters.daypart" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.daypartTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
                 <span>
-                  <label for="product-filter">Product:</label>
-                  <select name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
+                  <label for="product-filter">Product</label>
+                  <select id="product-filter" name="product-filter" ng-model="vm.filterParameters.product" ng-change="vm.updateFilterResults()" ng-options="option for option in vm.productTerms track by option">
                     <option value="">All</option>
                   </select>
                 </span>
@@ -102,8 +103,8 @@
             </div>
             <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1">
               <form id="form-recipe-search" name="form-recipe-search">
-                <label for="recipe-search" class="visually-hidden">Search by Keyword</label>
-                <input type="text" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
+                <label for="recipe-search">Search</label>
+                <input type="text" id="recipe-search" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
               </form>
             </div>
             <div class="col-xs-1"></div>
