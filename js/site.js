@@ -1,128 +1,28 @@
 
-function pageReady() {
+function pageReady(vm) {
     // here's where any run-once-on-setup code can be put
     console.log('page is set up and running');
 
-    //Handles the navigation for seasonal product group carousels
-    $('[id^=seasonal-group-carousel-selector-]').click(function () {
-      var id_selector = $(this).attr("id");
-      var carousel_index = 0;
-      try {
-        var id = /-(\d+)$/.exec(id_selector)[1];
-
-        //set the carousel index on group change
-        if( id == 1 ) {
-          carousel_index = 3;
-        }
-        else if( id == 2 ) {
-          carousel_index = 6;
-        }
-        $('#seasonal-carousel').carousel(carousel_index);
-        // console.log(id_selector, id);
-        $('#seasonal .nav-tabs .link-container').removeClass('active');
-        $(this).parent().parent().addClass('active');
-        $('#seasonal .product-group').removeClass('active');
-        $('#seasonal .product-group.group-' + id).addClass('active');
-
-        //Default to the first product in group
-        $('#seasonal .product-group > article').removeClass('active');
-        $('#seasonal .product-group.group-' + id + ' > article:first-child').addClass('active');
-      }
-      catch (e) {
-        console.log('Regex failed!', e);
-      }
-    });
-
-    //Handles the seasonal product carousel links
-    $('[id^=seasonal-carousel-selector-]').click(function () {
-      var id_selector = $(this).attr("id");
-      try {
-        var id = /-(\d+)$/.exec(id_selector)[1];
-        // console.log(id_selector, id);
-        $('#seasonal .product-group > article').removeClass('active');
-        $(this).parent().parent().parent().addClass('active');
-        $('#seasonal-carousel').carousel(parseInt(id));
-      }
-      catch (e) {
-        console.log('Regex failed!', e);
-      }
-    });
-
-    //Handles the navigation for gameday product group carousels
-    $('[id^=gameday-group-carousel-selector-]').click(function () {
-      var id_selector = $(this).attr("id");
-      var carousel_index = 0;
-      try {
-        var id = /-(\d+)$/.exec(id_selector)[1];
-
-        //set the carousel index on group change
-        if( id == 1 ) {
-          carousel_index = 3;
-        }
-        else if( id == 2 ) {
-          carousel_index = 6;
-        }
-        $('#gameday-carousel').carousel(carousel_index);
-        // console.log(id_selector, id);
-        $('#gameday .nav-tabs .link-container').removeClass('active');
-        $(this).parent().parent().addClass('active');
-        $('#gameday .product-group').removeClass('active');
-        $('#gameday .product-group.group-' + id).addClass('active');
-
-        //Default to the first product in group
-        $('#gameday .product-group > article').removeClass('active');
-        $('#gameday .product-group.group-' + id + ' > article:first-child').addClass('active');
-      }
-      catch (e) {
-        console.log('Regex failed!', e);
-      }
-    });
-
-    //Handles the gameday product carousel links
-    $('[id^=gameday-carousel-selector-]').click(function () {
-      var id_selector = $(this).attr("id");
-      try {
-        var id = /-(\d+)$/.exec(id_selector)[1];
-        // console.log(id_selector, id);
-        $('#gameday .product-group > article').removeClass('active');
-        $(this).parent().parent().parent().addClass('active');
-        $('#gameday-carousel').carousel(parseInt(id));
-      }
-      catch (e) {
-        console.log('Regex failed!', e);
-      }
+    $('.carousel').slick({
     });
 
     //Makes all anchor tags smooth scroll, except for carousel controls
     $('a[href^="#"]').on('click',function( event ) {
-  		if( event.preventDefault() ) {
-      	event.preventDefault();
-  		}
-  		var isCarousel = true;
-  		isCarousel = $(this).hasClass('carousel-control');
-  		//do not anchor scrolls for carousel links
-  		if( !isCarousel ) {
-  			var target = $( $(this).attr('href') );
-  			var scrollHeight = target.offset().top;
-  	    if( target.length ) {
-        //  event.preventDefault();
-          $('html, body').animate({
-              scrollTop: scrollHeight
-          }, 500);
-  	    }
-  		}
-  	});
-
-    $('#seasonal-video-link').click(function () {
-        var src = 'https://www.youtube.com/embed/xCdMYL0zUM4?rel=0&showinfo=0&autoplay=1';
-        $('#seasonal-video-modal').modal('show');
-        $('#seasonal-video-modal iframe').attr('src', src);
+        if( event.preventDefault() ) {
+            event.preventDefault();
+        }
+        var target = $( $(this).attr('href') );
+        var scrollHeight = target.offset().top;
+        if( target.length ) {
+            //  event.preventDefault();
+            $('html, body').animate({
+                scrollTop: scrollHeight
+            }, 500);
+        }
     });
 
-    $('#seasonal-video-modal button').click(function () {
-        $('#seasonal-video-modal iframe').removeAttr('src');
-    });
 
+    /*
     $('#gameday-video-link').click(function () {
         var src = 'https://www.youtube.com/embed/IHPC0zfiQ48?rel=0&showinfo=0&autoplay=1';
         $('#gameday-video-modal').modal('show');
@@ -132,6 +32,7 @@ function pageReady() {
     $('#gameday-video-modal button').click(function () {
         $('#gameday-video-modal iframe').removeAttr('src');
     });
+    */
 
 }
 
@@ -177,8 +78,23 @@ app.controller('FallHarvestController', function($scope, $timeout) {
     //     console.log('event fired:', event);
     // });
 
+    vm.currentSlide = 0;
+
+    $('.carousel').on('afterChange', function(event, slick, newSlide) {
+        newSlide += 1; // use 1-based counting
+        if (vm.currentSlide != newSlide) {
+            vm.currentSlide = newSlide;
+            $timeout(function() { $scope.$digest(); });
+        }
+    });
+
+    vm.gotoSlide = function (n) {
+        $('.carousel').slick('slickGoTo', n - 1);
+        // note: vm.currentSlide will be updated as an effect, above
+    };
+
     $timeout(function() {
-        pageReady();
+        pageReady(vm);
     });
 });
 
