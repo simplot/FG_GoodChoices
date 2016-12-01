@@ -1,3 +1,5 @@
+// website.com/#?slide=name is the syntax for landing on a particular slide
+var slideNames = ['pineapple', 'jalapeno', 'kale' ,'quinoa' , 'mango', 'normandy', 'avocado'];
 
 function pageReady(vm) {
     // here's where any run-once-on-setup code can be put
@@ -5,7 +7,7 @@ function pageReady(vm) {
 
     $('.carousel').slick({
     });
-    $('.carousel').slick('slickGoTo', vm.currentSlide);
+    $('.carousel').slick('slickGoTo', vm.currentSlide); // initial slide
 
     //Makes all anchor tags smooth scroll, except for carousel controls
     $('a[href^="#"]').on('click',function( event ) {
@@ -82,7 +84,6 @@ app.controller('FallHarvestController', function($scope, $timeout, $location) {
     vm.currentSlide = 0;
 
     $('.carousel').on('afterChange', function(event, slick, newSlide) {
-        newSlide += 1; // use 1-based counting
         if (vm.currentSlide != newSlide) {
             vm.currentSlide = newSlide;
             $timeout(function() { $scope.$digest(); });
@@ -90,13 +91,13 @@ app.controller('FallHarvestController', function($scope, $timeout, $location) {
     });
 
     vm.gotoSlide = function (n) {
-        $('.carousel').slick('slickGoTo', n - 1);
+        $('.carousel').slick('slickGoTo', n);
         // note: vm.currentSlide will be updated as an effect, above
     };
 
     // "pagelocation"/#?slide=name is the syntax
     var slideName = $location.search()['slide'];
-    var slideNum = ['first', 'second', 'third' ,'fourth' , 'fifth', 'sixth', 'seventh'].indexOf(slideName);
+    var slideNum = slideNames.indexOf(slideName);
     if (slideNum >= 0) {
         vm.currentSlide = slideNum; // for later initialization to move to.
     }
