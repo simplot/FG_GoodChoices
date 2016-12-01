@@ -1052,6 +1052,61 @@ hr.divider {
   }
 }
 
+//------------------------------------------------------------------------------
+//
+//    Videos
+//
+//------------------------------------------------------------------------------
+
+#videos {
+  .video-wrapper {
+    max-width: 640px;
+    margin: auto;
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    padding-top: 56.25%;
+    margin: auto;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .thumbnail-wrapper {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+  }
+  .carousel-buttons {
+    width: 1200px;
+    span {
+      display: block;
+      text-align: center;
+      font-size: 0.85rem;
+      line-height: 1rem;
+      float: left;
+      min-width: 165px;
+      width: 14.2857142%;
+      img {
+        display: block;
+        margin: auto;
+        max-width: 180px;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
 
 
 
