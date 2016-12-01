@@ -888,6 +888,8 @@ hr.divider {
     width: 100%;
     input {
       width: 100%;
+      background: url("#{$images}/search-icon.png") no-repeat right $white;
+      background-size: auto 20px;
     }
     label {
       display: block;
