@@ -116,7 +116,7 @@
           </div>
           <div class="row form-row">
             <div class="col-xs-1"></div>
-            <div class="col-xs-22 col-md-16 filter-container fluid-container">
+            <div class="col-xs-22 col-md-16 filter-container fluid-container" id="filter-wrapper">
               <h4 class="sort-title">Sort by:</h4>
               <form id="form-recipe-filters" name="form-recipe-filters">
                 <span>
@@ -133,7 +133,7 @@
                 </span>
               </form>
             </div>
-            <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1">
+            <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1" id="search-wrapper">
               <form id="form-recipe-search" name="form-recipe-search">
                 <label for="recipe-search">Search</label>
                 <input type="text" id="recipe-search" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
