@@ -223,6 +223,40 @@ h2 {
 
 //------------------------------------------------------------------------------
 //
+//    Divider
+//
+//------------------------------------------------------------------------------
+
+hr.divider {
+  border: 0;
+  height: 2px;
+  position: relative;
+  margin: 0.5em 0;
+  background: -webkit-radial-gradient(center ellipse, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 80%);
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+  }
+  &::before {
+    top: -0.5em;
+    height: 1em;
+    background: -webkit-radial-gradient(center ellipse, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 80%);
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 80%);
+  }
+  &::after {
+    top: -8px;
+    height: 0.5em;
+    background: $background-color;
+    opacity: 0.85;
+  }
+}
+
+//------------------------------------------------------------------------------
+//
 //    Header
 //
 //------------------------------------------------------------------------------
@@ -338,9 +372,6 @@ h2 {
     text-align: center;
     line-height: 1;
     padding-top: 14px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid $brand-secondary;
-    box-shadow: 0 6px 4px -4px rgba($black, 0.25);
     @media(min-width: 640px) {
       position: absolute;
       top: 47%;
@@ -356,6 +387,14 @@ h2 {
       padding-bottom: 0;
       border-bottom: none;
       box-shadow: none;
+    }
+    .divider {
+      height: 4px;
+      background: -webkit-radial-gradient(center ellipse, rgba($brand-secondary, 0.8) 0%, rgba(0,0,0,0) 80%);
+      background: radial-gradient(ellipse at center, rgba($brand-secondary, 0.8) 0%, rgba(0,0,0,0) 80%);
+      @media(min-width: 640px) {
+        display: none;
+      }
     }
     ul {
       position: relative;
@@ -739,38 +778,6 @@ h2 {
     @media(min-width: 640px) {
       padding: 0 20px 20px;
     }
-  }
-}
-
-//------------------------------------------------------------------------------
-//
-//    Divider
-//
-//------------------------------------------------------------------------------
-
-hr.divider {
-  border: 0;
-  height: 2px;
-  position: relative;
-  margin: 0.5em 0;
-  background: radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0) 80%);
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    left: 0;
-  }
-  &::before {
-    top: -0.5em;
-    height: 1em;
-    background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0) 80%);
-  }
-  &::after {
-    top: -8px;
-    height: 0.5em;
-    background: $background-color;
-    opacity: 0.85;
   }
 }
 

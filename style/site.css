@@ -5683,6 +5683,29 @@ h2 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: bold; }
 
+hr.divider {
+  border: 0;
+  height: 2px;
+  position: relative;
+  margin: 0.5em 0;
+  background: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.3) 0%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, transparent 80%); }
+  hr.divider::before, hr.divider::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0; }
+  hr.divider::before {
+    top: -0.5em;
+    height: 1em;
+    background: -webkit-radial-gradient(center ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 80%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, transparent 80%); }
+  hr.divider::after {
+    top: -8px;
+    height: 0.5em;
+    background: #f7f6f4;
+    opacity: 0.85; }
+
 #header {
   position: relative;
   width: 100%; }
@@ -5781,10 +5804,7 @@ h2 {
     margin: 0 auto 24px;
     text-align: center;
     line-height: 1;
-    padding-top: 14px;
-    padding-bottom: 6px;
-    border-bottom: 2px solid #7cba42;
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.25); }
+    padding-top: 14px; }
     @media (min-width: 640px) {
       #header nav {
         position: absolute;
@@ -5801,6 +5821,13 @@ h2 {
         padding-bottom: 0;
         border-bottom: none;
         box-shadow: none; } }
+    #header nav .divider {
+      height: 4px;
+      background: -webkit-radial-gradient(center ellipse, rgba(124, 186, 66, 0.8) 0%, transparent 80%);
+      background: radial-gradient(ellipse at center, rgba(124, 186, 66, 0.8) 0%, transparent 80%); }
+      @media (min-width: 640px) {
+        #header nav .divider {
+          display: none; } }
     #header nav ul {
       position: relative;
       display: inline-block;
@@ -6123,27 +6150,6 @@ h2 {
     @media (min-width: 640px) {
       #primary-footer .copyright-wrapper {
         padding: 0 20px 20px; } }
-
-hr.divider {
-  border: 0;
-  height: 2px;
-  position: relative;
-  margin: 0.5em 0;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3) 0%, transparent 80%); }
-  hr.divider::before, hr.divider::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    left: 0; }
-  hr.divider::before {
-    top: -0.5em;
-    height: 1em;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, transparent 80%); }
-  hr.divider::after {
-    top: -8px;
-    height: 0.5em;
-    background: #f7f6f4;
-    opacity: 0.85; }
 
 #recipes,
 #videos {
