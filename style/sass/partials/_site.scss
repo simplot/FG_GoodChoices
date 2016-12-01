@@ -135,10 +135,10 @@ span.reg {
     padding-right: 0;
     @media( max-width: '599px' ) {
       padding-right: 12.5px;
+      padding-left: 12.5px;
+      width: 100%;
     }
   }
-  // margin-right: 12.5px;
-  // padding-right: 0;
 }
 .nav-tabs {
   list-style: none;
@@ -822,6 +822,31 @@ hr.divider {
 #recipes {
   .form-row {
     margin-bottom: $spacer-y;
+    max-width: 1320px;
+    @media(min-width: 1320px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  #filter-wrapper {
+    @media(max-width: 599px) {
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      #form-recipe-filters > span {
+        padding: 0;
+      }
+    }
+  }
+  #search-wrapper {
+    @media(max-width: 599px) {
+      left: 0;
+      width: 100%;
+      padding: 0 30px;
+      form {
+        padding: 0;
+      }
+    }
   }
   .sort-by {
     @media ( max-width: '767px' ) {
@@ -860,6 +885,7 @@ hr.divider {
   }
   #form-recipe-search {
     float: right;
+    width: 100%;
     input {
       width: 100%;
     }
@@ -875,13 +901,11 @@ hr.divider {
       float: none;
       padding-right: $spacer-x;
     }
-    @media(min-width: 880px) {
-      width: 295px;
-    }
   }
   md-grid-list {
     margin: 20px auto 40px;
-    max-width: 1281px;
+    //max-width: 1281px;
+    max-width: 1180px;
   }
   md-grid-tile {
   }
@@ -939,7 +963,8 @@ hr.divider {
     font-weight: bold;
     font-size: 1rem;
     line-height: 1.25;
-    margin-bottom: 0.25rem;
+    //margin-bottom: 0.25rem;
+    margin-bottom: 0.35rem;
   }
   .card-subtitle {
     font-size: 0.875rem;
