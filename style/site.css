@@ -6382,24 +6382,26 @@ hr.divider {
     font-family: "Roboto Condensed", sans-serif;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
 
-#videos .video-wrapper {
-  max-width: 640px;
-  margin: auto; }
-
 #videos .video-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 24px; }
+
+#videos .video-wrapper {
   position: relative;
   width: 100%;
-  height: 0px;
-  padding-top: 56.25%;
-  margin: auto; }
-  #videos .video-container iframe {
+  height: 0 !important;
+  padding-bottom: calc(56.25% / 9); }
+  #videos .video-wrapper iframe {
+    display: block;
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%; }
+    bottom: 0; }
 
 #videos .thumbnail-wrapper {
   max-width: 1200px;

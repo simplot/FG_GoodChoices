@@ -6,6 +6,7 @@ function pageReady(vm) {
     console.log('page is set up and running');
 
     $('.carousel').slick({
+      adaptiveHeight: true,
     });
     $('.carousel').slick('slickGoTo', vm.currentSlide); // initial slide
 
