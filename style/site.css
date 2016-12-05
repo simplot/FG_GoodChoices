@@ -6071,7 +6071,7 @@ hr.divider {
       height: 100%; }
     @media (max-width: 574px) {
       #primary-footer #footer-logo {
-        margin: 0 10px;
+        margin: 0 auto;
         margin-bottom: 20px; } }
     @media (min-width: 1120px) {
       #primary-footer #footer-logo {
@@ -6129,7 +6129,6 @@ hr.divider {
               font-size: 1.4rem; } }
     @media (max-width: 574px) {
       #primary-footer nav {
-        text-align: left;
         padding: 0 10px; } }
     @media (min-width: 1120px) {
       #primary-footer nav {
@@ -6436,6 +6435,9 @@ hr.divider {
   background-size: cover;
   top: calc(50% - 5px);
   transform: translateY(-50%); }
+  @media (max-width: 929px) {
+    #videos button {
+      display: none !important; } }
 
 #videos .prev {
   left: -48px;
@@ -6451,8 +6453,12 @@ hr.divider {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
-  overflow-x: scroll; }
+  margin-bottom: 24px;
+  overflow-x: scroll;
+  -webkit-overflow-scroll: touch; }
+  @media (min-width: 1200px) {
+    #videos .thumbnail-wrapper {
+      margin-bottom: 48px; } }
 
 #videos .carousel-buttons {
   width: 1200px; }
@@ -6465,8 +6471,10 @@ hr.divider {
     min-width: 165px;
     width: 14.2857142%;
     opacity: 0.65;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ese; }
     #videos .carousel-buttons span img {
       display: block;
       margin: auto;
@@ -6474,9 +6482,19 @@ hr.divider {
       width: 100%;
       height: auto; }
     #videos .carousel-buttons span.active {
-      opacity: 1; }
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); }
     #videos .carousel-buttons span:focus {
       outline: none; }
+
+#videos .scroll-indicator {
+  display: block;
+  text-align: center;
+  font-size: 1.15rem; }
+  @media (min-width: 1200px) {
+    #videos .scroll-indicator {
+      display: none; } }
 
 /*
 #navigation {

@@ -7,6 +7,7 @@ function pageReady(vm) {
 
     $('.carousel').slick({
       adaptiveHeight: true,
+      swipe: true,
       prevArrow: '<button type="button" class="prev"><span class="visually-hidden">Previous</span></button>',
       nextArrow: '<button type="button" class="next"><span class="visually-hidden">Next</span></button>',
     });
