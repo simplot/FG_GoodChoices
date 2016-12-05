@@ -6383,10 +6383,32 @@ hr.divider {
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); }
 
 #videos .video-container {
+  position: relative;
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  z-index: 10; }
+  @media (min-width: 960px) {
+    #videos .video-container {
+      margin-top: 24px;
+      margin-bottom: 60px; } }
+  @media (min-width: 960px) {
+    #videos .video-container::before {
+      content: "";
+      position: absolute;
+      top: -52px;
+      left: -90px;
+      width: 980px;
+      height: 554px;
+      margin: 0 auto;
+      background-image: url(../img/videos/video-background.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      z-index: -1; } }
+  #videos .video-container .carousel {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4); }
 
 #videos .video-wrapper {
   position: relative;
@@ -6403,10 +6425,33 @@ hr.divider {
     right: 0;
     bottom: 0; }
 
+#videos button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  width: 84px;
+  height: 84px;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  top: calc(50% - 5px);
+  transform: translateY(-50%); }
+
+#videos .prev {
+  left: -48px;
+  background-image: url(../img/videos/left-arrow.png);
+  z-index: -1; }
+
+#videos .next {
+  right: -47px;
+  background-image: url(../img/videos/right-arrow.png);
+  z-index: -1; }
+
 #videos .thumbnail-wrapper {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 48px;
   overflow-x: scroll; }
 
 #videos .carousel-buttons {
@@ -6418,13 +6463,20 @@ hr.divider {
     line-height: 1rem;
     float: left;
     min-width: 165px;
-    width: 14.2857142%; }
+    width: 14.2857142%;
+    opacity: 0.65;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
     #videos .carousel-buttons span img {
       display: block;
       margin: auto;
       max-width: 180px;
       width: 100%;
       height: auto; }
+    #videos .carousel-buttons span.active {
+      opacity: 1; }
+    #videos .carousel-buttons span:focus {
+      outline: none; }
 
 /*
 #navigation {
