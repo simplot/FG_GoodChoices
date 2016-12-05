@@ -1,5 +1,5 @@
 // website.com/#?slide=name is the syntax for landing on a particular slide
-var slideNames = ['pineapple', 'jalapeno', 'kale' ,'quinoa' , 'mango', 'normandy', 'avocado'];
+var slideNames = ['jalapeno', 'kale' ,'quinoa' , 'mango', 'normandy', 'avocado'];
 
 function pageReady(vm) {
     // here's where any run-once-on-setup code can be put
