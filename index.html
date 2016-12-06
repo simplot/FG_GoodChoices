@@ -209,7 +209,7 @@
                     <md-grid-list md-cols="4" md-cols-md="4" md-cols-sm="3"  md-cols-xs="2" md-row-height-xs="4.8em"
                     md-row-height-sm="4.8em" md-row-height="4.9em" md-gutter="10px" md-gutter-sm="10px" md-gutter-gt-md="25px">
                       <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
-                        <div class="card" style="height:100%; width:100%;">
+                        <div class="card" style="height:100%; width:100%;" ng-class="{'trend': !recipe.name}">
                           <a href="pdf/{{recipe.pdf}}" target="_blank" title="{{recipe.name}}">
                             <div class="hovereffect">
                               <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />

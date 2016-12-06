@@ -144,6 +144,26 @@ app.directive('emitOnUpdate', function($timeout) {
 // to have something to copy-n-paste to here
 function getRecipes() {
     var recipes = [{
+        // this is a "trends" card -- signalled by empty name and pdf
+        name: "",
+        image: "WholeGrainsTrend.jpg",
+        thumbnail: "WholeGrainsTrendThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "",
+        dayparts: "Lunch | Dinner | Appetizer | Side | Breakfast",
+        products: "Grains | Fruit | Vegetables | Roasted | Potatoes | Avocado"
+    },{
+        // this is a "trends" card -- signalled by empty name and pdf
+        name: "",
+        image: "RootVegetablesMenuTrend.jpg",
+        thumbnail: "RootVegetablesMenuTrendThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "",
+        dayparts: "Lunch | Dinner | Appetizer | Side",
+        products: "Grains | Fruit | Vegetables | Roasted | Potatoes"
+    },{
         name: "Thai Style Pasty",
         image: "GGThaiStylePotPies.jpg",
         thumbnail: "GGThaiStylePotPiesThumbnail.jpg",
@@ -285,7 +305,7 @@ function getRecipes() {
         columns: 1,
         rows: 4,
         pdf: "EloteStrCrn.pdf",
-        dayparts: "Apppetizer | Side | Lunch",
+        dayparts: "Appetizer | Side | Lunch",
         products: "Vegetables | Roasted"
     }, {
         name: "Shrimp Taco",
@@ -483,7 +503,7 @@ function getRecipes() {
         recipe.products = recipe.products.split('|').map(function (product) { return product.trim(); });
     });
 
-    return recipes;
+    return _.shuffle(recipes);
 }
 
 function initializeRecipes(recipes) {
