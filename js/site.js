@@ -67,6 +67,12 @@ app.controller('FallHarvestController', function($scope, $timeout, $location) {
         product: '',
     };
 
+    vm.blurOnReturn = function (event) {
+        if (event.keyCode == 13) {
+            event.target.blur();
+        }
+    };
+
     vm.updateFilterResults = function () {
         var filterText = vm.filterParameters.text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
@@ -77,7 +83,7 @@ app.controller('FallHarvestController', function($scope, $timeout, $location) {
 
             recipe.isVisible = daypartMatch && productMatch && textMatch;
         });
-    }
+    };
     vm.updateFilterResults();
 
     // example emit-on-update receiver:

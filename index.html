@@ -164,7 +164,7 @@
             <div class="col-xs-22 push-xs-1 col-md-7 push-md-0 pull-md-1" id="search-wrapper">
               <form id="form-recipe-search" name="form-recipe-search">
                 <label for="recipe-search">Search</label>
-                <input type="text" id="recipe-search" name="recipe-search" ng-model="vm.filterParameters.text" ng-change="vm.updateFilterResults()" placeholder="Search by Keyword" />
+                <input type="text" id="recipe-search" name="recipe-search" ng-keyup="vm.blurOnReturn($event)" ng-change="vm.updateFilterResults()" ng-model="vm.filterParameters.text" placeholder="Search by Keyword" />
               </form>
             </div>
             <div class="col-xs-1"></div>
