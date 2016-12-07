@@ -5712,8 +5712,8 @@ hr.divider {
   @media (min-width: 640px) {
     #header {
       height: 0;
-      padding-bottom: 22.16%;
-      background: url(../img/header.png);
+      padding-bottom: 18.16%;
+      background: url(../img/header-wide.png);
       background-repeat: no-repeat;
       background-position: center top;
       background-size: contain;
@@ -5721,7 +5721,7 @@ hr.divider {
       margin: auto; } }
   @media (min-width: 1240px) {
     #header {
-      padding-bottom: 20.16%; } }
+      padding-bottom: 16.16%; } }
   #header #logo {
     display: block;
     background: url(../img/simplot-logo.png);
@@ -5742,7 +5742,7 @@ hr.divider {
         margin: 0;
         top: 13%;
         left: 4.5%;
-        width: 22.5%;
+        width: 18.5%;
         height: 42%; } }
   #header .message {
     background: #7cba42;
@@ -5785,7 +5785,7 @@ hr.divider {
         top: 9.5%;
         left: auto;
         right: 5.5%;
-        width: 9.5%;
+        width: 10%;
         height: 28%;
         background: transparent;
         border-radius: none;
@@ -5865,11 +5865,14 @@ hr.divider {
           transition: 0.3s; }
           #header nav ul li a strong {
             font-size: calc(14px + 1.5vw); }
-          @media (min-width: 680px) {
+          @media (min-width: 640px) {
             #header nav ul li a {
-              font-size: calc(10px + 1.25vw); }
+              font-size: calc(10px + 1vw); }
               #header nav ul li a strong {
-                font-size: calc(16px + 1.5vw); } }
+                font-size: calc(14px + 1.25vw); } }
+          @media (min-width: 960px) {
+            #header nav ul li a strong {
+              font-size: calc(16px + 1.5vw); } }
           @media (min-width: 1380px) {
             #header nav ul li a {
               font-size: 27px; }
@@ -6189,8 +6192,8 @@ hr.divider {
 
 #recipes .form-row {
   margin-bottom: 1rem;
-  max-width: 1320px; }
-  @media (min-width: 1320px) {
+  max-width: 1250px; }
+  @media (min-width: 1250px) {
     #recipes .form-row {
       margin-left: auto;
       margin-right: auto; } }
@@ -6262,7 +6265,7 @@ hr.divider {
 
 #recipes md-grid-list {
   margin: 20px auto 40px;
-  max-width: 1180px; }
+  max-width: 1120px; }
 
 #recipes .recipe-card-container {
   padding: 0; }
