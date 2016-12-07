@@ -146,23 +146,23 @@ function getRecipes() {
     var recipes = [{
         // this is a "trends" card -- signalled by empty name and pdf
         name: "",
-        image: "WholeGrainsTrend.jpg",
-        thumbnail: "WholeGrainsTrendThumbnail.jpg",
+        image: "trend-vegetable.jpg",
+        thumbnail: "trend-vegetable.jpg",
         columns: 1,
         rows: 4,
         pdf: "",
         dayparts: "Lunch | Dinner | Appetizer | Side | Breakfast",
-        products: "Grains | Fruit | Vegetables | Roasted | Potatoes | Avocado"
+        products: "Vegetables"
     },{
         // this is a "trends" card -- signalled by empty name and pdf
         name: "",
-        image: "RootVegetablesMenuTrend.jpg",
-        thumbnail: "RootVegetablesMenuTrendThumbnail.jpg",
+        image: "trend-grains.jpg",
+        thumbnail: "trend-grains.jpg",
         columns: 1,
         rows: 4,
         pdf: "",
-        dayparts: "Lunch | Dinner | Appetizer | Side",
-        products: "Grains | Fruit | Vegetables | Roasted | Potatoes"
+        dayparts: "Lunch | Dinner | Appetizer | Side | Breakfast",
+        products: "Grains"
     },{
         name: "Thai Style Pasty",
         image: "GGThaiStylePotPies.jpg",

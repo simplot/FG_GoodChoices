@@ -1004,6 +1004,16 @@ hr.divider {
     text-align: center;
     margin: $spacer-y * 2 0;
   }
+
+  // Trends
+  .card.trend {
+    .overlay {
+      display: none;
+    }
+    .inner {
+      display: none;
+    }
+  }
 }
 
 .hovereffect {

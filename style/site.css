@@ -6337,6 +6337,12 @@ hr.divider {
   text-align: center;
   margin: 2rem 0; }
 
+#recipes .card.trend .overlay {
+  display: none; }
+
+#recipes .card.trend .inner {
+  display: none; }
+
 .hovereffect {
   width: 100%;
   float: left;

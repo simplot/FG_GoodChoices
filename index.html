@@ -211,7 +211,7 @@
                       <md-grid-tile ng-repeat="recipe in vm.recipes | filter:{isVisible: true}" ng-class="{'double-wide': recipe.columns===2}" md-colspan="{{recipe.columns}}" md-rowspan="{{recipe.rows}}">
                         <div class="card" style="height:100%; width:100%;" ng-class="{'trend': !recipe.name}">
                           <a href="pdf/{{recipe.pdf}}" target="_blank" title="{{recipe.name}}">
-                            <div class="hovereffect">
+                            <div ng-class="{'hovereffect': recipe.name}">
                               <img class="card-img" ng-src="img/recipes/{{recipe.image}}" alt="{{recipe.name}}" />
                               <div class="overlay">
                                 <div class="inner">
