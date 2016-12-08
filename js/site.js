@@ -73,6 +73,12 @@ app.controller('FallHarvestController', function($scope, $timeout, $location) {
         }
     };
 
+    vm.blockEmptyTarget = function (recipe, event) {
+        if (!recipe.pdf) {
+            event.preventDefault();
+        }
+    };
+
     vm.updateFilterResults = function () {
         var filterText = vm.filterParameters.text.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
