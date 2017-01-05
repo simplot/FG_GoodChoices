@@ -6398,7 +6398,6 @@ hr.divider {
   width: 100%;
   margin: 0 auto;
   margin-bottom: 24px;
-  overflow: hidden;
   z-index: 10; }
   @media (min-width: 960px) {
     #videos .video-container {
@@ -6422,7 +6421,10 @@ hr.divider {
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
     height: 0;
     padding-bottom: 56.25%;
-    background: #000; }
+    background: #000;
+    overflow: hidden; }
+    #videos .video-container .carousel.slick-initialized {
+      overflow: visible; }
 
 #videos .video-wrapper {
   width: 100%;
