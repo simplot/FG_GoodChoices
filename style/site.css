@@ -6496,8 +6496,10 @@ hr.divider {
     min-width: 165px;
     width: 14.2857142%;
     opacity: 0.65;
+    -ms-transform: scale(0.9);
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
+    -ms-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ese; }
     #videos .carousel-buttons span img {
@@ -6508,6 +6510,7 @@ hr.divider {
       height: auto; }
     #videos .carousel-buttons span.active {
       opacity: 1;
+      -ms-transform: scale(1);
       -webkit-transform: scale(1);
       transform: scale(1); }
     #videos .carousel-buttons span:focus {
