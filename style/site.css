@@ -6418,10 +6418,12 @@ hr.divider {
       background-size: contain;
       z-index: -1; } }
   #videos .video-container .carousel {
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+    height: 0;
+    padding-bottom: 56.25%;
+    background: #000; }
 
 #videos .video-wrapper {
-  position: relative;
   width: 100%;
   height: 0 !important;
   padding-bottom: calc(56.25% / 8); }
@@ -6434,6 +6436,8 @@ hr.divider {
     left: 0;
     right: 0;
     bottom: 0; }
+  #videos .video-wrapper.slick-slide {
+    position: relative; }
 
 #videos button {
   border: none;
