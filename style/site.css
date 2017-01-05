@@ -6501,7 +6501,7 @@ hr.divider {
     transform: scale(0.9);
     -ms-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ese; }
+    transition: all 0.3s ease; }
     #videos .carousel-buttons span img {
       display: block;
       margin: auto;
