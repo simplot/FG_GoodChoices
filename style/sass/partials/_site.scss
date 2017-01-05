@@ -1088,6 +1088,7 @@ hr.divider {
     width: 100%;
     margin: 0 auto;
     margin-bottom: 24px;
+    overflow: hidden;
     z-index: 10;
     @media(min-width: 960px) {
       margin-top: 24px;
