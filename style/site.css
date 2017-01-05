@@ -6466,14 +6466,21 @@ hr.divider {
 
 #videos .thumbnail-wrapper {
   max-width: 1020px;
+  height: 132px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 24px;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch; }
+  overflow: hidden; }
   @media (min-width: 1200px) {
     #videos .thumbnail-wrapper {
       margin-bottom: 48px; } }
+
+#videos .inner-wrapper {
+  width: 100%;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 17px;
+  padding-bottom: 20px; }
 
 #videos .carousel-buttons {
   width: 1020px; }
