@@ -170,6 +170,15 @@ function getRecipes() {
         dayparts: "Lunch | Dinner | Appetizer | Side | Breakfast",
         products: "Grains"
     },{
+        name: "Normandy Thai Shrimp with Curry Coconut Sauce",
+        image: "NormandyThaiStyleShrimpwithCoconutSauce.jpg",
+        thumbnail: "NormandyThaiStyleShrimpwithCoconutSauceThumbnail.jpg",
+        columns: 1,
+        rows: 4,
+        pdf: "NormandyThaiStyleShrimpwithCoconutSauce.pdf",
+        dayparts: "Lunch | Dinner",
+        products: "Vegetables | Grains"
+    },{
         name: "Thai Style Pasty",
         image: "GGThaiStylePotPies.jpg",
         thumbnail: "GGThaiStylePotPiesThumbnail.jpg",
